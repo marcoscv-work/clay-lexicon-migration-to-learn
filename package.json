@@ -5,7 +5,10 @@
   "type": "module",
   "description": "Proof of concept for LPD-98580: Clay + Lexicon documentation merged under a single Clay umbrella.",
   "scripts": {
+    "assets:sync": "node scripts/sync-assets.mjs",
+    "predocs:dev": "node scripts/sync-assets.mjs",
     "docs:dev": "vitepress dev .",
+    "predocs:build": "node scripts/sync-assets.mjs",
     "docs:build": "vitepress build .",
     "docs:preview": "vitepress preview .",
     "api:generate": "node scripts/generate-api.mjs",

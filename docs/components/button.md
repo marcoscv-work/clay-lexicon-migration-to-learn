@@ -1,10 +1,184 @@
 ---
 title: Button
+description: Buttons trigger an action when the user activates them.
+sources:
+  - https://design.liferay.com/lexicon/core-components/buttons/
+  - https://design.liferay.com/lexicon/core-components/buttons/action-buttons/
+  - https://www.clayui.com/docs/components/button
+storybook: https://storybook.clayui.com/?path=/story/design-system-components-button--default
 status: poc-draft
+api_version: 3.165.0
 ---
 
 # Button
 
-<!-- Placeholder stub created during Milestone 1 scaffolding. Replaced with merged content in later milestones. -->
+Buttons trigger an action when the user activates them. Use a button for actions
+the user takes on a page, such as saving a form, opening a menu, or confirming a
+choice. Give every button a short, specific label that names the action.
 
-Content for this page is being migrated. See the [Get Started](/get-started/) page for project context.
+## Variants and anatomy
+
+### Types
+
+Choose the button type that matches the importance of the action.
+
+![Primary, secondary, and link buttons shown together: a filled Done button, an outlined Cancel button, and a Clear text link](/assets/components/button-types.png)
+
+- **Primary**: use for the most important action in a view, such as Save. Do not
+  place two primary buttons next to each other.
+- **Secondary**: use for supporting actions. You can place several secondary
+  buttons near each other.
+- **Link**: use mainly for low-emphasis actions such as Cancel.
+- **Action (color)**: a primary button that uses status colors (success, info,
+  warning, danger) to make an action easier to recognize. Use these sparingly,
+  and only when the color adds meaning to the action.
+
+### States
+
+Buttons respond to interaction with default, hover, active, and disabled states.
+Use the disabled state only when the action is unavailable, and make sure the
+reason is clear from the surrounding context.
+
+![Primary, secondary, and link buttons in the disabled state](/assets/components/button-states-disabled.png)
+
+### Sizes
+
+Clay buttons come in two heights:
+
+- **Default**: 40px. Use it for the main actions on a page, such as Save or
+  Cancel.
+- **Small**: 32px. Use it for actions inside dense areas such as drop down menus,
+  button groups, and split buttons.
+
+![A small button next to inputs, showing the 32px height used inside dense areas](/assets/components/button-size-small.png)
+
+### Common variations
+
+- **Icon button**: shows an icon instead of a text label. Reserve it for
+  well-understood actions and always provide an accessible name (see
+  [Accessibility](#accessibility)).
+- **Split button**: pairs a main action with a drop down of related actions.
+
+![An icon-only button using a single monospaced icon](/assets/components/button-icon.png)
+
+![A split button: a main action on the left and a drop down toggle on the right](/assets/components/button-split.png)
+
+## Usage guidelines
+
+- Keep all buttons in the same row at the same height.
+
+![Do: a Cancel and a Save button at the same height in one row](/assets/components/button-do-same-height.png)
+
+![Don't: a Cancel and a Save button at different heights in one row](/assets/components/button-dont-different-height.png)
+
+- Write button labels in sentence case. Do not set labels in all capitals.
+- Keep a label on a single line. Do not let button text wrap.
+- When you mix a borderless button with bordered buttons, place the borderless
+  button before or after the bordered set, not between them.
+- Use action (color) buttons only to reinforce meaning, and never place two of
+  them together, since that makes the user work to map each color to its action.
+- In modals, prefer the primary color for the confirming action. You can use an
+  action color for status messages, but stay consistent within the same modal.
+
+## Implementation
+
+Install the component and the CSS package:
+
+```shell
+npm install @clayui/css @clayui/button
+```
+
+Import the CSS once in your application entry point, then import the button where
+you need it. Set the visual type with the `displayType` property:
+
+```jsx
+import Button from '@clayui/button';
+
+export default function Example() {
+	return (
+		<Button.Group spaced>
+			<Button displayType="primary">Save</Button>
+			<Button displayType="secondary">Cancel</Button>
+			<Button displayType="link">Learn more</Button>
+		</Button.Group>
+	);
+}
+```
+
+For an icon-only button, use the `ClayButtonWithIcon` component and pass an
+`aria-label` so the control has an accessible name:
+
+```jsx
+import {ClayButtonWithIcon} from '@clayui/button';
+
+export default function Example() {
+	return (
+		<ClayButtonWithIcon aria-label="Close" symbol="times" title="Close" />
+	);
+}
+```
+
+<!-- REVIEW: conflict between sources. Lexicon documents Default (40px) and Small (32px) sizes, while @clayui/button also exposes an "xs" size value. Confirm with the Clay team whether "xs" is supported design guidance. -->
+
+## API reference
+
+<!-- API:START package=@clayui/button version=3.165.0 -->
+<!-- Generated by scripts/generate-api.mjs. Do not edit by hand; run `npm run api:generate`. -->
+
+### Button
+
+| Prop | Type | Default | Required | Description |
+| ---- | ---- | ------- | -------- | ----------- |
+| `alert` | `boolean` |  | No | Flag to indicate if button is used within an alert component. |
+| `block` | `boolean` |  | No | Renders the button as a block element. |
+| `borderless` | `boolean` |  | No | Flag to indicate if the button should be borderless. |
+| `dark` | `boolean` |  | No | Flag to indicate if the button should use the clay-dark variant. |
+| `displayType` | `null \| 'primary' \| 'secondary' \| 'link' \| 'success' \| 'warning' \| 'danger' \| 'info' \| 'beta' \| 'beta-dark' \| 'unstyled'` | `'primary'` | No | Determines the button variant to use. The values `beta` and `beta-dark` are deprecated since v3.100.0 - use `translucent` and `dark` instead. The values `null` and `unstyled` are for internal use only. |
+| `loading` | `boolean` |  | No | Flag to display a loading indicator. |
+| `monospaced` | `boolean` |  | No | Flag to indicate if button should be monospaced. |
+| `outline` | `boolean` |  | No | Flag to indicate if the button should use the outline variant. |
+| `rounded` | `boolean` |  | No | Flag to indicate if the button should be shaped like a pill. |
+| `size` | `'xs' \| 'regular' \| 'sm'` | `'regular'` | No | Determines the size of a button. |
+| `small` | `boolean` |  | No | Deprecated: since v3.72.0 - use `size` instead. Indicates button should be a small variant. |
+| `translucent` | `boolean` |  | No | Flag to indicate if the button should use the translucent variant. |
+
+### Button.Group
+
+| Prop | Type | Default | Required | Description |
+| ---- | ---- | ------- | -------- | ----------- |
+| `spaced` | `boolean` |  | No | Flag to indicate the spacing between the buttons. |
+| `vertical` | `boolean` |  | No | Flag to indicate if buttons are stacked vertically. |
+
+### ClayButtonWithIcon
+
+| Prop | Type | Default | Required | Description |
+| ---- | ---- | ------- | -------- | ----------- |
+| `aria-label` | `string` |  | No |  |
+| `aria-labelledby` | `string` |  | No |  |
+| `spritemap` | `string` |  | No | Path to the location of the spritemap resource. |
+| `symbol` | `string` |  | Yes | The id of the icon in the spritemap. |
+
+<!-- API:END -->
+
+## Accessibility
+
+- A button that shows only an icon must have an accessible name. Pass
+  `aria-label` or `aria-labelledby`; `@clayui/button` warns in development when
+  an icon-only button is missing both. The `title` attribute is optional and does
+  not replace an accessible name.
+- Buttons are keyboard operable by default: users can move focus with `Tab` and
+  activate with `Enter` or `Space`. Keep the visible focus indicator intact.
+- Do not rely on color alone to convey the meaning of an action (color) button.
+  Make the label describe the action, so success, warning, and danger buttons are
+  distinguishable without color.
+
+## Live examples
+
+See the [Button stories on Storybook](https://storybook.clayui.com/?path=/story/design-system-components-button--default),
+including the Default, Group, Group Vertical, and Icon stories.
+
+## Related components
+
+- [Drop Down](/components/drop-down)
+- [Modal](/components/modal)
+- [Alert](/components/alert)

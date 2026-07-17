@@ -1,9 +1,16 @@
+import path from 'node:path';
+import {fileURLToPath} from 'node:url';
+
 import {defineConfig} from 'vitepress';
+
+const REPO_ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 
 // Repository coordinates. Change these if the repo is forked or renamed;
 // they drive the GitHub Pages base path and the "Edit this page" links.
 const GITHUB_OWNER = 'marcoscv-work';
 const GITHUB_REPO = 'clay-docs-migration-poc';
+
+const BASE = `/${GITHUB_REPO}/`;
 
 export default defineConfig({
 	// Content lives in /docs so the Markdown stays portable and never mixes
@@ -12,7 +19,7 @@ export default defineConfig({
 
 	// Project pages are served from https://<owner>.github.io/<repo>/, so the
 	// base path must match the repo name for assets and internal links to resolve.
-	base: `/${GITHUB_REPO}/`,
+	base: BASE,
 
 	title: 'Clay',
 	description:
@@ -21,6 +28,9 @@ export default defineConfig({
 
 	// Fail the build on dead internal links so CI catches them.
 	ignoreDeadLinks: false,
+
+	// The component page template is documentation for contributors, not a page.
+	srcExclude: ['**/_TEMPLATE.md'],
 
 	head: [
 		['meta', {name: 'robots', content: 'noindex, nofollow'}],
@@ -117,5 +127,54 @@ export default defineConfig({
 			light: 'github-light',
 			dark: 'github-dark',
 		},
+
+		// Prepend the base path to root-absolute image sources (for example
+		// /assets/components/x.png) so images served from the public directory
+		// resolve correctly under the GitHub Pages base path, in both dev and
+		// build. Keeping the Markdown paths base-agnostic keeps /docs portable.
+		config: (md) => {
+			const defaultImageRenderer =
+				md.renderer.rules.image ??
+				((tokens, idx, options, env, self) =>
+					self.renderToken(tokens, idx, options));
+
+			md.renderer.rules.image = (tokens, idx, options, env, self) => {
+				const token = tokens[idx];
+				const srcIndex = token.attrIndex('src');
+				if (srcIndex >= 0) {
+					const src = token.attrs[srcIndex][1];
+					if (
+						src.startsWith('/') &&
+						!src.startsWith('//') &&
+						!src.startsWith(BASE)
+					) {
+						token.attrs[srcIndex][1] =
+							BASE.replace(/\/$/, '') + src;
+					}
+				}
+				return defaultImageRenderer(tokens, idx, options, env, self);
+			};
+		},
+	},
+
+	// Images live in the repo-root /assets folder (the deliverable) and are
+	// referenced from Markdown with absolute paths like /assets/components/x.png.
+	// Disable Vue's absolute-asset import so those paths are served statically
+	// from the public directory (with the base path applied) in both dev and
+	// build, instead of being turned into module imports. The scripts/sync-assets
+	// step mirrors /assets into the served public/assets folder.
+	vue: {
+		template: {
+			transformAssetUrls: {
+				includeAbsolute: false,
+			},
+		},
+	},
+
+	// Serve static files (the synced /public/assets) from the repo-root /public
+	// folder rather than the default docs/public, so nothing generated lives
+	// inside the portable /docs deliverable.
+	vite: {
+		publicDir: path.join(REPO_ROOT, 'public'),
 	},
 });
