@@ -36,22 +36,26 @@ repositioning it validates:
    published `@clayui/*` TypeScript definitions, never hand-transcribed. See
    [API reference](#api-reference-pipeline) below.
 
-## Scope of the sample
+## Scope
 
-A representative sample of 14 pages, chosen so quality can be judged before the
-full migration:
+The PoC started as a 14-page representative sample and, after stakeholder
+validation, grew into the full migration of the in-scope content:
 
 - **Get Started** (1): what Clay is, the Lexicon one-paragraph explanation,
   installation, quick start, composition philosophy, and positioning guidance
   (when to use Clay and when to use Liferay's site-building stack).
-- **Foundations** (3): Color, Typography, Grid.
-- **Components** (8): Alert, Badge, Button, Card, Drop Down, Modal, Table,
-  Tooltip. Each merges the Lexicon design spec with the clayui.com implementation
-  page.
+- **Foundations** (5): Animations, Color, Grid, Layout, Typography.
+- **Components** (46): every Lexicon core component merged with its Clay
+  implementation, plus Clay-only components with docs (Autocomplete, Panel).
+  Design-only pages (Charts, Keys, Section, Confirmation Message, Dataset
+  Display) carry no API block and say how they map to Clay.
 - **CSS** (1): an overview of the CSS framework and utilities.
-- **Patterns** (1): Common Actions.
+- **Patterns** (4): Common Actions, Common Content Patterns, Drag and Drop,
+  Ellipsis.
 
-Out of scope for the PoC: Satellites, Templates, Examples, Writing, and the blog.
+Out of scope: Satellites, Templates, Examples, Writing, the blog, the per-type
+chart specs, and pages marked `draft` upstream (Pager, the foundations
+Accessibility stub), whose relevant guidance was folded into related pages.
 
 > The working criteria evolved from the original brief in a few explicit ways
 > (live examples instead of images on component pages, per-story embed heights,

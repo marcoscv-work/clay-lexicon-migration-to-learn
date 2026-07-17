@@ -46,18 +46,52 @@ story to embed or link:
 
 ## Stories used by this PoC
 
-All verified against storybook.clayui.com (derived from the story exports in the
-Clay source):
+All verified against the story index snapshot in scripts/storybook-index.json
+(extracted from Storybook's own store):
 
-- Button: `--default`, `--group`, `--icon`
 - Alert: `--default`, `--feedback`, `--toast`
+- Autocomplete: `--default`, `--async-data`, `--keyboard`
 - Badge: `--default`, `--with-icon`
-- Card: `--card-with-info`, `--card-with-info-image`, `--card-with-user`,
-  `--card-with-horizontal`, `--card-with-navigation`, `--product-card`
+- Breadcrumb: `--default`, `--active-state`
+- Button: `--default`, `--icon`, `--group`
+- Card: `--card-with-info`, `--card-with-info-image`, `--card-with-user`, `--card-with-horizontal`, `--card-with-navigation`, `--product-card`
+- Checkbox, Radio, and Toggle: `--default`, `--checkbox`
+- Color Picker: `--default`, `--custom-colors`, `--native`
+- Confirmation Message: `--default`
+- Dataset Display: `--default`, `--dynamic`, `--simple`
+- Date Picker: `--default`, `--time`, `--date-range`, `--native`
 - Drop Down: `--default`, `--checkbox`, `--search`, `--groups`, `--drilldown`
+- Dual Listbox: `--default`
+- Empty State: `--default`, `--empty-state`, `--search-state`, `--success-state`
+- Forms: `--default`
+- Icon: `--default`, `--context-spritemap`
+- Input: `--default`, `--input-feedback`, `--textarea`, `--group-connected`
+- Label: `--default`, `--content-before`, `--sizes`
+- Link: `--default`, `--displayed-as-button`
+- List: `--simple`, `--complex`
+- Loading Indicator: `--default`
+- Management Toolbar: `--default`
 - Modal: `--default`
+- Multi Select: `--default`, `--with-primary-action`
+- Multi Step Nav: `--default`, `--error`
+- Navigation Bar: `--navigation-bar`
+- Pagination: `--default`, `--disabled-pages`
+- Panel: `--default`, `--collapsable`, `--groups`
+- Popover: `--default`, `--trigger`
+- Progress Bar: `--default`
+- Section: `--sheet`
+- Select: `--high-level`, `--default`
+- Side Panel: `--position-absolute`, `--position-fixed`, `--drilldown`
+- Slider: `--default`
+- Sticker: `--default`, `--shape`, `--user-image`, `--size`, `--positions`
 - Table: `--dynamic`, `--sections`, `--sorting`, `--treegrid`
+- Tabs: `--default`, `--new-default`
+- Time Picker: `--default`
+- Toolbar: `--default`, `--upper-toolbar`
 - Tooltip: `--default`, `--tooltip-provider`
+- Tree View: `--dynamic`, `--theme-dark`, `--with-sticker`, `--multiple-selection`, `--async-load`
+- Vertical Bar: `--default`, `--dynamic-content`
+- Vertical Nav: `--default`, `--primary`
 
 The Foundations, CSS, and Patterns pages are not components and do not link to
 Storybook. As the real migration adds components or variants without a story, add
