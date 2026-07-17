@@ -45,8 +45,9 @@ so the table shows Clay-specific props only. Local union type aliases (such as
 
 ### Configure the Clay source location
 
-The script looks for the mirror at `../sources/clay` relative to the repo root.
-Override it with the `CLAY_SRC` environment variable:
+The script looks for the mirror at `sources/clay` inside the repo (which is
+gitignored), then at `../sources/clay` alongside the repo. Override the location
+with the `CLAY_SRC` environment variable:
 
 ```bash
 CLAY_SRC=/path/to/clay npm run api:generate

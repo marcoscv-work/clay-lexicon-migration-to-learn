@@ -34,9 +34,21 @@ import {Node, Project, ts} from 'ts-morph';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const REPO_ROOT = path.resolve(__dirname, '..');
-const CLAY_SRC = process.env.CLAY_SRC
-	? path.resolve(process.env.CLAY_SRC)
-	: path.resolve(REPO_ROOT, '..', 'sources', 'clay');
+
+// Locate the Clay mirror. Honor CLAY_SRC (set by CI) first, then look for a
+// sources/clay clone inside the repo, then one alongside the repo.
+function resolveClaySrc() {
+	if (process.env.CLAY_SRC) {
+		return path.resolve(process.env.CLAY_SRC);
+	}
+	const candidates = [
+		path.resolve(REPO_ROOT, 'sources', 'clay'),
+		path.resolve(REPO_ROOT, '..', 'sources', 'clay'),
+	];
+	return candidates.find((dir) => fs.existsSync(dir)) ?? candidates[0];
+}
+
+const CLAY_SRC = resolveClaySrc();
 
 const CHECK = process.argv.includes('--check');
 const OFFLINE = process.argv.includes('--offline');
