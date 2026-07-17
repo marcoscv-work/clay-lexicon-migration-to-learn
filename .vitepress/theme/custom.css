@@ -52,9 +52,11 @@ summary:focus-visible,
 	border-radius: 2px;
 }
 
-/* Make the built-in skip link clearly visible when focused. */
+/* Make the built-in skip link clearly visible when focused, and drop it below
+ * the PoC banner so it never overlaps the banner text. */
 .VPSkipLink:focus,
 .VPSkipLink:focus-visible {
+	top: calc(var(--vp-layout-top-height, 40px) + 8px) !important;
 	outline: 3px solid var(--poc-focus-color) !important;
 	outline-offset: 2px;
 }
