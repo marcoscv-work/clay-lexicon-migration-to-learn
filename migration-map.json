@@ -78,6 +78,37 @@
     }
   },
   {
+    "new_path": "docs/components/button.md",
+    "site_url": "/components/button",
+    "sources": [
+      "https://design.liferay.com/lexicon/core-components/buttons/",
+      "https://design.liferay.com/lexicon/core-components/buttons/action-buttons/",
+      "https://www.clayui.com/docs/components/button"
+    ],
+    "storybook": "https://storybook.clayui.com/?path=/story/design-system-components-button--default",
+    "notes": "Merged Lexicon button design spec (types, states, sizes, dos and don'ts, variations) with clayui.com implementation (display types, groups, icon buttons). Action-buttons subpage folded into the Variants and anatomy section. API generated from @clayui/button for Button, Button.Group, and ClayButtonWithIcon.",
+    "api": {
+      "package": "@clayui/button",
+      "targets": [
+        {
+          "heading": "Button",
+          "file": "packages/clay-button/src/Button.tsx",
+          "type": "IProps"
+        },
+        {
+          "heading": "Button.Group",
+          "file": "packages/clay-button/src/Group.tsx",
+          "type": "Props"
+        },
+        {
+          "heading": "ClayButtonWithIcon",
+          "file": "packages/clay-button/src/ButtonWithIcon.tsx",
+          "type": "Props"
+        }
+      ]
+    }
+  },
+  {
     "new_path": "docs/components/card.md",
     "site_url": "/components/card",
     "sources": [
