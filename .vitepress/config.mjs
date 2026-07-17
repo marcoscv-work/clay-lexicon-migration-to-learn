@@ -81,6 +81,7 @@ export default defineConfig({
 				items: [
 					{text: 'Alert', link: '/components/alert'},
 					{text: 'Badge', link: '/components/badge'},
+					{text: 'Breadcrumb', link: '/components/breadcrumb'},
 					{text: 'Button', link: '/components/button'},
 					{text: 'Card', link: '/components/card'},
 					{text: 'Drop Down', link: '/components/drop-down'},
@@ -92,12 +93,18 @@ export default defineConfig({
 						link: '/components/loading-indicator',
 					},
 					{text: 'Modal', link: '/components/modal'},
+					{
+						text: 'Navigation Bar',
+						link: '/components/navigation-bar',
+					},
+					{text: 'Pagination', link: '/components/pagination'},
 					{text: 'Popover', link: '/components/popover'},
 					{text: 'Progress Bar', link: '/components/progress-bar'},
 					{text: 'Sticker', link: '/components/sticker'},
 					{text: 'Table', link: '/components/table'},
 					{text: 'Tabs', link: '/components/tabs'},
 					{text: 'Tooltip', link: '/components/tooltip'},
+					{text: 'Vertical Nav', link: '/components/vertical-nav'},
 				],
 			},
 			{

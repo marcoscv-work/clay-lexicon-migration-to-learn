@@ -422,5 +422,101 @@
         }
       ]
     }
+  },
+  {
+    "new_path": "docs/components/breadcrumb.md",
+    "site_url": "/components/breadcrumb",
+    "sources": [
+      "https://design.liferay.com/lexicon/core-components/navigation/breadcrumb/",
+      "https://www.clayui.com/docs/components/breadcrumb"
+    ],
+    "storybook": "https://storybook.clayui.com/?path=/story/design-system-components-breadcrumb--default",
+    "notes": "Merged Lexicon breadcrumb spec (collapse into dropdown, dos and donts) with clayui.com implementation (items, ellipsisBuffer). API from @clayui/breadcrumb.",
+    "api": {
+      "package": "@clayui/breadcrumb",
+      "targets": [
+        {
+          "heading": "Breadcrumb",
+          "file": "packages/clay-breadcrumb/src/index.tsx",
+          "type": "IProps"
+        }
+      ]
+    }
+  },
+  {
+    "new_path": "docs/components/navigation-bar.md",
+    "site_url": "/components/navigation-bar",
+    "sources": [
+      "https://design.liferay.com/lexicon/core-components/navigation/horizontal-nav/",
+      "https://www.clayui.com/docs/components/navigation-bar"
+    ],
+    "storybook": "https://storybook.clayui.com/?path=/story/design-system-components-navigationbar--navigation-bar",
+    "notes": "Merged Lexicon navbar spec (default/inverted, overflow collapse) with clayui.com implementation (NavigationBar + Item, triggerLabel). API from @clayui/navigation-bar.",
+    "api": {
+      "package": "@clayui/navigation-bar",
+      "targets": [
+        {
+          "heading": "NavigationBar",
+          "file": "packages/clay-navigation-bar/src/index.tsx",
+          "type": "IProps"
+        },
+        {
+          "heading": "NavigationBar.Item",
+          "file": "packages/clay-navigation-bar/src/Item.tsx",
+          "type": "IProps"
+        }
+      ]
+    }
+  },
+  {
+    "new_path": "docs/components/vertical-nav.md",
+    "site_url": "/components/vertical-nav",
+    "sources": [
+      "https://design.liferay.com/lexicon/core-components/navigation/vertical-nav/",
+      "https://www.clayui.com/docs/components/vertical-nav"
+    ],
+    "storybook": "https://storybook.clayui.com/?path=/story/design-system-components-verticalnav--default",
+    "notes": "Merged Lexicon vertical navigation spec (left of forms, states, mobile collapse) with the @clayui/core VerticalNav implementation (items render prop, expanded keys). API from @clayui/core.",
+    "api": {
+      "package": "@clayui/core",
+      "targets": [
+        {
+          "heading": "VerticalNav",
+          "file": "packages/clay-core/src/vertical-nav/VerticalNav.tsx",
+          "type": "Props"
+        }
+      ]
+    }
+  },
+  {
+    "new_path": "docs/components/pagination.md",
+    "site_url": "/components/pagination",
+    "sources": [
+      "https://design.liferay.com/lexicon/core-components/pagination/",
+      "https://www.clayui.com/docs/components/pagination",
+      "https://www.clayui.com/docs/components/pagination-bar"
+    ],
+    "storybook": "https://storybook.clayui.com/?path=/story/design-system-components-pagination--default",
+    "notes": "Merged Lexicon pagination + pagination bar spec (arrows, numbers, ellipsis, page size selector) with clayui.com implementation (ClayPaginationWithBasicItems, ClayPaginationBarWithBasicItems). Pager (draft in Lexicon) folded in as a variant note. API from @clayui/pagination and @clayui/pagination-bar.",
+    "api": {
+      "package": "@clayui/pagination",
+      "targets": [
+        {
+          "heading": "Pagination",
+          "file": "packages/clay-pagination/src/Pagination.tsx",
+          "type": "IProps"
+        },
+        {
+          "heading": "Pagination.Item",
+          "file": "packages/clay-pagination/src/Item.tsx",
+          "type": "IPaginationItemProps"
+        },
+        {
+          "heading": "ClayPaginationBarWithBasicItems",
+          "file": "packages/clay-pagination-bar/src/PaginationBarWithBasicItems.tsx",
+          "type": "IProps"
+        }
+      ]
+    }
   }
 ]
