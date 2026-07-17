@@ -748,5 +748,219 @@
         }
       ]
     }
+  },
+  {
+    "new_path": "docs/components/tree-view.md",
+    "site_url": "/components/tree-view",
+    "sources": [
+      "https://design.liferay.com/lexicon/core-components/tree-view/",
+      "https://www.clayui.com/docs/components/tree-view"
+    ],
+    "storybook": "https://storybook.clayui.com/?path=/story/design-system-components-treeview--dynamic",
+    "notes": "Merged Lexicon tree view spec (box/node anatomy, node roles, tri-state selection, hover actions, focus rules) with the @clayui/core TreeView implementation (items, nestedKey, render props). API from @clayui/core.",
+    "api": {
+      "package": "@clayui/core",
+      "targets": [
+        {
+          "heading": "TreeView",
+          "file": "packages/clay-core/src/tree-view/TreeView.tsx",
+          "type": "ITreeViewProps"
+        }
+      ]
+    }
+  },
+  {
+    "new_path": "docs/components/toolbar.md",
+    "site_url": "/components/toolbar",
+    "sources": [
+      "https://design.liferay.com/lexicon/core-components/toolbars/",
+      "https://www.clayui.com/docs/components/toolbar"
+    ],
+    "storybook": "https://storybook.clayui.com/?path=/story/design-system-components-toolbar--default",
+    "notes": "Merged Lexicon toolbar spec (field/content blocks, layouts, spacing metrics) with clayui.com implementation (Toolbar.Nav/Item/Section). Upper toolbar covered via its story. API from @clayui/toolbar.",
+    "api": {
+      "package": "@clayui/toolbar",
+      "targets": [
+        {
+          "heading": "Toolbar",
+          "file": "packages/clay-toolbar/src/index.tsx",
+          "type": "IProps"
+        }
+      ]
+    }
+  },
+  {
+    "new_path": "docs/components/management-toolbar.md",
+    "site_url": "/components/management-toolbar",
+    "sources": [
+      "https://design.liferay.com/lexicon/core-components/toolbars/",
+      "https://www.clayui.com/docs/components/management-toolbar"
+    ],
+    "storybook": "https://storybook.clayui.com/?path=/story/design-system-components-managementtoolbar--default",
+    "notes": "Management toolbar split out of the Lexicon toolbars page (dataset search/filter/selection, active state, results bar) merged with clayui.com implementation. API from @clayui/management-toolbar.",
+    "api": {
+      "package": "@clayui/management-toolbar",
+      "targets": [
+        {
+          "heading": "ManagementToolbar",
+          "file": "packages/clay-management-toolbar/src/ManagementToolbar.tsx",
+          "type": "IProps"
+        }
+      ]
+    }
+  },
+  {
+    "new_path": "docs/components/side-panel.md",
+    "site_url": "/components/side-panel",
+    "sources": [
+      "https://design.liferay.com/lexicon/core-components/sidebar/",
+      "https://www.clayui.com/docs/components/side-panel"
+    ],
+    "storybook": "https://storybook.clayui.com/?path=/story/design-system-components-sidepanel--position-absolute",
+    "notes": "Merged Lexicon sidebar spec (product menu and info panel, push vs overlay breakpoints) with the @clayui/core SidePanel implementation. API from @clayui/core.",
+    "api": {
+      "package": "@clayui/core",
+      "targets": [
+        {
+          "heading": "SidePanel",
+          "file": "packages/clay-core/src/side-panel/SidePanel.tsx",
+          "type": "Props"
+        }
+      ]
+    }
+  },
+  {
+    "new_path": "docs/components/vertical-bar.md",
+    "site_url": "/components/vertical-bar",
+    "sources": [
+      "https://design.liferay.com/lexicon/core-components/vertical-bar/",
+      "https://www.clayui.com/docs/components/vertical-bar"
+    ],
+    "storybook": "https://storybook.clayui.com/?path=/story/design-system-components-verticalbar--default",
+    "notes": "Merged Lexicon vertical bar spec (tab items, dividers, panel, stack areas, push/pull and hover modes, keyboard rules) with the @clayui/core VerticalBar implementation. API from @clayui/core.",
+    "api": {
+      "package": "@clayui/core",
+      "targets": [
+        {
+          "heading": "VerticalBar",
+          "file": "packages/clay-core/src/vertical-bar/VerticalBar.tsx",
+          "type": "Props"
+        }
+      ]
+    }
+  },
+  {
+    "new_path": "docs/components/list.md",
+    "site_url": "/components/list",
+    "sources": [
+      "https://design.liferay.com/lexicon/core-components/list/",
+      "https://www.clayui.com/docs/components/list"
+    ],
+    "storybook": "https://storybook.clayui.com/?path=/story/design-system-components-list--simple",
+    "notes": "Merged Lexicon list spec (row states, interactions, content format and alignment, sections, responsive rules) with clayui.com implementation (ClayList parts). API from @clayui/list.",
+    "api": {
+      "package": "@clayui/list",
+      "targets": [
+        {
+          "heading": "ClayList",
+          "file": "packages/clay-list/src/List.tsx",
+          "type": "IProps"
+        },
+        {
+          "heading": "ClayList.Item",
+          "file": "packages/clay-list/src/Item.tsx",
+          "type": "IProps"
+        }
+      ]
+    }
+  },
+  {
+    "new_path": "docs/components/slider.md",
+    "site_url": "/components/slider",
+    "sources": [
+      "https://design.liferay.com/lexicon/core-components/slider/",
+      "https://www.clayui.com/docs/components/slider"
+    ],
+    "storybook": "https://storybook.clayui.com/?path=/story/design-system-components-slider--default",
+    "notes": "Merged Lexicon slider spec (progress/thumb/track, states, steps, tooltip, keyboard map) with clayui.com implementation (controlled value, min/max/step). API from @clayui/slider.",
+    "api": {
+      "package": "@clayui/slider",
+      "targets": [
+        {
+          "heading": "ClaySlider",
+          "file": "packages/clay-slider/src/index.tsx",
+          "type": "IProps"
+        }
+      ]
+    }
+  },
+  {
+    "new_path": "docs/components/icon.md",
+    "site_url": "/components/icon",
+    "sources": [
+      "https://design.liferay.com/lexicon/core-components/icons/",
+      "https://www.clayui.com/docs/components/icon"
+    ],
+    "storybook": "https://storybook.clayui.com/?path=/story/design-system-components-icon--default",
+    "notes": "Merged Lexicon icons spec (icons need labels, container sizing, single library rule, language flags rationale) with clayui.com implementation (spritemap symbols, Provider). API from @clayui/icon.",
+    "api": {
+      "package": "@clayui/icon",
+      "targets": [
+        {
+          "heading": "Icon",
+          "file": "packages/clay-icon/src/index.tsx",
+          "type": "IProps"
+        }
+      ]
+    }
+  },
+  {
+    "new_path": "docs/components/autocomplete.md",
+    "site_url": "/components/autocomplete",
+    "sources": [
+      "https://www.clayui.com/docs/components/autocomplete"
+    ],
+    "storybook": "https://storybook.clayui.com/?path=/story/design-system-components-autocomplete--default",
+    "notes": "Clay-only component (no standalone Lexicon spec; behavior referenced from the Multi Select spec). Implementation and API from @clayui/autocomplete; flagged with a REVIEW comment for the design team.",
+    "api": {
+      "package": "@clayui/autocomplete",
+      "targets": [
+        {
+          "heading": "Autocomplete",
+          "file": "packages/clay-autocomplete/src/Autocomplete.tsx",
+          "type": "IProps"
+        }
+      ]
+    }
+  },
+  {
+    "new_path": "docs/components/panel.md",
+    "site_url": "/components/panel",
+    "sources": [
+      "https://www.clayui.com/docs/components/panel",
+      "https://design.liferay.com/lexicon/core-components/forms/"
+    ],
+    "storybook": "https://storybook.clayui.com/?path=/story/design-system-components-panel--default",
+    "notes": "Clay-only component page; collapsible-section design rules borrowed from the Lexicon forms guidance and flagged with a REVIEW comment. API from @clayui/panel.",
+    "api": {
+      "package": "@clayui/panel",
+      "targets": [
+        {
+          "heading": "Panel",
+          "file": "packages/clay-panel/src/index.tsx",
+          "type": "IProps"
+        }
+      ]
+    }
+  },
+  {
+    "new_path": "docs/components/timelines.md",
+    "site_url": "/components/timelines",
+    "sources": [
+      "https://design.liferay.com/lexicon/core-components/timelines/",
+      "https://www.clayui.com/docs/components/timelines"
+    ],
+    "storybook": null,
+    "notes": "Merged Lexicon timelines spec (variants by alignment, even/odd, mobile rule) with the Clay CSS markup pattern (no React component). No Storybook story exists; recorded in STORYBOOK-GAPS.md."
   }
 ]

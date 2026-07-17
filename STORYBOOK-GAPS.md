@@ -33,6 +33,10 @@ story to embed or link:
   and anatomy): no story shows the twelve `alignPosition` values side by side.
   A grid story rendering one tooltip per position would replace the old static
   reference image.
+- **Timelines** (`docs/components/timelines.md`): the pattern is CSS only (no
+  React component) and has no story at all. A story rendering the default,
+  right, and center variants from the `timeline` CSS classes would let the page
+  show live examples.
 
 ## Stories used by this PoC
 

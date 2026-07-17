@@ -121,4 +121,4 @@ See the [Vertical Nav stories on Storybook](https://storybook.clayui.com/?path=/
 
 - [Navigation Bar](/components/navigation-bar)
 - [Breadcrumb](/components/breadcrumb)
-- Tree View, for data hierarchies rather than navigation
+- [Tree View](/components/tree-view), for data hierarchies rather than navigation
