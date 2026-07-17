@@ -17,7 +17,11 @@
 
 <style scoped>
 .poc-banner {
-	position: relative;
+	/* Sticky so the "not official documentation" notice stays visible while
+	 * scrolling. It sits in the layout-top flow (top: 0) and its z-index is
+	 * above the fixed navbar, so it pins above the nav. */
+	position: sticky;
+	top: 0;
 	z-index: var(--vp-z-index-layout-top, 10);
 	box-sizing: border-box;
 	display: flex;
