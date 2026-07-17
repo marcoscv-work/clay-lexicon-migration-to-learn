@@ -14,10 +14,11 @@
     "new_path": "docs/foundations/color.md",
     "site_url": "/foundations/color",
     "sources": [
-      "https://design.liferay.com/lexicon/foundations/color/"
+      "https://design.liferay.com/lexicon/foundations/color/",
+      "https://www.clayui.com/docs/css/color"
     ],
     "storybook": null,
-    "notes": "Foundations Color, rewritten under the Clay umbrella from the Lexicon color foundation."
+    "notes": "Foundations Color: full merged palette reference. Lexicon provides the palette, variations, and usage roles; clayui.com/docs/css/color provides the SCSS variable names and utility classes. Hex values are plain inline code; the viewer renders swatch chips next to them."
   },
   {
     "new_path": "docs/foundations/typography.md",

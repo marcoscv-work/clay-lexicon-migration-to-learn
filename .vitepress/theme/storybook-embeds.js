@@ -16,6 +16,43 @@
 const STORYBOOK_HOST = 'storybook.clayui.com';
 const ENHANCED_FLAG = 'data-storybook-embedded';
 
+/**
+ * Per-story iframe heights, in pixels, so each embed fits its content instead
+ * of using one generic height. Small static stories were measured against the
+ * rendered story canvas (document.body.scrollHeight on iframe.html) with a
+ * small buffer; interactive stories (drop downs, modals, toasts) get room for
+ * their expanded state. Stories not listed fall back to DEFAULT_HEIGHT.
+ */
+const DEFAULT_HEIGHT = 400;
+const STORY_HEIGHTS = {
+	'design-system-components-alert--default': 110,
+	'design-system-components-alert--feedback': 166,
+	'design-system-components-alert--toast': 320,
+	'design-system-components-badge--default': 64,
+	'design-system-components-badge--with-icon': 64,
+	'design-system-components-button--default': 74,
+	'design-system-components-button--group': 74,
+	'design-system-components-button--icon': 74,
+	'design-system-components-card--card-with-horizontal': 360,
+	'design-system-components-card--card-with-info': 440,
+	'design-system-components-card--card-with-info-image': 440,
+	'design-system-components-card--card-with-navigation': 380,
+	'design-system-components-card--card-with-user': 440,
+	'design-system-components-card--product-card': 480,
+	'design-system-components-drop-down--checkbox': 420,
+	'design-system-components-drop-down--default': 420,
+	'design-system-components-drop-down--drilldown': 420,
+	'design-system-components-drop-down--groups': 460,
+	'design-system-components-drop-down--search': 420,
+	'design-system-components-modal--default': 560,
+	'design-system-components-table--dynamic': 480,
+	'design-system-components-table--sections': 520,
+	'design-system-components-table--sorting': 480,
+	'design-system-components-table--treegrid': 520,
+	'design-system-components-tooltip--default': 48,
+	'design-system-components-tooltip--tooltip-provider': 140,
+};
+
 /** Extract the story id from a canonical ?path=/story/<id> Storybook URL. */
 function storyIdFromHref(href) {
 	try {
@@ -97,6 +134,7 @@ export function embedStorybookLinks() {
 		)}&viewMode=story`;
 		iframe.loading = 'lazy';
 		iframe.title = `Live example: ${link.textContent.trim()}`;
+		iframe.style.height = `${STORY_HEIGHTS[id] ?? DEFAULT_HEIGHT}px`;
 
 		const caption = document.createElement('figcaption');
 		const openLink = document.createElement('a');

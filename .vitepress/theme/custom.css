@@ -124,3 +124,15 @@ summary:focus-visible,
 .storybook-embed figcaption a:focus-visible {
 	color: var(--vp-c-brand-1);
 }
+
+/* Color swatch chips, injected by the theme (color-chips.js) before hex values
+ * written as inline code (for example on the Color foundation page). */
+.color-chip {
+	display: inline-block;
+	width: 0.85em;
+	height: 0.85em;
+	margin-right: 0.3em;
+	vertical-align: -0.08em;
+	border: 1px solid var(--vp-c-divider);
+	border-radius: 3px;
+}

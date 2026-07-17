@@ -2,6 +2,7 @@ import DefaultTheme from 'vitepress/theme';
 import {useRoute} from 'vitepress';
 import {h, nextTick, onMounted, watch} from 'vue';
 import PocBanner from './PocBanner.vue';
+import {addColorChips} from './color-chips';
 import {embedStorybookLinks} from './storybook-embeds';
 import './custom.css';
 
@@ -19,11 +20,15 @@ export default {
 			// Enhance after the page content renders. Retries cover the async
 			// page-chunk load on client-side navigation; the enhancement itself
 			// is idempotent.
+			const enhanceAll = () => {
+				embedStorybookLinks();
+				addColorChips();
+			};
 			const enhance = () => {
 				nextTick(() => {
-					embedStorybookLinks();
-					setTimeout(embedStorybookLinks, 150);
-					setTimeout(embedStorybookLinks, 500);
+					enhanceAll();
+					setTimeout(enhanceAll, 150);
+					setTimeout(enhanceAll, 500);
 				});
 			};
 
