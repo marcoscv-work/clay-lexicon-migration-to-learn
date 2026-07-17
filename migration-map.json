@@ -247,5 +247,180 @@
     ],
     "storybook": null,
     "notes": "Common Actions pattern from Lexicon Patterns: the standard action set and how actions are grouped, ordered, and surfaced."
+  },
+  {
+    "new_path": "docs/components/label.md",
+    "site_url": "/components/label",
+    "sources": [
+      "https://design.liferay.com/lexicon/core-components/labels/",
+      "https://www.clayui.com/docs/components/label"
+    ],
+    "storybook": "https://storybook.clayui.com/?path=/story/design-system-components-label--default",
+    "notes": "Merged Lexicon labels spec (simple/outline/bold status, removable, link, sizes, dos and donts) with clayui.com implementation (displayType, withClose). API from @clayui/label.",
+    "api": {
+      "package": "@clayui/label",
+      "targets": [
+        {
+          "heading": "Label",
+          "file": "packages/clay-label/src/index.tsx",
+          "type": "IProps"
+        }
+      ]
+    }
+  },
+  {
+    "new_path": "docs/components/link.md",
+    "site_url": "/components/link",
+    "sources": [
+      "https://design.liferay.com/lexicon/core-components/link/",
+      "https://www.clayui.com/docs/components/link"
+    ],
+    "storybook": "https://storybook.clayui.com/?path=/story/design-system-components-link--default",
+    "notes": "Merged Lexicon link spec (inline, single, title, external) with clayui.com implementation (displayType, ClayLinkContext). API from @clayui/link.",
+    "api": {
+      "package": "@clayui/link",
+      "targets": [
+        {
+          "heading": "Link",
+          "file": "packages/clay-link/src/Link.tsx",
+          "type": "IProps"
+        }
+      ]
+    }
+  },
+  {
+    "new_path": "docs/components/sticker.md",
+    "site_url": "/components/sticker",
+    "sources": [
+      "https://design.liferay.com/lexicon/core-components/stickers/",
+      "https://www.clayui.com/docs/components/sticker"
+    ],
+    "storybook": "https://storybook.clayui.com/?path=/story/design-system-components-sticker--default",
+    "notes": "Merged Lexicon stickers spec (shapes, sizes 24-48, colors, position) with clayui.com implementation (displayType, size, Sticker.Image). API from @clayui/sticker.",
+    "api": {
+      "package": "@clayui/sticker",
+      "targets": [
+        {
+          "heading": "Sticker",
+          "file": "packages/clay-sticker/src/Sticker.tsx",
+          "type": "IClayStickerProps"
+        },
+        {
+          "heading": "Sticker.Overlay",
+          "file": "packages/clay-sticker/src/Sticker.tsx",
+          "type": "IOverylayProps"
+        }
+      ]
+    }
+  },
+  {
+    "new_path": "docs/components/tabs.md",
+    "site_url": "/components/tabs",
+    "sources": [
+      "https://design.liferay.com/lexicon/core-components/tabs/",
+      "https://www.clayui.com/docs/components/tabs"
+    ],
+    "storybook": "https://storybook.clayui.com/?path=/story/design-system-components-tabs--default",
+    "notes": "Merged Lexicon tabs spec (classic vs modern, selection rules, More overflow) with clayui.com implementation (controlled Tabs, Item, Content, TabPane). API from @clayui/tabs.",
+    "api": {
+      "package": "@clayui/tabs",
+      "targets": [
+        {
+          "heading": "Tabs",
+          "file": "packages/clay-tabs/src/index.tsx",
+          "type": "IProps"
+        },
+        {
+          "heading": "Tabs.Item",
+          "file": "packages/clay-tabs/src/Item.tsx",
+          "type": "IProps"
+        },
+        {
+          "heading": "Tabs.TabPane",
+          "file": "packages/clay-tabs/src/TabPane.tsx",
+          "type": "ITabPaneProps"
+        }
+      ]
+    }
+  },
+  {
+    "new_path": "docs/components/progress-bar.md",
+    "site_url": "/components/progress-bar",
+    "sources": [
+      "https://design.liferay.com/lexicon/core-components/progress-bars/",
+      "https://www.clayui.com/docs/components/progress-bar"
+    ],
+    "storybook": "https://storybook.clayui.com/?path=/story/design-system-components-progressbar--default",
+    "notes": "Merged Lexicon progress bar spec (loading/warning/finished, not for user steps) with clayui.com implementation (value, warn). API from @clayui/progress-bar.",
+    "api": {
+      "package": "@clayui/progress-bar",
+      "targets": [
+        {
+          "heading": "ProgressBar",
+          "file": "packages/clay-progress-bar/src/index.tsx",
+          "type": "IProps"
+        }
+      ]
+    }
+  },
+  {
+    "new_path": "docs/components/loading-indicator.md",
+    "site_url": "/components/loading-indicator",
+    "sources": [
+      "https://design.liferay.com/lexicon/core-components/loading-indicator/",
+      "https://www.clayui.com/docs/components/loading-indicator"
+    ],
+    "storybook": "https://storybook.clayui.com/?path=/story/design-system-components-loadingindicator--default",
+    "notes": "Merged Lexicon loading indicator spec (sizes, positive/negative, not inside buttons) with clayui.com implementation (shape circle/squares, size, displayType). API from @clayui/loading-indicator.",
+    "api": {
+      "package": "@clayui/loading-indicator",
+      "targets": [
+        {
+          "heading": "LoadingIndicator",
+          "file": "packages/clay-loading-indicator/src/index.tsx",
+          "type": "IProps"
+        }
+      ]
+    }
+  },
+  {
+    "new_path": "docs/components/empty-state.md",
+    "site_url": "/components/empty-state",
+    "sources": [
+      "https://design.liferay.com/lexicon/core-components/empty-state/",
+      "https://www.clayui.com/docs/components/empty-state"
+    ],
+    "storybook": "https://storybook.clayui.com/?path=/story/design-system-components-emptystate--default",
+    "notes": "Merged Lexicon empty state spec (three scenarios, anatomy, message writing rules, secondary composition) with clayui.com implementation (imgSrc, reduced motion). API from @clayui/empty-state.",
+    "api": {
+      "package": "@clayui/empty-state",
+      "targets": [
+        {
+          "heading": "EmptyState",
+          "file": "packages/clay-empty-state/src/index.tsx",
+          "type": "IProps"
+        }
+      ]
+    }
+  },
+  {
+    "new_path": "docs/components/popover.md",
+    "site_url": "/components/popover",
+    "sources": [
+      "https://design.liferay.com/lexicon/core-components/popovers-tooltips/",
+      "https://www.clayui.com/docs/components/popover"
+    ],
+    "storybook": "https://storybook.clayui.com/?path=/story/design-system-components-popover--default",
+    "notes": "Popover split out of the Lexicon popovers-tooltips page (rich contextual help, help icon pairing, 280 char rule) merged with clayui.com implementation (alignPosition, header, trigger). API from @clayui/popover.",
+    "api": {
+      "package": "@clayui/popover",
+      "targets": [
+        {
+          "heading": "Popover",
+          "file": "packages/clay-popover/src/Popover.tsx",
+          "type": "IProps"
+        }
+      ]
+    }
   }
 ]

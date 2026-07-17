@@ -72,9 +72,35 @@ function extractTargets(content) {
 const files = walk(DOCS);
 const routes = buildRouteSet(files);
 
+// Storybook story links are validated against the snapshot of story ids in
+// scripts/storybook-index.json (extracted from Storybook's own store). Ids
+// must never be hand-derived: Storybook sanitizes titles (DropDown becomes
+// "dropdown"), so a plausible-looking id may not exist.
+let storyIds = null;
+const INDEX_PATH = path.join(__dirname, 'storybook-index.json');
+if (fs.existsSync(INDEX_PATH)) {
+	storyIds = new Set(JSON.parse(fs.readFileSync(INDEX_PATH, 'utf8')).ids);
+}
+
+function storyIdFromUrl(target) {
+	try {
+		const url = new URL(target);
+		if (url.host !== 'storybook.clayui.com') {
+			return null;
+		}
+		const match = (url.searchParams.get('path') || '').match(
+			/^\/(?:story|docs)\/(.+)$/
+		);
+		return match ? match[1] : null;
+	} catch {
+		return null;
+	}
+}
+
 let broken = 0;
 let externalCount = 0;
 let checked = 0;
+let storyChecked = 0;
 
 for (const file of files) {
 	if (path.basename(file).startsWith('_')) {
@@ -89,6 +115,16 @@ for (const file of files) {
 		}
 		if (/^(https?:|mailto:|tel:)/.test(target)) {
 			externalCount++;
+			const storyId = storyIdFromUrl(target);
+			if (storyId && storyIds) {
+				storyChecked++;
+				if (!storyIds.has(storyId)) {
+					console.error(
+						`BROKEN story  ${rel}  ->  ${storyId} (not in scripts/storybook-index.json)`
+					);
+					broken++;
+				}
+			}
 			continue;
 		}
 
@@ -135,6 +171,7 @@ for (const file of files) {
 
 console.log(
 	`\nChecked ${checked} internal link(s) across ${files.length} file(s). ` +
+		`${storyChecked} Storybook story id(s) validated against the index. ` +
 		`${externalCount} external link(s) not fetched.`
 );
 
