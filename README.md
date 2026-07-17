@@ -28,8 +28,10 @@ repositioning it validates:
    that today lives in Lexicon with the implementation content from clayui.com.
 4. **Storybook stays.** [storybook.clayui.com](https://storybook.clayui.com)
    remains the only home for live, runnable examples. These docs never recreate
-   interactive examples; they link to Storybook. Missing stories are logged in
-   [STORYBOOK-GAPS.md](./STORYBOOK-GAPS.md).
+   interactive examples; the Markdown links to Storybook, and the viewer
+   progressively enhances those links into embedded live previews (see
+   [Live examples](#live-examples-progressive-storybook-embeds) below). Missing
+   stories are logged in [STORYBOOK-GAPS.md](./STORYBOOK-GAPS.md).
 5. **API reference is first-class.** Props tables are generated from the
    published `@clayui/*` TypeScript definitions, never hand-transcribed. See
    [API reference](#api-reference-pipeline) below.
@@ -132,6 +134,26 @@ Actions workflow re-runs it weekly and opens a pull request when a table
 changes, so updating the docs after a Clay release is a reviewed PR, not an
 archaeology session. Full details, including how to add a component, are in
 [scripts/README.md](./scripts/README.md).
+
+## Live examples: progressive Storybook embeds
+
+Each component page's "Live examples" section is, in the Markdown, a plain
+CommonMark link to the component's story on storybook.clayui.com. The viewer
+theme (`.vitepress/theme/storybook-embeds.js`) progressively enhances those
+links in the browser: it reads the story id from the link and inserts a
+lazy-loaded, embedded Storybook preview after it, keeping the original link as
+the accessible fallback and adding an "Open this example in Storybook" caption.
+
+This keeps all three constraints intact at once:
+
+- **Storybook stays the single home for live examples.** The embed is served by
+  storybook.clayui.com itself (`iframe.html?id=...`); nothing is ported,
+  recreated, or duplicated, and stories update with every Clay release.
+- **The content stays plain CommonMark.** No iframes or HTML in `/docs`; in any
+  other pipeline (for example Liferay Learn) the links degrade gracefully to
+  normal links.
+- **Contributors do nothing special.** Writing a regular Markdown link to a
+  story is all it takes; the viewer does the rest.
 
 ## How the Edit-button flow works
 

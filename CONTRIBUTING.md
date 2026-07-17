@@ -40,9 +40,11 @@ final destination is Liferay Learn's Markdown pipeline.
 - **Plain CommonMark only.** No MDX, no framework components, no shortcodes, no
   HTML beyond what is strictly unavoidable. The single exception is GFM tables,
   and only inside the generated API blocks.
-- **No interactive examples.** Never embed CodeSandbox, live MDX blocks, or
-  iframes. Link to the matching [Storybook](https://storybook.clayui.com) story
-  instead. If no story exists, add an entry to
+- **No interactive examples in the Markdown.** Never embed CodeSandbox, live MDX
+  blocks, or iframes. Link to the matching
+  [Storybook](https://storybook.clayui.com) story with a plain Markdown link;
+  the viewer automatically turns story links into embedded live previews, so a
+  link is all you need. If no story exists, add an entry to
   [STORYBOOK-GAPS.md](./STORYBOOK-GAPS.md) rather than inventing a link.
 - **No em dashes.** Use commas, colons, or parentheses instead.
 - **One H1 per page, no skipped heading levels.**
