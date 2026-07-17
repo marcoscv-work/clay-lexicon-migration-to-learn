@@ -1,0 +1,71 @@
+name: Update API reference
+
+# Regenerates the component API tables from the Clay source and, if anything
+# changed (for example after a new @clayui release), opens a pull request with
+# the regenerated blocks. It never commits to main: a human reviews the API diff
+# like any other contribution.
+#
+# Runs weekly and on demand (workflow_dispatch).
+
+on:
+  schedule:
+    # Mondays at 06:00 UTC.
+    - cron: '0 6 * * 1'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  regenerate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout docs repo
+        uses: actions/checkout@v4
+
+      - name: Checkout Clay source (mirror)
+        uses: actions/checkout@v4
+        with:
+          repository: liferay/clay
+          path: clay-src
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Regenerate API tables
+        env:
+          CLAY_SRC: ${{ github.workspace }}/clay-src
+        run: npm run api:generate
+
+      - name: Verify the site still builds
+        run: npm run docs:build
+
+      - name: Open a pull request if the API changed
+        uses: peter-evans/create-pull-request@v6
+        with:
+          commit-message: 'chore: regenerate Clay API reference tables'
+          branch: chore/api-update
+          delete-branch: true
+          title: 'Regenerate Clay API reference tables'
+          body: |
+            Automated update of the generated API reference blocks.
+
+            This PR was opened by the scheduled `api-update` workflow because
+            regenerating the API tables from the Clay source produced changes
+            (for example after a new `@clayui/*` release).
+
+            Only content between the `API:START` and `API:END` markers and the
+            `api_version` frontmatter should change. Review the diff as usual
+            before merging.
+          labels: |
+            api
+            automated
+          add-paths: |
+            docs/**/*.md
