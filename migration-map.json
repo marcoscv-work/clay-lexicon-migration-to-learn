@@ -1,33 +1,219 @@
 [
   {
-    "new_path": "docs/components/button.md",
-    "site_url": "/components/button",
+    "new_path": "docs/get-started/index.md",
+    "site_url": "/get-started/",
     "sources": [
-      "https://design.liferay.com/lexicon/core-components/buttons/",
-      "https://design.liferay.com/lexicon/core-components/buttons/action-buttons/",
-      "https://www.clayui.com/docs/components/button"
+      "https://www.clayui.com/docs/introduction/how-to-use-clay",
+      "https://www.clayui.com/docs/introduction/composition",
+      "https://design.liferay.com/lexicon/get-started/"
     ],
-    "storybook": "https://storybook.clayui.com/?path=/docs/design-system-components-button--docs",
-    "notes": "Merged Lexicon button design spec (types, states, sizes, dos and don'ts, variations) with clayui.com implementation (display types, groups, icon buttons). Action-buttons subpage folded into the Variants and anatomy section. API generated from @clayui/button.",
+    "storybook": null,
+    "notes": "Get Started: what Clay is, one-paragraph Lexicon explanation, installation (NPM/Yarn/CDN), quick start, composition philosophy, and positioning guidance (when to use Clay vs Liferay's site-building stack). Positioning wording pending product-messaging alignment."
+  },
+  {
+    "new_path": "docs/foundations/color.md",
+    "site_url": "/foundations/color",
+    "sources": [
+      "https://design.liferay.com/lexicon/foundations/color/"
+    ],
+    "storybook": null,
+    "notes": "Foundations Color, rewritten under the Clay umbrella from the Lexicon color foundation."
+  },
+  {
+    "new_path": "docs/foundations/typography.md",
+    "site_url": "/foundations/typography",
+    "sources": [
+      "https://design.liferay.com/lexicon/foundations/typography/"
+    ],
+    "storybook": null,
+    "notes": "Foundations Typography, rewritten under the Clay umbrella from the Lexicon typography foundation."
+  },
+  {
+    "new_path": "docs/foundations/grid.md",
+    "site_url": "/foundations/grid",
+    "sources": [
+      "https://design.liferay.com/lexicon/foundations/grid/"
+    ],
+    "storybook": null,
+    "notes": "Foundations Grid, rewritten under the Clay umbrella from the Lexicon grid foundation. Images copied from Lexicon grid folder."
+  },
+  {
+    "new_path": "docs/components/alert.md",
+    "site_url": "/components/alert",
+    "sources": [
+      "https://design.liferay.com/lexicon/core-components/alerts/",
+      "https://www.clayui.com/docs/components/alert"
+    ],
+    "storybook": "https://storybook.clayui.com/?path=/story/design-system-components-alert--default",
+    "notes": "Merged Lexicon alert design spec (types, attributes, variations: feedback, toast, embedded, stripe, inline) with clayui.com implementation (displayType, variant, ToastContainer, Footer). API generated from @clayui/alert.",
     "api": {
-      "package": "@clayui/button",
+      "package": "@clayui/alert",
       "targets": [
         {
-          "heading": "Button",
-          "file": "packages/clay-button/src/Button.tsx",
-          "type": "IProps"
-        },
-        {
-          "heading": "Button.Group",
-          "file": "packages/clay-button/src/Group.tsx",
-          "type": "Props"
-        },
-        {
-          "heading": "ClayButtonWithIcon",
-          "file": "packages/clay-button/src/ButtonWithIcon.tsx",
-          "type": "Props"
+          "heading": "Alert",
+          "file": "packages/clay-alert/src/index.tsx",
+          "type": "IClayAlertProps"
         }
       ]
     }
+  },
+  {
+    "new_path": "docs/components/badge.md",
+    "site_url": "/components/badge",
+    "sources": [
+      "https://design.liferay.com/lexicon/core-components/badges/",
+      "https://www.clayui.com/docs/components/badge"
+    ],
+    "storybook": "https://storybook.clayui.com/?path=/story/design-system-components-badge--default",
+    "notes": "Merged Lexicon badge design spec (numeric usage rules, do/don't spacing) with clayui.com implementation (displayType, symbol, translucent, dark). API generated from @clayui/badge.",
+    "api": {
+      "package": "@clayui/badge",
+      "targets": [
+        {
+          "heading": "Badge",
+          "file": "packages/clay-badge/src/index.tsx",
+          "type": "IProps"
+        }
+      ]
+    }
+  },
+  {
+    "new_path": "docs/components/card.md",
+    "site_url": "/components/card",
+    "sources": [
+      "https://design.liferay.com/lexicon/core-components/cards/",
+      "https://www.clayui.com/docs/components/card"
+    ],
+    "storybook": "https://storybook.clayui.com/?path=/story/design-system-components-card--card-with-info",
+    "notes": "Merged Lexicon card design spec (anatomy, variations: image, user, file, folder, navigation) with clayui.com implementation (low-level composition and high-level ClayCardWith* components). API generated from @clayui/card.",
+    "api": {
+      "package": "@clayui/card",
+      "targets": [
+        {
+          "heading": "Card",
+          "file": "packages/clay-card/src/Card.tsx",
+          "type": "IProps"
+        }
+      ]
+    }
+  },
+  {
+    "new_path": "docs/components/drop-down.md",
+    "site_url": "/components/drop-down",
+    "sources": [
+      "https://design.liferay.com/lexicon/core-components/dropdowns/",
+      "https://www.clayui.com/docs/components/drop-down"
+    ],
+    "storybook": "https://storybook.clayui.com/?path=/story/design-system-components-drop-down--default",
+    "notes": "Merged Lexicon dropdown design spec (types, action ordering, sizing) with clayui.com implementation (low-level composition, high-level ClayDropDownWithItems and ClayDropDownWithDrilldown, search filtering). API generated from @clayui/drop-down for DropDown and DropDown.Item.",
+    "api": {
+      "package": "@clayui/drop-down",
+      "targets": [
+        {
+          "heading": "DropDown",
+          "file": "packages/clay-drop-down/src/DropDown.tsx",
+          "type": "IProps"
+        },
+        {
+          "heading": "DropDown.Item",
+          "file": "packages/clay-drop-down/src/Item.tsx",
+          "type": "IProps"
+        }
+      ]
+    }
+  },
+  {
+    "new_path": "docs/components/modal.md",
+    "site_url": "/components/modal",
+    "sources": [
+      "https://design.liferay.com/lexicon/core-components/modal/",
+      "https://www.clayui.com/docs/components/modal"
+    ],
+    "storybook": "https://storybook.clayui.com/?path=/story/design-system-components-modal--default",
+    "notes": "Merged Lexicon modal design spec (anatomy, sizes, status types, footer compositions, do/don't) with clayui.com implementation (useModal observer pattern, Modal.Header/Body/Footer, status). API generated from @clayui/modal.",
+    "api": {
+      "package": "@clayui/modal",
+      "targets": [
+        {
+          "heading": "Modal",
+          "file": "packages/clay-modal/src/Modal.tsx",
+          "type": "IProps"
+        }
+      ]
+    }
+  },
+  {
+    "new_path": "docs/components/table.md",
+    "site_url": "/components/table",
+    "sources": [
+      "https://design.liferay.com/lexicon/core-components/table/",
+      "https://www.clayui.com/docs/components/table"
+    ],
+    "storybook": "https://storybook.clayui.com/?path=/story/design-system-components-table--dynamic",
+    "notes": "Merged Lexicon table design spec (anatomy, row states, header sorting, do/don't) with clayui.com implementation (Table/Head/Body/Row/Cell, static vs dynamic content, sorting, nested rows). Table ships in @clayui/core. API generated from @clayui/core.",
+    "api": {
+      "package": "@clayui/core",
+      "targets": [
+        {
+          "heading": "Table",
+          "file": "packages/clay-core/src/table/Table.tsx",
+          "type": "IProps"
+        },
+        {
+          "heading": "Head",
+          "file": "packages/clay-core/src/table/Head.tsx",
+          "type": "IProps"
+        },
+        {
+          "heading": "Row",
+          "file": "packages/clay-core/src/table/Row.tsx",
+          "type": "IProps"
+        },
+        {
+          "heading": "Cell",
+          "file": "packages/clay-core/src/table/Cell.tsx",
+          "type": "IProps"
+        }
+      ]
+    }
+  },
+  {
+    "new_path": "docs/components/tooltip.md",
+    "site_url": "/components/tooltip",
+    "sources": [
+      "https://design.liferay.com/lexicon/core-components/popovers-tooltips/",
+      "https://www.clayui.com/docs/components/tooltip"
+    ],
+    "storybook": "https://storybook.clayui.com/?path=/story/design-system-components-tooltip--default",
+    "notes": "Merged Lexicon tooltip design spec (purpose, positions, length limit, disabled-element handling) with clayui.com implementation (direct Tooltip and ClayTooltipProvider with title attributes). API generated from @clayui/tooltip.",
+    "api": {
+      "package": "@clayui/tooltip",
+      "targets": [
+        {
+          "heading": "Tooltip",
+          "file": "packages/clay-tooltip/src/Tooltip.tsx",
+          "type": "IProps"
+        }
+      ]
+    }
+  },
+  {
+    "new_path": "docs/css/index.md",
+    "site_url": "/css/",
+    "sources": [
+      "https://www.clayui.com/docs/css-framework",
+      "https://www.clayui.com/docs/css"
+    ],
+    "storybook": null,
+    "notes": "CSS framework overview condensed from clayui.com/docs/css: Atlas and base themes, install/CDN, and the utility taxonomy (flex, spacing, text, display, borders, and more)."
+  },
+  {
+    "new_path": "docs/patterns/common-actions.md",
+    "site_url": "/patterns/common-actions",
+    "sources": [
+      "https://design.liferay.com/lexicon/patterns/common-actions/"
+    ],
+    "storybook": null,
+    "notes": "Common Actions pattern from Lexicon Patterns: the standard action set and how actions are grouped, ordered, and surfaced."
   }
 ]

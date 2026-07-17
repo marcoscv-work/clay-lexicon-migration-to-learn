@@ -131,17 +131,44 @@ function findLocalTypeDecl(sourceFile, name) {
 	);
 }
 
+function isLocalDecl(decl) {
+	// Only follow declarations that live in the Clay mirror, never external
+	// types such as React.ButtonHTMLAttributes resolved from node_modules.
+	return decl.getSourceFile().getFilePath().startsWith(slash(CLAY_SRC));
+}
+
+function slash(p) {
+	return p.replace(/\\/g, '/');
+}
+
 /**
- * Return only the OWN property signatures declared by a named type, following
- * local intersections and aliases but skipping external types (React.*, Omit,
- * etc.) so inherited DOM attributes never leak into the table.
+ * Return the public property signatures declared by a named type. Follows local
+ * interface `extends` clauses, local intersections, and local aliases (so props
+ * defined on a base interface in the same package are included), but skips
+ * external types (React.*, Omit, etc.) so inherited DOM attributes never leak
+ * into the table. Own declarations win over inherited ones of the same name.
  */
 function ownProperties(decl) {
 	if (!decl) {
 		return [];
 	}
 	if (Node.isInterfaceDeclaration(decl)) {
-		return decl.getProperties();
+		const props = new Map();
+		for (const base of decl.getBaseDeclarations()) {
+			if (
+				(Node.isInterfaceDeclaration(base) ||
+					Node.isTypeAliasDeclaration(base)) &&
+				isLocalDecl(base)
+			) {
+				for (const prop of ownProperties(base)) {
+					props.set(prop.getName(), prop);
+				}
+			}
+		}
+		for (const prop of decl.getProperties()) {
+			props.set(prop.getName(), prop);
+		}
+		return [...props.values()];
 	}
 	if (Node.isTypeAliasDeclaration(decl)) {
 		return membersFromTypeNode(decl.getTypeNode(), decl.getSourceFile());
@@ -221,7 +248,10 @@ function codeCell(text) {
 	if (!text) {
 		return '';
 	}
-	return '`' + text.replace(/\|/g, '\\|') + '`';
+	// Collapse any internal whitespace (including newlines from multi-line
+	// default values or object types) so the cell stays on a single line.
+	const oneLine = text.replace(/\s+/g, ' ').trim();
+	return '`' + oneLine.replace(/\|/g, '\\|') + '`';
 }
 
 /** Escape a plain-text GFM table cell. */
@@ -267,6 +297,11 @@ function extractProps(target) {
 
 	for (const prop of ownProperties(decl)) {
 		const name = prop.getName().replace(/^['"]|['"]$/g, '');
+		// Skip internal/private props (leading underscore), which are plumbing
+		// and not part of the public API surface.
+		if (name.startsWith('_')) {
+			continue;
+		}
 		const optional = prop.hasQuestionToken();
 		const typeText = resolveTypeText(prop);
 		const defaultValue = defaults[name] ?? '';
