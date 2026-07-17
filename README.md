@@ -45,8 +45,10 @@ validation, grew into the full migration of the in-scope content:
   installation, quick start, composition philosophy, and positioning guidance
   (when to use Clay and when to use Liferay's site-building stack).
 - **Foundations** (5): Animations, Color, Grid, Layout, Typography.
-- **Components** (46): every Lexicon core component merged with its Clay
-  implementation, plus Clay-only components with docs (Autocomplete, Panel).
+- **Components** (62): every Lexicon core component merged with its Clay
+  implementation, plus every Clay-only component with docs (Picker, Icon
+  Selector, Language Picker, Overlay Mask, Focus Trap, Resize Handle, Nav,
+  Heading, Text, Layout, Provider, Data Provider, and the CSS markup patterns).
   Design-only pages (Charts, Keys, Section, Confirmation Message, Dataset
   Display) carry no API block and say how they map to Clay.
 - **CSS** (1): an overview of the CSS framework and utilities.

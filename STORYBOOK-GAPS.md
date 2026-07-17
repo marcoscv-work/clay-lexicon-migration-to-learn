@@ -40,9 +40,17 @@ story to embed or link:
 - **Keys** (`docs/components/keys.md`): CSS only (`c-kbd` classes) with no
   story. A story showing single keys, combinations, and unicode symbols would
   let the page show live examples.
-- **Charts** (`docs/components/charts.md`): no chart stories exist (Clay ships
-  no React chart components). If a charting implementation is adopted, stories
-  per chart type would back the design collection.
+- **Charts** (`docs/components/charts.md`): no chart stories exist (the
+  @clayui/charts package announces its own upcoming deprecation). If a charting
+  implementation is adopted, stories per chart type would back the design
+  collection.
+- **Application Bar** (`docs/components/application-bar.md`): CSS markup
+  pattern with no story. A story rendering the dark bar with menu trigger,
+  title, and actions would back the page.
+- **Menubar** (`docs/components/menubar.md`): CSS markup pattern with no
+  dedicated story (the Vertical Nav stories show the React equivalent).
+- **Aspect Ratio** (`docs/components/aspect-ratio.md`): CSS utility with no
+  dedicated story (the card stories show it in context).
 
 ## Stories used by this PoC
 
@@ -50,6 +58,7 @@ All verified against the story index snapshot in scripts/storybook-index.json
 (extracted from Storybook's own store):
 
 - Alert: `--default`, `--feedback`, `--toast`
+- Aspect Ratio: `--card-with-info`
 - Autocomplete: `--default`, `--async-data`, `--keyboard`
 - Badge: `--default`, `--with-icon`
 - Breadcrumb: `--default`, `--active-state`
@@ -58,27 +67,40 @@ All verified against the story index snapshot in scripts/storybook-index.json
 - Checkbox, Radio, and Toggle: `--default`, `--checkbox`
 - Color Picker: `--default`, `--custom-colors`, `--native`
 - Confirmation Message: `--default`
+- Data Provider: `--polling-example`, `--custom-fetcher`
 - Dataset Display: `--default`, `--dynamic`, `--simple`
 - Date Picker: `--default`, `--time`, `--date-range`, `--native`
 - Drop Down: `--default`, `--checkbox`, `--search`, `--groups`, `--drilldown`
 - Dual Listbox: `--default`
 - Empty State: `--default`, `--empty-state`, `--search-state`, `--success-state`
+- Focus Trap: `--default`, `--focus-on-specific-element`
 - Forms: `--default`
+- Heading: `--heading-typography`
 - Icon: `--default`, `--context-spritemap`
+- Icon Selector: `--default`
 - Input: `--default`, `--input-feedback`, `--textarea`, `--group-connected`
 - Label: `--default`, `--content-before`, `--sizes`
+- Language Picker: `--default`, `--language-picker-with-translations`
+- Layout Components: `--row-positioning`, `--breakpoints`, `--ordering`
 - Link: `--default`, `--displayed-as-button`
 - List: `--simple`, `--complex`
 - Loading Indicator: `--default`
+- Localized Input: `--default`
 - Management Toolbar: `--default`
+- Menubar: `--default`
 - Modal: `--default`
 - Multi Select: `--default`, `--with-primary-action`
 - Multi Step Nav: `--default`, `--error`
+- Nav: `--default`, `--with-decorator`
 - Navigation Bar: `--navigation-bar`
+- Overlay Mask: `--default`, `--with-popover`
 - Pagination: `--default`, `--disabled-pages`
 - Panel: `--default`, `--collapsable`, `--groups`
+- Picker: `--default`, `--search`, `--custom-options`
 - Popover: `--default`, `--trigger`
 - Progress Bar: `--default`
+- Provider: `--spritemap`, `--theme`
+- Resize Handle: `--resizing-left`, `--resizing-right`
 - Section: `--sheet`
 - Select: `--high-level`, `--default`
 - Side Panel: `--position-absolute`, `--position-fixed`, `--drilldown`
@@ -86,6 +108,7 @@ All verified against the story index snapshot in scripts/storybook-index.json
 - Sticker: `--default`, `--shape`, `--user-image`, `--size`, `--positions`
 - Table: `--dynamic`, `--sections`, `--sorting`, `--treegrid`
 - Tabs: `--default`, `--new-default`
+- Text: `--text-typography`, `--text-highlight-typography`
 - Time Picker: `--default`
 - Toolbar: `--default`, `--upper-toolbar`
 - Tooltip: `--default`, `--tooltip-provider`

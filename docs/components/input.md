@@ -46,8 +46,8 @@ or separated. Try the
 
 ### Localized input
 
-A localized input adds a language selector so users can provide a value per
-language. Try the
+A [localized input](/components/localized-input) adds a language selector so
+users can provide a value per language. Try the
 [localized input story](https://storybook.clayui.com/?path=/story/design-system-components-localizedinput--default).
 
 ## Usage guidelines

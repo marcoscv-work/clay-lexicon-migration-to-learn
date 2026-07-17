@@ -13,7 +13,7 @@ Charts are the main graphical pattern for analyzing data. These are the design
 rules shared by every chart type; they exist so users always know what to
 expect from a chart, whatever it visualizes.
 
-<!-- REVIEW: Clay does not currently ship React chart components; the CSS framework provides the chart color palette. Confirm the recommended charting implementation (and whether per-chart-type pages should be migrated) with the Clay team. -->
+<!-- REVIEW: @clayui/charts exists but its own docs state it will be deprecated soon in favor of a wrapper, and it has no Storybook stories; the CSS framework provides the chart color palette. Confirm the recommended charting implementation (and whether per-chart-type pages should be migrated) with the Clay team. -->
 
 ## Color
 

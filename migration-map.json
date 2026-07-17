@@ -1053,5 +1053,291 @@
     ],
     "storybook": null,
     "notes": "Ellipsis pattern: horizontal vs vertical consistency rule, and the overflow, truncation, additional action, and activity use cases."
+  },
+  {
+    "new_path": "docs/components/picker.md",
+    "site_url": "/components/picker",
+    "sources": [
+      "https://www.clayui.com/docs/components/picker"
+    ],
+    "storybook": "https://storybook.clayui.com/?path=/story/design-system-components-picker--default",
+    "notes": "Clay-only (Beta, @clayui/core): select-like control with a styled options panel. Lexicon selector rules apply; REVIEW note on status.",
+    "api": {
+      "package": "@clayui/core",
+      "targets": [
+        {
+          "heading": "Picker",
+          "file": "packages/clay-core/src/picker/Picker.tsx",
+          "type": "Props"
+        }
+      ]
+    }
+  },
+  {
+    "new_path": "docs/components/icon-selector.md",
+    "site_url": "/components/icon-selector",
+    "sources": [
+      "https://www.clayui.com/docs/components/icon-selector"
+    ],
+    "storybook": "https://storybook.clayui.com/?path=/story/design-system-components-iconselector--default",
+    "notes": "Clay-only: searchable spritemap icon chooser. API from @clayui/core.",
+    "api": {
+      "package": "@clayui/core",
+      "targets": [
+        {
+          "heading": "IconSelector",
+          "file": "packages/clay-core/src/icon-selector/IconSelector.tsx",
+          "type": "Props"
+        }
+      ]
+    }
+  },
+  {
+    "new_path": "docs/components/language-picker.md",
+    "site_url": "/components/language-picker",
+    "sources": [
+      "https://www.clayui.com/docs/components/language-picker"
+    ],
+    "storybook": "https://storybook.clayui.com/?path=/story/design-system-components-languagepicker--default",
+    "notes": "Clay-only: locale selector with flags and translation status. API from @clayui/core.",
+    "api": {
+      "package": "@clayui/core",
+      "targets": [
+        {
+          "heading": "LanguagePicker",
+          "file": "packages/clay-core/src/language-picker/LanguagePicker.tsx",
+          "type": "Props"
+        }
+      ]
+    }
+  },
+  {
+    "new_path": "docs/components/localized-input.md",
+    "site_url": "/components/localized-input",
+    "sources": [
+      "https://design.liferay.com/lexicon/core-components/forms/input-localizable/",
+      "https://www.clayui.com/docs/components/localized-input"
+    ],
+    "storybook": "https://storybook.clayui.com/?path=/story/design-system-components-localizedinput--default",
+    "notes": "Merged Lexicon localizable input spec with clayui.com implementation (translations map, selected locale). Also summarized as a variant on the Input page. API from @clayui/localized-input.",
+    "api": {
+      "package": "@clayui/localized-input",
+      "targets": [
+        {
+          "heading": "ClayLocalizedInput",
+          "file": "packages/clay-localized-input/src/index.tsx",
+          "type": "IProps"
+        }
+      ]
+    }
+  },
+  {
+    "new_path": "docs/components/overlay-mask.md",
+    "site_url": "/components/overlay-mask",
+    "sources": [
+      "https://www.clayui.com/docs/components/overlay-mask"
+    ],
+    "storybook": "https://storybook.clayui.com/?path=/story/design-system-components-overlaymask--default",
+    "notes": "Clay-only: dims the page except a highlighted area for onboarding tours. API from @clayui/core.",
+    "api": {
+      "package": "@clayui/core",
+      "targets": [
+        {
+          "heading": "OverlayMask",
+          "file": "packages/clay-core/src/overlay-mask/OverlayMask.tsx",
+          "type": "Props"
+        }
+      ]
+    }
+  },
+  {
+    "new_path": "docs/components/focus-trap.md",
+    "site_url": "/components/focus-trap",
+    "sources": [
+      "https://www.clayui.com/docs/components/focus-trap"
+    ],
+    "storybook": "https://storybook.clayui.com/?path=/story/design-system-components-focustrap--default",
+    "notes": "Clay-only utility: keeps keyboard focus inside a container for custom overlays. API from @clayui/core.",
+    "api": {
+      "package": "@clayui/core",
+      "targets": [
+        {
+          "heading": "FocusTrap",
+          "file": "packages/clay-core/src/focus-trap/FocusTrap.tsx",
+          "type": "Props"
+        }
+      ]
+    }
+  },
+  {
+    "new_path": "docs/components/resize-handle.md",
+    "site_url": "/components/resize-handle",
+    "sources": [
+      "https://www.clayui.com/docs/components/resize-handle"
+    ],
+    "storybook": "https://storybook.clayui.com/?path=/story/design-system-components-resizehandle--resizing-left",
+    "notes": "Clay-only utility: drag and keyboard resizing for panels; integrated by VerticalBar resize. API from @clayui/core.",
+    "api": {
+      "package": "@clayui/core",
+      "targets": [
+        {
+          "heading": "ResizeHandle",
+          "file": "packages/clay-core/src/resize-handle/ResizeHandle.tsx",
+          "type": "Props"
+        }
+      ]
+    }
+  },
+  {
+    "new_path": "docs/components/heading.md",
+    "site_url": "/components/heading",
+    "sources": [
+      "https://www.clayui.com/docs/components/heading"
+    ],
+    "storybook": "https://storybook.clayui.com/?path=/story/design-system-components-typography--heading-typography",
+    "notes": "Clay-only: typography heading component implementing the foundation levels. API from @clayui/core.",
+    "api": {
+      "package": "@clayui/core",
+      "targets": [
+        {
+          "heading": "Heading",
+          "file": "packages/clay-core/src/typography/Heading.tsx",
+          "type": "Props"
+        }
+      ]
+    }
+  },
+  {
+    "new_path": "docs/components/text.md",
+    "site_url": "/components/text",
+    "sources": [
+      "https://www.clayui.com/docs/components/text"
+    ],
+    "storybook": "https://storybook.clayui.com/?path=/story/design-system-components-typography--text-typography",
+    "notes": "Clay-only: typography text component (sizes, weights, semantic colors) plus TextHighlight. API from @clayui/core.",
+    "api": {
+      "package": "@clayui/core",
+      "targets": [
+        {
+          "heading": "Text",
+          "file": "packages/clay-core/src/typography/Text.tsx",
+          "type": "Props"
+        }
+      ]
+    }
+  },
+  {
+    "new_path": "docs/components/nav.md",
+    "site_url": "/components/nav",
+    "sources": [
+      "https://www.clayui.com/docs/components/nav"
+    ],
+    "storybook": "https://storybook.clayui.com/?path=/story/design-system-components-nav--default",
+    "notes": "Clay-only building block for navigation lists (pills, underline, stacked); specialized navs cover the Lexicon specs. API from @clayui/core.",
+    "api": {
+      "package": "@clayui/core",
+      "targets": [
+        {
+          "heading": "Nav",
+          "file": "packages/clay-core/src/nav/Nav.tsx",
+          "type": "IPropsNav"
+        }
+      ]
+    }
+  },
+  {
+    "new_path": "docs/components/layout-components.md",
+    "site_url": "/components/layout-components",
+    "sources": [
+      "https://www.clayui.com/docs/components/layout"
+    ],
+    "storybook": "https://storybook.clayui.com/?path=/story/design-system-components-layout--row-positioning",
+    "notes": "React implementation of the grid/layout foundations: Container, Row, Col, Sheet. API from @clayui/layout.",
+    "api": {
+      "package": "@clayui/layout",
+      "targets": [
+        {
+          "heading": "ClayLayout.Container",
+          "file": "packages/clay-layout/src/Container.tsx",
+          "type": "IProps"
+        },
+        {
+          "heading": "ClayLayout.Row",
+          "file": "packages/clay-layout/src/Row.tsx",
+          "type": "IProps"
+        },
+        {
+          "heading": "ClayLayout.Col",
+          "file": "packages/clay-layout/src/Col.tsx",
+          "type": "IProps"
+        }
+      ]
+    }
+  },
+  {
+    "new_path": "docs/components/provider.md",
+    "site_url": "/components/provider",
+    "sources": [
+      "https://www.clayui.com/docs/components/provider",
+      "https://www.clayui.com/docs/components/reduced-motion"
+    ],
+    "storybook": "https://storybook.clayui.com/?path=/story/design-system-application-provider--spritemap",
+    "notes": "Application Provider (spritemap, theme, reduced motion). The clayui.com reduced-motion page is folded in. API from @clayui/core (clay-provider source).",
+    "api": {
+      "package": "@clayui/core",
+      "targets": [
+        {
+          "heading": "Provider",
+          "file": "packages/clay-provider/src/Provider.tsx",
+          "type": "IProviderProps"
+        }
+      ]
+    }
+  },
+  {
+    "new_path": "docs/components/data-provider.md",
+    "site_url": "/components/data-provider",
+    "sources": [
+      "https://www.clayui.com/docs/components/data-provider"
+    ],
+    "storybook": "https://storybook.clayui.com/?path=/story/design-system-components-dataprovider--polling-example",
+    "notes": "Clay-only utility: remote data fetching with caching and polling (useResource). API from @clayui/data-provider.",
+    "api": {
+      "package": "@clayui/data-provider",
+      "targets": [
+        {
+          "heading": "DataProvider",
+          "file": "packages/clay-data-provider/src/DataProvider.tsx",
+          "type": "IProps"
+        }
+      ]
+    }
+  },
+  {
+    "new_path": "docs/components/application-bar.md",
+    "site_url": "/components/application-bar",
+    "sources": [
+      "https://www.clayui.com/docs/components/application-bar"
+    ],
+    "storybook": null,
+    "notes": "CSS markup pattern (DXP main navigation; satellite in Lexicon, included because Clay documents it). No React component, no story (in STORYBOOK-GAPS.md)."
+  },
+  {
+    "new_path": "docs/components/menubar.md",
+    "site_url": "/components/menubar",
+    "sources": [
+      "https://www.clayui.com/docs/components/menubar"
+    ],
+    "storybook": null,
+    "notes": "CSS markup pattern for collapsing vertical navigations on small screens; rendered by the VerticalNav React component. No story (in STORYBOOK-GAPS.md)."
+  },
+  {
+    "new_path": "docs/components/aspect-ratio.md",
+    "site_url": "/components/aspect-ratio",
+    "sources": [
+      "https://www.clayui.com/docs/components/aspect-ratio"
+    ],
+    "storybook": null,
+    "notes": "CSS utility classes for image proportions, rendered in React by Card.AspectRatio. No story (in STORYBOOK-GAPS.md)."
   }
 ]
