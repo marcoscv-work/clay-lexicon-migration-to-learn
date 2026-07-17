@@ -18,9 +18,10 @@ number without interrupting the user.
 ## Variants and anatomy
 
 Badges come in several colors for different contexts. A badge has rounded corners
-and shows a single value.
-
-![A row of badges in different colors, each showing a number](/assets/components/badge-types.png)
+and shows a single value. Try the colors live in the
+[Badge story](https://storybook.clayui.com/?path=/story/design-system-components-badge--default),
+and the icon variant in the
+[badge with icon story](https://storybook.clayui.com/?path=/story/design-system-components-badge--with-icon).
 
 Reserve the red (danger) badge for two cases:
 
@@ -35,10 +36,6 @@ Reserve the red (danger) badge for two cases:
   and M for millions (2M).
 - When the exact count does not matter, use plain text instead of a badge.
 - Keep at least 8px of space between a badge and any adjacent element.
-
-![Do: a badge placed 8 pixels away from the adjacent text](/assets/components/badge-do-spacing.png)
-
-![Don't: a badge placed too close to the adjacent text](/assets/components/badge-dont-spacing.png)
 
 ## Implementation
 

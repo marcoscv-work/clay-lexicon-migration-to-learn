@@ -17,17 +17,17 @@ longer, use a popover instead.
 
 ## Variants and anatomy
 
-![Two tooltips: one with a longer description of an application, and one that reads "Add template"](/assets/components/tooltip-examples.png)
-
 A tooltip appears when the pointer hovers over an element and disappears on mouse
 out. Because it is hover only, it does not exist on touch devices, so never put
 essential information only in a tooltip.
 
 The arrow points at the element the tooltip describes. Clay supports twelve arrow
 positions, so the tooltip can sit above, below, left, or right of the element,
-aligned to its start, center, or end.
-
-![A reference grid showing the tooltip arrow positions and their names](/assets/components/tooltip-positions.png)
+aligned to its start, center, or end. Try the
+[Tooltip story](https://storybook.clayui.com/?path=/story/design-system-components-tooltip--default)
+and switch the alignment in the controls, or the
+[provider story](https://storybook.clayui.com/?path=/story/design-system-components-tooltip--tooltip-provider)
+to see tooltips driven by `title` attributes.
 
 ## Usage guidelines
 

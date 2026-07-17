@@ -20,8 +20,6 @@ instead.
 
 ### Anatomy
 
-![A card with its parts labeled: checkbox, image, sticker, title, actions button, description text, and status label](/assets/components/card-anatomy.png)
-
 A card can include a selection control (checkbox or radio), an image, a sticker
 (for example a file type), a title, an actions button, descriptive text, and a
 status label. The image is the only required part; everything else is optional.
@@ -34,22 +32,19 @@ state also shows a check.
 
 ### Variation types
 
-- **Image card**: a photo with a title and description.
-- **User card**: a profile image, or initials when there is no photo.
-
-  ![An image card showing a photo, a title, and a short description](/assets/components/card-image.png)
-
+- **Image card**: a photo with a title and description. Try the
+  [image card story](https://storybook.clayui.com/?path=/story/design-system-components-card--card-with-info-image).
+- **User card**: a profile image, or initials when there is no photo. Try the
+  [user card story](https://storybook.clayui.com/?path=/story/design-system-components-card--card-with-user).
 - **File card**: a file type icon centered in place of a photo.
-- **Folder card**: a horizontal card with no image and a selection checkbox.
-
-  ![A folder card in a horizontal layout with a selection checkbox and no image](/assets/components/card-folder.png)
-
+- **Folder card**: a horizontal card with no image and a selection checkbox. Try
+  the [folder card story](https://storybook.clayui.com/?path=/story/design-system-components-card--card-with-horizontal).
 - **Navigation card**: a minimal card with an icon or image, a title, and a short
-  description, available in big and small formats.
+  description, available in big and small formats. Try the
+  [navigation card story](https://storybook.clayui.com/?path=/story/design-system-components-card--card-with-navigation).
 - **Product card**: a product image on a colored background with a call to
-  action.
-
-  ![A product card with a product image on a colored background and an add to cart action](/assets/components/card-product.png)
+  action. Try the
+  [product card story](https://storybook.clayui.com/?path=/story/design-system-components-card--product-card).
 
 ## Usage guidelines
 

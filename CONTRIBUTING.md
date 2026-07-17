@@ -51,8 +51,11 @@ final destination is Liferay Learn's Markdown pipeline.
 - **API tables are generated.** Never hand-edit content between
   `<!-- API:START -->` and `<!-- API:END -->`. Run `npm run api:generate`
   instead. Everything outside those markers is yours to edit.
-- **Images** go in `/assets`, organized per section, with a descriptive filename
-  and meaningful alt text in the Markdown.
+- **No images on component pages.** Component pages show variants through live
+  Storybook story links (which the viewer embeds) instead of screenshots.
+  Images are still used where a live example cannot express the content (for
+  example the Foundations pages); those go in `/assets`, organized per section,
+  with a descriptive filename and meaningful alt text in the Markdown.
 - **Record provenance.** When you add or substantially change a page, update its
   entry in `migration-map.json` (source URLs and notes).
 - **Conflicts between sources.** Prefer clayui.com for implementation facts and

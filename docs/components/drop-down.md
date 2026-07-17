@@ -20,8 +20,6 @@ user needs them.
 A button or an icon button triggers the drop down, and a caret icon signals the
 behavior. The menu opens with an 8px gap from its trigger.
 
-![A default drop down menu open below its trigger button, showing a list of options](/assets/components/drop-down-default.png)
-
 Keep the menu within its size limits: up to 240px wide (wrap long text to two
 lines) and up to 500px tall on desktop or 400px on mobile, with vertical
 scrolling beyond that.
@@ -31,17 +29,14 @@ Common types:
 - **Default**: a simple list of options.
 - **With dividers**: related actions separated into groups.
 - **With checkboxes or radios**: checkboxes for filtering, radios for ordering.
-
-  ![A drop down menu containing a list of checkboxes](/assets/components/drop-down-checkbox.png)
-
-- **With a search field**: filter a long list.
-
-  ![A drop down menu with a search field at the top for filtering options](/assets/components/drop-down-search.png)
-
+  Try the [checkbox story](https://storybook.clayui.com/?path=/story/design-system-components-drop-down--checkbox).
+- **With a search field**: filter a long list. Try the
+  [search story](https://storybook.clayui.com/?path=/story/design-system-components-drop-down--search).
 - **With groups**: grouped filter and order controls, for example in a management
-  bar.
-
-  ![A drop down with grouped filter and order controls and primary and secondary buttons](/assets/components/drop-down-groups.png)
+  bar. Try the
+  [groups story](https://storybook.clayui.com/?path=/story/design-system-components-drop-down--groups).
+- **Drilldown**: multi level navigation inside the menu. Try the
+  [drilldown story](https://storybook.clayui.com/?path=/story/design-system-components-drop-down--drilldown).
 
 ## Usage guidelines
 

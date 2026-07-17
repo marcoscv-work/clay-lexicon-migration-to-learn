@@ -19,8 +19,6 @@ for focused tasks that need the user's attention.
 
 ### Anatomy
 
-![A modal with its parts labeled: header with title and close button, body, and footer with actions](/assets/components/modal-anatomy.png)
-
 A modal has four parts: an optional header (title and close button), a required
 body, an optional footer (actions), and an optional overlay behind it. Common
 compositions are header with body and footer, header with body, and body with
@@ -28,15 +26,13 @@ footer.
 
 ### Sizes
 
-![The modal sizes shown side by side: small, default, and large](/assets/components/modal-sizes.png)
-
 Choose a size for the content: small (320px), default (600px), or large (896px).
 A full screen size exists but is discouraged; prefer a dedicated page for large
-tasks.
+tasks. Try the sizes and status types live in the
+[Modal story](https://storybook.clayui.com/?path=/story/design-system-components-modal--default),
+using the controls.
 
 ### Status types
-
-![Status modals for information, success, warning, and error, each with an icon in the title](/assets/components/modal-status.png)
 
 Besides the default modal, there are status modals for information, success,
 warning, and error. A status modal must keep the icon in its title, because the

@@ -18,19 +18,18 @@ the data is image heavy, use [cards](/components/card) or a list instead.
 
 ### Anatomy
 
-![A table with its parts labeled: header row, group section, data rows, and row actions](/assets/components/table-anatomy.jpg)
-
 A table has a header, optional sections that group rows, and data rows. A row can
 include a selection checkbox, a main column, other columns, and an actions button.
-On hover, a row can reveal up to three quick action icons.
+On hover, a row can reveal up to three quick action icons. Try the
+[sections story](https://storybook.clayui.com/?path=/story/design-system-components-table--sections)
+to see rows grouped by dividers.
 
 ### Row states
 
-![Table rows in their default, hover, and selected states](/assets/components/table-row-states.jpg)
-
 Rows have default, hover, and selected states. The hover state reveals quick
 actions, which are hidden while a row is selected. The header supports sorting
-(an icon shows the direction) and column drag and drop.
+(an icon shows the direction) and column drag and drop. Try the
+[sorting story](https://storybook.clayui.com/?path=/story/design-system-components-table--sorting).
 
 ### Content
 
@@ -173,7 +172,8 @@ row with a function. Icons in the table require an application `Provider` with a
 
 - Give the `Table` an `aria-label` so its purpose is announced.
 - The table follows the W3C ARIA table pattern by default and switches to the
-  treegrid pattern automatically when you use nested rows.
+  treegrid pattern automatically when you use nested rows. Try the
+  [treegrid story](https://storybook.clayui.com/?path=/story/design-system-components-table--treegrid).
 - For nested rows, give each row's data an `id` (or configure `itemIdKey`), so
   expansion is tracked correctly.
 

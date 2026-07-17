@@ -35,8 +35,10 @@ Overview: what it is and when to use it, rewritten from the Lexicon overview.
 
 ## Variants and anatomy
 
-From Lexicon: types, states, hierarchy. Use images from `/assets` with
-meaningful alt text.
+From Lexicon: types, states, hierarchy. Component pages do not use images;
+illustrate each variant with a plain link to its Storybook story (the viewer
+embeds story links as live previews automatically). If a variant has no story,
+add an entry to STORYBOOK-GAPS.md instead.
 
 ## Usage guidelines
 

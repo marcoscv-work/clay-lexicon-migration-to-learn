@@ -20,9 +20,9 @@ choice. Give every button a short, specific label that names the action.
 
 ### Types
 
-Choose the button type that matches the importance of the action.
-
-![Primary, secondary, and link buttons shown together: a filled Done button, an outlined Cancel button, and a Clear text link](/assets/components/button-types.png)
+Choose the button type that matches the importance of the action. Try each type
+live in the [Button story](https://storybook.clayui.com/?path=/story/design-system-components-button--default),
+using the controls to switch the display type.
 
 - **Primary**: use for the most important action in a view, such as Save. Do not
   place two primary buttons next to each other.
@@ -39,8 +39,6 @@ Buttons respond to interaction with default, hover, active, and disabled states.
 Use the disabled state only when the action is unavailable, and make sure the
 reason is clear from the surrounding context.
 
-![Primary, secondary, and link buttons in the disabled state](/assets/components/button-states-disabled.png)
-
 ### Sizes
 
 Clay buttons come in two heights:
@@ -50,27 +48,19 @@ Clay buttons come in two heights:
 - **Small**: 32px. Use it for actions inside dense areas such as drop down menus,
   button groups, and split buttons.
 
-![A small button next to inputs, showing the 32px height used inside dense areas](/assets/components/button-size-small.png)
-
 ### Common variations
 
 - **Icon button**: shows an icon instead of a text label. Reserve it for
   well-understood actions and always provide an accessible name (see
-  [Accessibility](#accessibility)).
+  [Accessibility](#accessibility)). Try the
+  [icon button story](https://storybook.clayui.com/?path=/story/design-system-components-button--icon).
+- **Button group**: places related buttons together in a row. Try the
+  [button group story](https://storybook.clayui.com/?path=/story/design-system-components-button--group).
 - **Split button**: pairs a main action with a drop down of related actions.
-
-![An icon-only button using a single monospaced icon](/assets/components/button-icon.png)
-
-![A split button: a main action on the left and a drop down toggle on the right](/assets/components/button-split.png)
 
 ## Usage guidelines
 
 - Keep all buttons in the same row at the same height.
-
-![Do: a Cancel and a Save button at the same height in one row](/assets/components/button-do-same-height.png)
-
-![Don't: a Cancel and a Save button at different heights in one row](/assets/components/button-dont-different-height.png)
-
 - Write button labels in sentence case. Do not set labels in all capitals.
 - Keep a label on a single line. Do not let button text wrap.
 - When you mix a borderless button with bordered buttons, place the borderless

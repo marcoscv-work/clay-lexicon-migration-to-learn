@@ -17,11 +17,14 @@
 
 <style scoped>
 .poc-banner {
-	/* Sticky so the "not official documentation" notice stays visible while
-	 * scrolling. It sits in the layout-top flow (top: 0) and its z-index is
-	 * above the fixed navbar, so it pins above the nav. */
-	position: sticky;
+	/* Fixed so the "not official documentation" notice stays visible while
+	 * scrolling, mirroring how the default theme fixes .VPNav at >=960px. The
+	 * layout offset is handled by --vp-layout-top-height (set in custom.css),
+	 * which VitePress's own components (nav, local nav, sidebar) consume. */
+	position: fixed;
 	top: 0;
+	right: 0;
+	left: 0;
 	z-index: var(--vp-z-index-layout-top, 10);
 	box-sizing: border-box;
 	display: flex;

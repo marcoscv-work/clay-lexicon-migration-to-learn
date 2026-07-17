@@ -45,6 +45,21 @@ export function embedStorybookLinks() {
 		`.vp-doc a[href*="${STORYBOOK_HOST}"]:not([${ENHANCED_FLAG}])`
 	);
 
+	// One embed per story per page: pages may link the same story more than
+	// once (for example in a variants list and again under Live examples).
+	// Derive the already-embedded set from the DOM so this stays idempotent.
+	const embeddedIds = new Set(
+		[...document.querySelectorAll('.storybook-embed iframe')]
+			.map((frame) => {
+				try {
+					return new URL(frame.src).searchParams.get('id');
+				} catch {
+					return null;
+				}
+			})
+			.filter(Boolean)
+	);
+
 	for (const link of links) {
 		// Never enhance links inside an embed we created (the figcaption link
 		// also points at Storybook; without this the enhancer recurses).
@@ -59,6 +74,10 @@ export function embedStorybookLinks() {
 
 		link.setAttribute(ENHANCED_FLAG, 'true');
 
+		if (embeddedIds.has(id)) {
+			continue;
+		}
+
 		// Idempotence against DOM state too (not only the link flag): if the
 		// framework re-rendered the content but a previously injected embed for
 		// this block survived, do not add a second one.
@@ -66,6 +85,8 @@ export function embedStorybookLinks() {
 		if (host.nextElementSibling?.classList.contains('storybook-embed')) {
 			continue;
 		}
+
+		embeddedIds.add(id);
 
 		const container = document.createElement('figure');
 		container.className = 'storybook-embed';

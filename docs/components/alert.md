@@ -20,9 +20,9 @@ needs to notice.
 
 ### Types
 
-Four status types communicate the nature of the message through color and icon:
-
-![The four alert types shown as colored bars: information (blue), success (green), warning (yellow), and error (red)](/assets/components/alert-types.png)
+Four status types communicate the nature of the message through color and icon.
+Try each one live in the [Alert story](https://storybook.clayui.com/?path=/story/design-system-components-alert--default),
+switching the display type in the controls.
 
 - **Information** (blue): relevant information shown while the user works.
 - **Success** (green): the action completed successfully.
@@ -30,8 +30,6 @@ Four status types communicate the nature of the message through color and icon:
 - **Error** (red): something went wrong and the action did not complete.
 
 ### Anatomy
-
-![An alert with its parts numbered: status icon, type text, description text, and close button](/assets/components/alert-anatomy.png)
 
 An alert has four parts: a status icon, the type text, the description text, and
 an optional close button. Set the status icon and the type text in semibold so
@@ -42,19 +40,15 @@ contain links, which use the primary color.
 
 - **Feedback indicator**: the smallest form of an alert, a status icon used to
   draw attention in place, for example inside a form or a sidebar. If the icon's
-  meaning is not clear from nearby text, show a tooltip on hover.
+  meaning is not clear from nearby text, show a tooltip on hover. Try the
+  [feedback story](https://storybook.clayui.com/?path=/story/design-system-components-alert--feedback).
 - **Toast**: a temporary notification that does not interrupt the user. Toasts
-  appear at the bottom left of the screen and stack vertically.
-
-  ![Four toast alerts, one per status type, stacked vertically](/assets/components/alert-toast.png)
-
+  appear at the bottom left of the screen and stack vertically. Try the
+  [toast story](https://storybook.clayui.com/?path=/story/design-system-components-alert--toast).
 - **Embedded**: an alert placed inside a form. Its width follows the container,
   and the close action is usually not needed.
 - **Stripe**: a full width bar, a space saving alternative to embedded and toast
   alerts, placed near form sections or headers.
-
-  ![An information stripe alert spanning the full width of its container](/assets/components/alert-stripe.png)
-
 - **Inline action**: an action placed after the message on the same line, instead
   of on its own line. Use it for messages of up to two lines, and set a maximum
   width so alerts stay consistent.
