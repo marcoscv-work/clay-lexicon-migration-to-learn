@@ -87,7 +87,7 @@ VitePress, Astro Starlight, and MkDocs Material. VitePress was chosen:
 | "Edit this page" | Built-in | `editLink.pattern` with `:path`; verified correct for nested paths like `docs/components/button.md`. |
 | Client-side search | Built-in | `search.provider: 'local'`, no external service (Algolia) or API key. |
 | Sidebar navigation | Built-in | Declarative config, mirrors `/docs`; components ordered alphabetically. |
-| GitHub Pages deploy | Simple | Single static output; one Actions workflow; `base` set to `/clay-docs-migration-poc/`. |
+| GitHub Pages deploy | Simple | Single static output; one Actions workflow; `base` set to `/clay-lexicon-migration-to-learn/`. |
 | Frontmatter bloat | Minimal | Only `title`, `description`, and provenance fields; no framework-specific fields leak into content. |
 
 Astro Starlight is excellent but leans on MDX and heavier per-page frontmatter,
@@ -112,7 +112,7 @@ npm run docs:preview  # serve the production build locally
 ```
 
 The dev server and the production build both use the base path
-`/clay-docs-migration-poc/`, matching GitHub Pages, so internal links and assets
+`/clay-lexicon-migration-to-learn/`, matching GitHub Pages, so internal links and assets
 are exercised the same way locally as in production.
 
 ## API reference pipeline

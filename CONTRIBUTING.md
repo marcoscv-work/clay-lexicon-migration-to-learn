@@ -21,8 +21,8 @@ You never need to clone anything or run a local environment for a content edit.
 If you prefer working locally:
 
 ```bash
-git clone https://github.com/marcoscv-work/clay-docs-migration-poc
-cd clay-docs-migration-poc
+git clone https://github.com/marcoscv-work/clay-lexicon-migration-to-learn
+cd clay-lexicon-migration-to-learn
 npm install
 npm run docs:dev
 ```

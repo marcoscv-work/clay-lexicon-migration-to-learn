@@ -8,7 +8,7 @@ const REPO_ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..
 // Repository coordinates. Change these if the repo is forked or renamed;
 // they drive the GitHub Pages base path and the "Edit this page" links.
 const GITHUB_OWNER = 'marcoscv-work';
-const GITHUB_REPO = 'clay-docs-migration-poc';
+const GITHUB_REPO = 'clay-lexicon-migration-to-learn';
 
 const BASE = `/${GITHUB_REPO}/`;
 

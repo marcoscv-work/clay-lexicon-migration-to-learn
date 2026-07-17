@@ -2,7 +2,7 @@ name: Deploy to GitHub Pages
 
 # Builds the site and deploys it to GitHub Pages on every push to main.
 # Enable Pages once in the repository settings: Settings > Pages > Build and
-# deployment > Source: GitHub Actions. The base path (/clay-docs-migration-poc/)
+# deployment > Source: GitHub Actions. The base path (/clay-lexicon-migration-to-learn/)
 # is set in .vitepress/config.mjs.
 
 on:
