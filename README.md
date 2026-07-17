@@ -53,6 +53,11 @@ full migration:
 
 Out of scope for the PoC: Satellites, Templates, Examples, Writing, and the blog.
 
+> The working criteria evolved from the original brief in a few explicit ways
+> (live examples instead of images on component pages, per-story embed heights,
+> color swatch chips, a fixed banner). [DECISIONS.md](./DECISIONS.md) records
+> each change and wins over the brief where they disagree.
+
 ## Repository layout
 
 ```
@@ -62,11 +67,12 @@ Out of scope for the PoC: Satellites, Templates, Examples, Writing, and the blog
   components/           _TEMPLATE.md defines the merged component page shape
   css/
   patterns/
-/assets/               images downloaded from Lexicon, organized per section
+/assets/               images for content a live example cannot express (foundations)
 /scripts/              API extraction pipeline (see scripts/README.md)
 /.vitepress/           viewer configuration only, never mixed into /docs
 migration-map.json     provenance and redirect-map seed
 STORYBOOK-GAPS.md      backlog of components/variants missing a Storybook story
+DECISIONS.md           how the criteria evolved from the original brief
 README.md
 CONTRIBUTING.md
 ```

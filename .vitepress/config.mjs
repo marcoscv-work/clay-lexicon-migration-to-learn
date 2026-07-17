@@ -61,11 +61,12 @@ export default defineConfig({
 		],
 
 		// Sidebar mirrors the /docs structure. Components are alphabetical,
-		// per the migration brief.
+		// per the migration brief. Single-page sections are plain links (no
+		// group heading) to avoid duplicated labels in the navigation.
 		sidebar: [
 			{
 				text: 'Get Started',
-				items: [{text: 'Get Started', link: '/get-started/'}],
+				link: '/get-started/',
 			},
 			{
 				text: 'Foundations',
@@ -89,8 +90,8 @@ export default defineConfig({
 				],
 			},
 			{
-				text: 'CSS',
-				items: [{text: 'CSS Framework', link: '/css/'}],
+				text: 'CSS Framework',
+				link: '/css/',
 			},
 			{
 				text: 'Patterns',

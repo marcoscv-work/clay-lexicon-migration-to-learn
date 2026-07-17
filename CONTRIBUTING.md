@@ -32,7 +32,9 @@ Edit files under `/docs`, preview at the local URL, then open a pull request.
 ## Content rules
 
 These are the rules the CI check and reviewers look for. They exist because the
-final destination is Liferay Learn's Markdown pipeline.
+final destination is Liferay Learn's Markdown pipeline. Some criteria evolved
+from the original migration brief; [DECISIONS.md](./DECISIONS.md) records those
+changes and wins where the two disagree.
 
 - **Liferay Learn tone.** Task-oriented, second person, direct ("Use a primary
   button for the main action on a page"). No marketing language. Rewrite; do not

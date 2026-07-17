@@ -136,7 +136,7 @@
       "https://design.liferay.com/lexicon/core-components/dropdowns/",
       "https://www.clayui.com/docs/components/drop-down"
     ],
-    "storybook": "https://storybook.clayui.com/?path=/story/design-system-components-drop-down--default",
+    "storybook": "https://storybook.clayui.com/?path=/story/design-system-components-dropdown--default",
     "notes": "Merged Lexicon dropdown design spec (types, action ordering, sizing) with clayui.com implementation (low-level composition, high-level ClayDropDownWithItems and ClayDropDownWithDrilldown, search filtering). API generated from @clayui/drop-down for DropDown and DropDown.Item.",
     "api": {
       "package": "@clayui/drop-down",

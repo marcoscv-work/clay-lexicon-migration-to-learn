@@ -4,7 +4,7 @@ description: A drop down shows a list of options or actions for the element that
 sources:
   - https://design.liferay.com/lexicon/core-components/dropdowns/
   - https://www.clayui.com/docs/components/drop-down
-storybook: https://storybook.clayui.com/?path=/story/design-system-components-drop-down--default
+storybook: https://storybook.clayui.com/?path=/story/design-system-components-dropdown--default
 status: poc-draft
 api_version: 3.165.0
 ---
@@ -29,14 +29,14 @@ Common types:
 - **Default**: a simple list of options.
 - **With dividers**: related actions separated into groups.
 - **With checkboxes or radios**: checkboxes for filtering, radios for ordering.
-  Try the [checkbox story](https://storybook.clayui.com/?path=/story/design-system-components-drop-down--checkbox).
+  Try the [checkbox story](https://storybook.clayui.com/?path=/story/design-system-components-dropdown--checkbox).
 - **With a search field**: filter a long list. Try the
-  [search story](https://storybook.clayui.com/?path=/story/design-system-components-drop-down--search).
+  [search story](https://storybook.clayui.com/?path=/story/design-system-components-dropdown--search).
 - **With groups**: grouped filter and order controls, for example in a management
   bar. Try the
-  [groups story](https://storybook.clayui.com/?path=/story/design-system-components-drop-down--groups).
+  [groups story](https://storybook.clayui.com/?path=/story/design-system-components-dropdown--groups).
 - **Drilldown**: multi level navigation inside the menu. Try the
-  [drilldown story](https://storybook.clayui.com/?path=/story/design-system-components-drop-down--drilldown).
+  [drilldown story](https://storybook.clayui.com/?path=/story/design-system-components-dropdown--drilldown).
 
 ## Usage guidelines
 
@@ -163,7 +163,7 @@ export default function Example() {
 
 ## Live examples
 
-See the [Drop Down stories on Storybook](https://storybook.clayui.com/?path=/story/design-system-components-drop-down--default).
+See the [Drop Down stories on Storybook](https://storybook.clayui.com/?path=/story/design-system-components-dropdown--default).
 
 ## Related components
 
