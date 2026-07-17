@@ -71,8 +71,10 @@ export default defineConfig({
 			{
 				text: 'Foundations',
 				items: [
+					{text: 'Animations', link: '/foundations/animations'},
 					{text: 'Color', link: '/foundations/color'},
 					{text: 'Grid', link: '/foundations/grid'},
+					{text: 'Layout', link: '/foundations/layout'},
 					{text: 'Typography', link: '/foundations/typography'},
 				],
 			},
@@ -85,11 +87,17 @@ export default defineConfig({
 					{text: 'Breadcrumb', link: '/components/breadcrumb'},
 					{text: 'Button', link: '/components/button'},
 					{text: 'Card', link: '/components/card'},
+					{text: 'Charts', link: '/components/charts'},
 					{
 						text: 'Checkbox, Radio, and Toggle',
 						link: '/components/checkbox-radio-toggle',
 					},
 					{text: 'Color Picker', link: '/components/color-picker'},
+					{
+						text: 'Confirmation Message',
+						link: '/components/confirmation-message',
+					},
+					{text: 'Dataset Display', link: '/components/dataset-display'},
 					{text: 'Date Picker', link: '/components/date-picker'},
 					{text: 'Drop Down', link: '/components/drop-down'},
 					{text: 'Dual Listbox', link: '/components/dual-listbox'},
@@ -97,6 +105,7 @@ export default defineConfig({
 					{text: 'Forms', link: '/components/forms'},
 					{text: 'Icon', link: '/components/icon'},
 					{text: 'Input', link: '/components/input'},
+					{text: 'Keys', link: '/components/keys'},
 					{text: 'Label', link: '/components/label'},
 					{text: 'Link', link: '/components/link'},
 					{text: 'List', link: '/components/list'},
@@ -122,6 +131,7 @@ export default defineConfig({
 					{text: 'Panel', link: '/components/panel'},
 					{text: 'Popover', link: '/components/popover'},
 					{text: 'Progress Bar', link: '/components/progress-bar'},
+					{text: 'Section', link: '/components/section'},
 					{text: 'Select', link: '/components/select'},
 					{text: 'Side Panel', link: '/components/side-panel'},
 					{text: 'Slider', link: '/components/slider'},
@@ -145,6 +155,12 @@ export default defineConfig({
 				text: 'Patterns',
 				items: [
 					{text: 'Common Actions', link: '/patterns/common-actions'},
+					{
+						text: 'Common Content Patterns',
+						link: '/patterns/common-content-patterns',
+					},
+					{text: 'Drag and Drop', link: '/patterns/drag-and-drop'},
+					{text: 'Ellipsis', link: '/patterns/ellipsis'},
 				],
 			},
 		],

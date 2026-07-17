@@ -37,6 +37,12 @@ story to embed or link:
   React component) and has no story at all. A story rendering the default,
   right, and center variants from the `timeline` CSS classes would let the page
   show live examples.
+- **Keys** (`docs/components/keys.md`): CSS only (`c-kbd` classes) with no
+  story. A story showing single keys, combinations, and unicode symbols would
+  let the page show live examples.
+- **Charts** (`docs/components/charts.md`): no chart stories exist (Clay ships
+  no React chart components). If a charting implementation is adopted, stories
+  per chart type would back the design collection.
 
 ## Stories used by this PoC
 

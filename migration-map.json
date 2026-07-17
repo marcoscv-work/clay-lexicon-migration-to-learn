@@ -962,5 +962,96 @@
     ],
     "storybook": null,
     "notes": "Merged Lexicon timelines spec (variants by alignment, even/odd, mobile rule) with the Clay CSS markup pattern (no React component). No Storybook story exists; recorded in STORYBOOK-GAPS.md."
+  },
+  {
+    "new_path": "docs/foundations/animations.md",
+    "site_url": "/foundations/animations",
+    "sources": [
+      "https://design.liferay.com/lexicon/foundations/animations/"
+    ],
+    "storybook": null,
+    "notes": "Foundations Animations: the three default empty state animations, usage rule (support a message), and theming guidance."
+  },
+  {
+    "new_path": "docs/foundations/layout.md",
+    "site_url": "/foundations/layout",
+    "sources": [
+      "https://design.liferay.com/lexicon/foundations/layout/"
+    ],
+    "storybook": null,
+    "notes": "Foundations Layout: the four standard layouts (cards, form box, full box, sidebar and box) condensed from the Lexicon layout index and its four subpages."
+  },
+  {
+    "new_path": "docs/components/charts.md",
+    "site_url": "/components/charts",
+    "sources": [
+      "https://design.liferay.com/lexicon/core-components/charts/"
+    ],
+    "storybook": null,
+    "notes": "Charts design overview (color-last rule, shared interactions, collection list). Per-chart-type Lexicon subpages not migrated in this pass; REVIEW comment asks the Clay team about the recommended charting implementation."
+  },
+  {
+    "new_path": "docs/components/keys.md",
+    "site_url": "/components/keys",
+    "sources": [
+      "https://design.liferay.com/lexicon/core-components/keys/",
+      "https://www.clayui.com/docs/css/c-kbd"
+    ],
+    "storybook": null,
+    "notes": "Merged Lexicon keys spec (monospaced style, unicode symbols) with the Clay CSS c-kbd implementation. CSS only; no story (recorded in STORYBOOK-GAPS.md)."
+  },
+  {
+    "new_path": "docs/components/section.md",
+    "site_url": "/components/section",
+    "sources": [
+      "https://design.liferay.com/lexicon/core-components/section/"
+    ],
+    "storybook": "https://storybook.clayui.com/?path=/story/design-system-components-panel--sheet",
+    "notes": "Lexicon section spec (simple and collapsible, collapse level rules, sizes) pointing at the Panel sheet implementation in Clay."
+  },
+  {
+    "new_path": "docs/components/confirmation-message.md",
+    "site_url": "/components/confirmation-message",
+    "sources": [
+      "https://design.liferay.com/lexicon/core-components/confirmation-message/"
+    ],
+    "storybook": "https://storybook.clayui.com/?path=/story/design-system-components-modal--default",
+    "notes": "Lexicon confirmation message spec (risk action and unintended consequence cases, when not to use, writing rules) implemented by composing status modals."
+  },
+  {
+    "new_path": "docs/components/dataset-display.md",
+    "site_url": "/components/dataset-display",
+    "sources": [
+      "https://design.liferay.com/lexicon/core-components/dataset-display/"
+    ],
+    "storybook": "https://storybook.clayui.com/?path=/story/design-system-components-managementtoolbar--default",
+    "notes": "Lexicon dataset display pattern (management toolbar + views + pagination, view choice guidance) linking the composing component pages."
+  },
+  {
+    "new_path": "docs/patterns/common-content-patterns.md",
+    "site_url": "/patterns/common-content-patterns",
+    "sources": [
+      "https://design.liferay.com/lexicon/patterns/common-content-patterns/"
+    ],
+    "storybook": null,
+    "notes": "Writing rules for recurring content situations: actions, links, lists, messaging, descriptions, instructions, titles, and validations (confirmations, acknowledgments, errors, forms)."
+  },
+  {
+    "new_path": "docs/patterns/drag-and-drop.md",
+    "site_url": "/patterns/drag-and-drop",
+    "sources": [
+      "https://design.liferay.com/lexicon/patterns/drag-and-drop/"
+    ],
+    "storybook": null,
+    "notes": "Drag and drop pattern: six events, pointer and handler rules, drag feedback (single, representation, multiple), drag source, valid target states, and drop animations."
+  },
+  {
+    "new_path": "docs/patterns/ellipsis.md",
+    "site_url": "/patterns/ellipsis",
+    "sources": [
+      "https://design.liferay.com/lexicon/patterns/ellipsis/"
+    ],
+    "storybook": null,
+    "notes": "Ellipsis pattern: horizontal vs vertical consistency rule, and the overflow, truncation, additional action, and activity use cases."
   }
 ]
