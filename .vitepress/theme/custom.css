@@ -1,0 +1,86 @@
+/*
+ * Minimal WCAG 2.2 AA overrides on top of the VitePress default theme.
+ * The default theme already ships a skip-to-content link, landmark structure,
+ * and keyboard-operable nav and search; these rules harden focus visibility
+ * and contrast in both light and dark modes rather than switching themes.
+ */
+
+/*
+ * Reserve space for the PoC banner rendered in the `layout-top` slot. Without
+ * this, the fixed navbar overlaps the banner. The value must be at least the
+ * banner's rendered height at each breakpoint, so it grows as the text wraps on
+ * narrower viewports.
+ */
+:root {
+	--vp-layout-top-height: 40px;
+}
+
+@media (max-width: 960px) {
+	:root {
+		--vp-layout-top-height: 64px;
+	}
+}
+
+@media (max-width: 640px) {
+	:root {
+		--vp-layout-top-height: 92px;
+	}
+}
+
+/* 2.4.7 Focus Visible + 2.4.11 Focus Not Obscured: a strong, consistent focus
+ * ring on every interactive element, drawn outside the element so it is never
+ * clipped by overflow containers. */
+:root {
+	--poc-focus-color: #0b5fff;
+}
+
+.dark {
+	--poc-focus-color: #7aa2ff;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+summary:focus-visible,
+[tabindex]:focus-visible,
+.VPButton:focus-visible,
+.VPSwitch:focus-visible {
+	outline: 3px solid var(--poc-focus-color) !important;
+	outline-offset: 2px !important;
+	border-radius: 2px;
+}
+
+/* Make the built-in skip link clearly visible when focused. */
+.VPSkipLink:focus,
+.VPSkipLink:focus-visible {
+	outline: 3px solid var(--poc-focus-color) !important;
+	outline-offset: 2px;
+}
+
+/* 1.4.3 Contrast: nudge muted body text to meet 4.5:1 against page
+ * backgrounds in both themes. */
+:root {
+	--vp-c-text-2: #4b5563;
+	--vp-c-text-3: #5b6472;
+}
+
+.dark {
+	--vp-c-text-2: #c2c8d1;
+	--vp-c-text-3: #aab2bf;
+}
+
+/* Keep the local search box results keyboard-navigable with a visible active
+ * state (default theme relies on background only; add a border for contrast). */
+.VPLocalSearchBox .result.selected {
+	border-color: var(--poc-focus-color);
+}
+
+/* Do/Don't guidance markers used on component pages. Rendered from plain
+ * Markdown blockquotes are not available, so pages use small inline badges via
+ * standard emphasis; this only styles optional helper classes if present. */
+.poc-dos,
+.poc-donts {
+	font-weight: 600;
+}

@@ -1,0 +1,19 @@
+{
+  "name": "clay-docs-migration-poc",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Proof of concept for LPD-98580: Clay + Lexicon documentation merged under a single Clay umbrella.",
+  "scripts": {
+    "docs:dev": "vitepress dev .",
+    "docs:build": "vitepress build .",
+    "docs:preview": "vitepress preview .",
+    "api:generate": "node scripts/generate-api.mjs",
+    "api:check": "node scripts/generate-api.mjs --check",
+    "lint:links": "node scripts/check-links.mjs"
+  },
+  "devDependencies": {
+    "ts-morph": "^28.0.0",
+    "vitepress": "^1.6.4"
+  }
+}
