@@ -518,5 +518,235 @@
         }
       ]
     }
+  },
+  {
+    "new_path": "docs/components/forms.md",
+    "site_url": "/components/forms",
+    "sources": [
+      "https://design.liferay.com/lexicon/core-components/forms/",
+      "https://design.liferay.com/lexicon/core-components/forms/forms-hierarchy/",
+      "https://design.liferay.com/lexicon/core-components/forms/forms-validation/",
+      "https://www.clayui.com/docs/components/form"
+    ],
+    "storybook": null,
+    "notes": "Forms overview: structure, one/two column layout, spacing rules, sections, help mechanisms, validation placement. Condenses the Lexicon forms index plus hierarchy/rules/validation subpages. Overview page linking to each control; no API block by design (not a single component)."
+  },
+  {
+    "new_path": "docs/components/input.md",
+    "site_url": "/components/input",
+    "sources": [
+      "https://design.liferay.com/lexicon/core-components/forms/input/",
+      "https://design.liferay.com/lexicon/core-components/forms/input-variations/",
+      "https://design.liferay.com/lexicon/core-components/forms/input-localizable/",
+      "https://www.clayui.com/docs/components/input"
+    ],
+    "storybook": "https://storybook.clayui.com/?path=/story/design-system-components-input--default",
+    "notes": "Merged Lexicon input spec (states, sizes, validation, text area growth, help mechanisms) with clayui.com implementation (ClayInput, Form.Group feedback). Input group and localized input folded in as variants. API from @clayui/form.",
+    "api": {
+      "package": "@clayui/form",
+      "targets": [
+        {
+          "heading": "ClayInput",
+          "file": "packages/clay-form/src/Input.tsx",
+          "type": "IProps"
+        },
+        {
+          "heading": "ClayInput.Group",
+          "file": "packages/clay-form/src/Input.tsx",
+          "type": "IGroupProps"
+        }
+      ]
+    }
+  },
+  {
+    "new_path": "docs/components/checkbox-radio-toggle.md",
+    "site_url": "/components/checkbox-radio-toggle",
+    "sources": [
+      "https://design.liferay.com/lexicon/core-components/forms/radio-check-toggle/",
+      "https://www.clayui.com/docs/components/checkbox"
+    ],
+    "storybook": "https://storybook.clayui.com/?path=/story/design-system-components-checkbox--default",
+    "notes": "Merged Lexicon checkbox/radio/toggle spec (states, groups, dos and donts) with clayui.com implementation (ClayCheckbox, ClayRadioGroup, ClayToggle). API from @clayui/form.",
+    "api": {
+      "package": "@clayui/form",
+      "targets": [
+        {
+          "heading": "ClayCheckbox",
+          "file": "packages/clay-form/src/Checkbox.tsx",
+          "type": "IProps"
+        },
+        {
+          "heading": "ClayRadio",
+          "file": "packages/clay-form/src/Radio.tsx",
+          "type": "IRadioProps"
+        },
+        {
+          "heading": "ClayRadioGroup",
+          "file": "packages/clay-form/src/RadioGroup.tsx",
+          "type": "IGroupProps"
+        },
+        {
+          "heading": "ClayToggle",
+          "file": "packages/clay-form/src/Toggle.tsx",
+          "type": "IToggleProps"
+        }
+      ]
+    }
+  },
+  {
+    "new_path": "docs/components/select.md",
+    "site_url": "/components/select",
+    "sources": [
+      "https://design.liferay.com/lexicon/core-components/forms/selector/",
+      "https://www.clayui.com/docs/components/select"
+    ],
+    "storybook": "https://storybook.clayui.com/?path=/story/design-system-components-select--high-level",
+    "notes": "Merged Lexicon selector spec (native control, input states, select vs dropdown distinction) with clayui.com implementation (ClaySelectWithOption, ClaySelect, SelectBox). API from @clayui/form.",
+    "api": {
+      "package": "@clayui/form",
+      "targets": [
+        {
+          "heading": "ClaySelect",
+          "file": "packages/clay-form/src/Select.tsx",
+          "type": "IProps"
+        },
+        {
+          "heading": "ClaySelectBox",
+          "file": "packages/clay-form/src/SelectBox.tsx",
+          "type": "IProps"
+        }
+      ]
+    }
+  },
+  {
+    "new_path": "docs/components/multi-select.md",
+    "site_url": "/components/multi-select",
+    "sources": [
+      "https://design.liferay.com/lexicon/core-components/forms/multi-select/",
+      "https://www.clayui.com/docs/components/multi-select"
+    ],
+    "storybook": "https://storybook.clayui.com/?path=/story/design-system-components-multiselect--default",
+    "notes": "Merged Lexicon multi select spec (tags as labels, autocomplete, paste to tags, allowlist) with clayui.com implementation (items/sourceItems, onItemsChange). API from @clayui/multi-select.",
+    "api": {
+      "package": "@clayui/multi-select",
+      "targets": [
+        {
+          "heading": "MultiSelect",
+          "file": "packages/clay-multi-select/src/MultiSelect.tsx",
+          "type": "IProps"
+        }
+      ]
+    }
+  },
+  {
+    "new_path": "docs/components/dual-listbox.md",
+    "site_url": "/components/dual-listbox",
+    "sources": [
+      "https://design.liferay.com/lexicon/core-components/dual-listbox/",
+      "https://www.clayui.com/docs/components/dual-list-box"
+    ],
+    "storybook": "https://storybook.clayui.com/?path=/story/design-system-components-duallistbox--default",
+    "notes": "Merged Lexicon dual listbox spec (parts, transfer button states, ordering rules) with clayui.com implementation (ClayDualListBox). API from @clayui/form.",
+    "api": {
+      "package": "@clayui/form",
+      "targets": [
+        {
+          "heading": "ClayDualListBox",
+          "file": "packages/clay-form/src/DualListBox.tsx",
+          "type": "IProps"
+        }
+      ]
+    }
+  },
+  {
+    "new_path": "docs/components/date-picker.md",
+    "site_url": "/components/date-picker",
+    "sources": [
+      "https://design.liferay.com/lexicon/core-components/forms/picker-date-time/",
+      "https://www.clayui.com/docs/components/date-picker"
+    ],
+    "storybook": "https://storybook.clayui.com/?path=/story/design-system-components-datepicker--default",
+    "notes": "Merged the date half of the Lexicon date and time pickers spec (calendar anatomy, day states, extension points, native on mobile) with clayui.com implementation (controlled value, years range, time variant). API from @clayui/date-picker.",
+    "api": {
+      "package": "@clayui/date-picker",
+      "targets": [
+        {
+          "heading": "DatePicker",
+          "file": "packages/clay-date-picker/src/index.tsx",
+          "type": "IProps"
+        }
+      ]
+    }
+  },
+  {
+    "new_path": "docs/components/time-picker.md",
+    "site_url": "/components/time-picker",
+    "sources": [
+      "https://design.liferay.com/lexicon/core-components/forms/picker-date-time/",
+      "https://www.clayui.com/docs/components/time-picker"
+    ],
+    "storybook": "https://storybook.clayui.com/?path=/story/design-system-components-timepicker--default",
+    "notes": "Merged the time half of the Lexicon date and time pickers spec (segmented editing, native on mobile) with clayui.com implementation (values object, use12Hours). API from @clayui/time-picker.",
+    "api": {
+      "package": "@clayui/time-picker",
+      "targets": [
+        {
+          "heading": "TimePicker",
+          "file": "packages/clay-time-picker/src/index.tsx",
+          "type": "IProps"
+        }
+      ]
+    }
+  },
+  {
+    "new_path": "docs/components/color-picker.md",
+    "site_url": "/components/color-picker",
+    "sources": [
+      "https://design.liferay.com/lexicon/core-components/forms/picker-color/",
+      "https://www.clayui.com/docs/components/color-picker"
+    ],
+    "storybook": "https://storybook.clayui.com/?path=/story/design-system-components-colorpicker--default",
+    "notes": "Merged Lexicon color picker spec (field anatomy, predefined and custom panels, restricted/unrestricted/simple variants) with clayui.com implementation (colors, onValueChange, native). API from @clayui/color-picker.",
+    "api": {
+      "package": "@clayui/color-picker",
+      "targets": [
+        {
+          "heading": "ColorPicker",
+          "file": "packages/clay-color-picker/src/ColorPicker.tsx",
+          "type": "IProps"
+        }
+      ]
+    }
+  },
+  {
+    "new_path": "docs/components/multi-step-nav.md",
+    "site_url": "/components/multi-step-nav",
+    "sources": [
+      "https://design.liferay.com/lexicon/core-components/forms/multi-step-form/",
+      "https://design.liferay.com/lexicon/core-components/forms/multi-step-form-simplified/",
+      "https://www.clayui.com/docs/components/multi-step-nav"
+    ],
+    "storybook": "https://storybook.clayui.com/?path=/story/design-system-components-multistepnav--default",
+    "notes": "Merged Lexicon multi step form spec (2-7 steps, overflow dropdown, states, mobile condensation) with clayui.com implementation (ClayMultiStepNavWithBasicItems). API from @clayui/multi-step-nav.",
+    "api": {
+      "package": "@clayui/multi-step-nav",
+      "targets": [
+        {
+          "heading": "MultiStepNav",
+          "file": "packages/clay-multi-step-nav/src/MultiStepNav.tsx",
+          "type": "IProps"
+        },
+        {
+          "heading": "MultiStepNav.Item",
+          "file": "packages/clay-multi-step-nav/src/Item.tsx",
+          "type": "IProps"
+        },
+        {
+          "heading": "ClayMultiStepNavWithBasicItems",
+          "file": "packages/clay-multi-step-nav/src/MultiStepNavWithBasicItems.tsx",
+          "type": "IProps"
+        }
+      ]
+    }
   }
 ]
