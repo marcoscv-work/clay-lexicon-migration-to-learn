@@ -21,6 +21,35 @@ DISCREPANCIES.md for the inventory). One page per component, holding both,
 makes disagreement visible and fixable in one review. This repositioning comes
 from the epic (LPD-98580); the PoC's job was to prove it works page by page.
 
+**Is Lexicon's documentation actually unmaintained?**
+Yes, and the git history of its source repository
+([liferay-design/liferay.design](https://github.com/liferay-design/liferay.design),
+path `src/markdown/lexicon`) quantifies it. Data as of 2026-07-18:
+
+- Commits touching the Lexicon content per year: 223 in 2019, 111 in 2020, 49
+  in 2021, **zero in 2022**, 2 in 2023, 35 in 2024, 1 in 2025, 4 in 2026.
+- The 2024 activity was a single cleanup burst in January and February
+  (Input and Multi Select renames, the Selector-to-Select update), not
+  sustained maintenance.
+- Of the 98 Markdown pages that make up Lexicon today, **71 (72%) have not
+  been modified since before 2022**, and 29 (30%) not since before 2021.
+- The last content change by anyone other than this PoC's author landed on
+  2024-02-19. Everything after is infrastructure survival work (the Gatsby 5
+  migration, accessibility fixes, redirects) by the same person now proposing
+  this migration: 28 of the repository's 32 commits in the last 52 weeks.
+- The contrast: `liferay/clay` received **496 commits in the same 52 weeks**
+  (about 15 times more), with its latest push on the day of this measurement
+  and releases shipping continuously.
+
+The conclusion the numbers support: the design content is still valuable, but
+the site that hosts it has had no team behind it for four years and survives
+on one person's spare-time fixes. Folding it into the actively maintained
+Clay documentation is how that content gets an owner, a pipeline, and a
+future. Reproduce the numbers with
+`git log --format=%ad --date=format:%Y -- src/markdown/lexicon | sort | uniq -c`
+on a full clone, and `gh api repos/liferay/clay/stats/participation` for the
+Clay side.
+
 **Why is Lexicon mentioned only once?**
 The strategic decision under validation is that Lexicon becomes the internal
 design language behind Clay, not a parallel public brand. One mention on Get
