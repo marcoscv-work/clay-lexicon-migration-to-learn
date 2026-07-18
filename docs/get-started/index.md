@@ -22,8 +22,6 @@ separately.
 
 ## When to use Clay, and when not to
 
-<!-- REVIEW: the exact wording of this positioning is pending alignment with product messaging. -->
-
 Clay is built first for Liferay's own needs, so it is focused on administration
 interfaces. Use the guidance below to choose the right tool for what you are
 building.

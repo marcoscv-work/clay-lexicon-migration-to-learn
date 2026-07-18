@@ -40,10 +40,6 @@ story to embed or link:
 - **Keys** (`docs/components/keys.md`): CSS only (`c-kbd` classes) with no
   story. A story showing single keys, combinations, and unicode symbols would
   let the page show live examples.
-- **Charts** (`docs/components/charts.md`): no chart stories exist (the
-  @clayui/charts package announces its own upcoming deprecation). If a charting
-  implementation is adopted, stories per chart type would back the design
-  collection.
 - **Application Bar** (`docs/components/application-bar.md`): CSS markup
   pattern with no story. A story rendering the dark bar with menu trigger,
   title, and actions would back the page.

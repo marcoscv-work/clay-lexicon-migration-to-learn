@@ -45,11 +45,11 @@ validation, grew into the full migration of the in-scope content:
   installation, quick start, composition philosophy, and positioning guidance
   (when to use Clay and when to use Liferay's site-building stack).
 - **Foundations** (5): Animations, Color, Grid, Layout, Typography.
-- **Components** (62): every Lexicon core component merged with its Clay
+- **Components** (61): every Lexicon core component merged with its Clay
   implementation, plus every Clay-only component with docs (Picker, Icon
   Selector, Language Picker, Overlay Mask, Focus Trap, Resize Handle, Nav,
   Heading, Text, Layout, Provider, Data Provider, and the CSS markup patterns).
-  Design-only pages (Charts, Keys, Section, Confirmation Message, Dataset
+  Design-only pages (Keys, Section, Confirmation Message, Dataset
   Display) carry no API block and say how they map to Clay.
 - **CSS** (7): the framework overview plus a curated utilities reference
   (layout, spacing, text, decoration, accessibility) and the SCSS theming
@@ -61,9 +61,12 @@ validation, grew into the full migration of the in-scope content:
 - **Writing** (1): the writing principles, framework, and style rules,
   condensed from the four-page Lexicon writing guide.
 
-Out of scope: Satellites, Templates, Examples, the blog, the per-type
-chart specs, and pages marked `draft` upstream (Pager, the foundations
-Accessibility stub), whose relevant guidance was folded into related pages.
+Out of scope: Satellites, Templates, Examples, the blog, Charts (both the
+design overview and the per-type specs, excluded by stakeholder decision while
+the charting implementation is unresolved; the chart color palette remains in
+the Color foundation), and pages marked `draft` upstream (Pager, the
+foundations Accessibility stub), whose relevant guidance was folded into
+related pages.
 
 > The working criteria evolved from the original brief in a few explicit ways
 > (live examples instead of images on component pages, per-story embed heights,

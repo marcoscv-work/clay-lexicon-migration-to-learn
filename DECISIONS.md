@@ -89,6 +89,23 @@ The brief suggested `clay-docs-migration-poc`; the work lives in the existing
 path and Edit-on-GitHub links follow the real repository name (configured in
 `.vitepress/config.mjs`).
 
+## 7. REVIEW conflicts are resolved by stakeholder ruling
+
+The brief marks source conflicts with `<!-- REVIEW -->` comments. Each one is
+resolved by an explicit ruling from the product owner declaring which source
+prevails (Lexicon or Clay), or a scope call where the binary does not apply.
+When a ruling lands, the page text is updated, the comment is removed, and the
+decision is recorded in that page's `migration-map.json` notes so the
+provenance trail keeps the editorial call. Rulings so far (2026-07-18):
+
+- **Button sizes: Clay wins.** `xs` is documented as a third supported size
+  alongside Lexicon's Default (40px) and Small (32px).
+- **Get Started positioning: wording approved as written.**
+- **Charts: out of scope.** The design-overview page is removed along with the
+  per-type specs, pending a decision on the charting implementation after the
+  announced `@clayui/charts` deprecation. The chart color palette stays in the
+  Color foundation.
+
 ## Unchanged rules
 
 Everything else in the brief still applies as written: Learn tone, rewrite (no

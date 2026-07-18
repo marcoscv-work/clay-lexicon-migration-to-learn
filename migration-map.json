@@ -8,7 +8,7 @@
       "https://design.liferay.com/lexicon/get-started/"
     ],
     "storybook": null,
-    "notes": "Get Started: what Clay is, one-paragraph Lexicon explanation, installation (NPM/Yarn/CDN), quick start, composition philosophy, and positioning guidance (when to use Clay vs Liferay's site-building stack). Positioning wording pending product-messaging alignment."
+    "notes": "Get Started: what Clay is, one-paragraph Lexicon explanation, installation (NPM/Yarn/CDN), quick start, composition philosophy, and positioning guidance (when to use Clay vs Liferay's site-building stack). Positioning wording approved by the stakeholder on 2026-07-18; REVIEW flag removed."
   },
   {
     "new_path": "docs/foundations/color.md",
@@ -87,7 +87,7 @@
       "https://www.clayui.com/docs/components/button"
     ],
     "storybook": "https://storybook.clayui.com/?path=/story/design-system-components-button--default",
-    "notes": "Merged Lexicon button design spec (types, states, sizes, dos and don'ts, variations) with clayui.com implementation (display types, groups, icon buttons). Action-buttons subpage folded into the Variants and anatomy section. API generated from @clayui/button for Button, Button.Group, and ClayButtonWithIcon.",
+    "notes": "Merged Lexicon button design spec (types, states, sizes, dos and don'ts, variations) with clayui.com implementation (display types, groups, icon buttons). Action-buttons subpage folded into the Variants and anatomy section. API generated from @clayui/button for Button, Button.Group, and ClayButtonWithIcon. Sizes conflict resolved 2026-07-18 (Clay wins): xs documented as a third supported size alongside Lexicon's Default and Small.",
     "api": {
       "package": "@clayui/button",
       "targets": [
@@ -980,15 +980,6 @@
     ],
     "storybook": null,
     "notes": "Foundations Layout: the four standard layouts (cards, form box, full box, sidebar and box) condensed from the Lexicon layout index and its four subpages."
-  },
-  {
-    "new_path": "docs/components/charts.md",
-    "site_url": "/components/charts",
-    "sources": [
-      "https://design.liferay.com/lexicon/core-components/charts/"
-    ],
-    "storybook": null,
-    "notes": "Charts design overview (color-last rule, shared interactions, collection list). Per-chart-type Lexicon subpages not migrated in this pass; REVIEW comment asks the Clay team about the recommended charting implementation."
   },
   {
     "new_path": "docs/components/keys.md",

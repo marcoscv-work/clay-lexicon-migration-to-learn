@@ -90,7 +90,6 @@ export default defineConfig({
 					{text: 'Breadcrumb', link: '/components/breadcrumb'},
 					{text: 'Button', link: '/components/button'},
 					{text: 'Card', link: '/components/card'},
-					{text: 'Charts', link: '/components/charts'},
 					{text: 'Checkbox, Radio, and Toggle', link: '/components/checkbox-radio-toggle'},
 					{text: 'Color Picker', link: '/components/color-picker'},
 					{text: 'Confirmation Message', link: '/components/confirmation-message'},

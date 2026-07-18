@@ -41,12 +41,15 @@ reason is clear from the surrounding context.
 
 ### Sizes
 
-Clay buttons come in two heights:
+Clay buttons come in three sizes:
 
 - **Default**: 40px. Use it for the main actions on a page, such as Save or
   Cancel.
 - **Small**: 32px. Use it for actions inside dense areas such as drop down menus,
   button groups, and split buttons.
+- **Extra small** (`xs`): the most compact size. Reserve it for the densest
+  contexts, such as inline actions inside table rows or toolbars, where even
+  the small button takes too much room.
 
 ### Common variations
 
@@ -107,8 +110,6 @@ export default function Example() {
 	);
 }
 ```
-
-<!-- REVIEW: conflict between sources. Lexicon documents Default (40px) and Small (32px) sizes, while @clayui/button also exposes an "xs" size value. Confirm with the Clay team whether "xs" is supported design guidance. -->
 
 ## API reference
 
