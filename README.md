@@ -54,8 +54,10 @@ validation, grew into the full migration of the in-scope content:
 - **CSS** (1): an overview of the CSS framework and utilities.
 - **Patterns** (4): Common Actions, Common Content Patterns, Drag and Drop,
   Ellipsis.
+- **Writing** (1): the writing principles, framework, and style rules,
+  condensed from the four-page Lexicon writing guide.
 
-Out of scope: Satellites, Templates, Examples, Writing, the blog, the per-type
+Out of scope: Satellites, Templates, Examples, the blog, the per-type
 chart specs, and pages marked `draft` upstream (Pager, the foundations
 Accessibility stub), whose relevant guidance was folded into related pages.
 

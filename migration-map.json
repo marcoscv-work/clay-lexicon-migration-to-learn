@@ -1339,5 +1339,17 @@
     ],
     "storybook": null,
     "notes": "CSS utility classes for image proportions, rendered in React by Card.AspectRatio. No story (in STORYBOOK-GAPS.md)."
+  },
+  {
+    "new_path": "docs/writing/index.md",
+    "site_url": "/writing/",
+    "sources": [
+      "https://design.liferay.com/lexicon/writing/",
+      "https://design.liferay.com/lexicon/writing/principles/",
+      "https://design.liferay.com/lexicon/writing/writing-framework/",
+      "https://design.liferay.com/lexicon/writing/style/"
+    ],
+    "storybook": null,
+    "notes": "Condensed Writing guide: the five principles, the framework (clarity, active voice, reading level, scannability, positive form, persons, tenses, localization), and the style essentials (capitalization, punctuation, numbers, dates ISO-8601, time). Links to Common Actions and Common Content Patterns per the original guide structure."
   }
 ]

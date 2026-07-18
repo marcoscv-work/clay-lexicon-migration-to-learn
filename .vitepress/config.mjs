@@ -58,6 +58,7 @@ export default defineConfig({
 			{text: 'Components', link: '/components/button'},
 			{text: 'CSS', link: '/css/'},
 			{text: 'Patterns', link: '/patterns/common-actions'},
+			{text: 'Writing', link: '/writing/'},
 		],
 
 		// Sidebar mirrors the /docs structure. Components are alphabetical,
@@ -148,6 +149,10 @@ export default defineConfig({
 			{
 				text: 'CSS Framework',
 				link: '/css/',
+			},
+			{
+				text: 'Writing',
+				link: '/writing/',
 			},
 			{
 				text: 'Patterns',
