@@ -21,10 +21,19 @@ DISCREPANCIES.md for the inventory). One page per component, holding both,
 makes disagreement visible and fixable in one review. This repositioning comes
 from the epic (LPD-98580); the PoC's job was to prove it works page by page.
 
-**Is Lexicon's documentation actually unmaintained?**
-Yes, and the git history of its source repository
+**Why did the public Lexicon documentation stop being updated?**
+The explanation is structural, not neglect. Lexicon's guides remain valid,
+but their foundations are already applied across the product, and the design
+language now evolves internally: decisions are agreed with and for Liferay's
+internal designers, in internal channels (the ENGLEXICON Confluence space is
+that channel; see DECISIONS.md, item 8). The public site stopped being the
+medium where Lexicon happens, so its documentation stopped receiving updates.
+
+The proof is the git history of the site's source repository
 ([liferay-design/liferay.design](https://github.com/liferay-design/liferay.design),
-path `src/markdown/lexicon`) quantifies it. Data as of 2026-07-18:
+path `src/markdown/lexicon`). When reading it, only the real-documentation
+column is valid evidence: raw commit totals are inflated by renames, deploys,
+and site infrastructure. Data as of 2026-07-18:
 
 The counts below exclude mechanical commits (page renames, reorderings,
 deploy retriggers, image moves, redirects, and site infrastructure such as
@@ -50,11 +59,28 @@ Method: the 42 commits since 2022 were classified one by one from their
 subject and their Markdown line churn (`git log -M --numstat`, so a pure
 rename counts as zero); the 2019-2021 era was classified by subject keywords,
 so those figures are estimates of the same order as the raw totals (223, 111,
-and 49). The conclusion the numbers support: the design content is still
-valuable, but the site that hosts it has had no team behind it for four years
-and survives on one person's spare-time fixes. Folding it into the actively
-maintained Clay documentation is how that content gets an owner, a pipeline,
-and a future.
+and 49).
+
+This ties the other arguments together and gives them weight. The public site
+froze once the foundations were applied, while the real evolution moved to
+internal channels: that is exactly why the freshest design rulings (the
+Select-to-Picker substitution) exist only in Confluence and even reverse the
+public guidance, why this PoC had to import those internal documents as
+sources (DECISIONS.md, item 8), and why keeping two public sites means
+publishing guidance the design team no longer stands behind. The content is
+valid; its public home is not where it lives anymore.
+
+**Why is Liferay Learn the destination, instead of keeping a standalone site?**
+Audience. The last time traffic could be traced, design.liferay.com/lexicon
+received less than one visit per day, and clayui.com's traffic was also low
+(product owner's measurement; re-measure if analytics access is available
+when the final decision is made). learn.liferay.com is the most visited web
+property Liferay has. Documentation that nobody visits does not fail for lack
+of quality; it fails for lack of placement. Publishing the merged content
+where the readers already are multiplies its visibility at no extra
+maintenance cost, and it is the reason the deliverable is plain CommonMark
+that moves into Learn's pipeline unchanged (DECISIONS.md, governing
+principle).
 
 **Why is Lexicon mentioned only once?**
 The strategic decision under validation is that Lexicon becomes the internal
