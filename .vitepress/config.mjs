@@ -45,7 +45,7 @@ export default defineConfig({
 	],
 
 	themeConfig: {
-		siteTitle: 'Clay Docs (PoC)',
+		siteTitle: 'Clay Docs',
 
 		// Client-side search, no external service required.
 		search: {
