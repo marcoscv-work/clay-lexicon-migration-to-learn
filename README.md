@@ -51,7 +51,11 @@ validation, grew into the full migration of the in-scope content:
   Heading, Text, Layout, Provider, Data Provider, and the CSS markup patterns).
   Design-only pages (Charts, Keys, Section, Confirmation Message, Dataset
   Display) carry no API block and say how they map to Clay.
-- **CSS** (1): an overview of the CSS framework and utilities.
+- **CSS** (7): the framework overview plus a curated utilities reference
+  (layout, spacing, text, decoration, accessibility) and the SCSS theming
+  guide, consolidating the 24 clayui.com CSS pages with human names (no more
+  "C Spacing"); the color, chart color, grid, typography, and c-kbd pages are
+  covered by Foundations and Keys.
 - **Patterns** (4): Common Actions, Common Content Patterns, Drag and Drop,
   Ellipsis.
 - **Writing** (1): the writing principles, framework, and style rules,

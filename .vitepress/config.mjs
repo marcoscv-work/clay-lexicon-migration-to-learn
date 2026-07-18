@@ -147,8 +147,22 @@ export default defineConfig({
 				],
 			},
 			{
-				text: 'CSS Framework',
-				link: '/css/',
+				text: 'CSS',
+				items: [
+					{text: 'Overview', link: '/css/'},
+					{
+						text: 'Accessibility Utilities',
+						link: '/css/accessibility-utilities',
+					},
+					{
+						text: 'Decoration Utilities',
+						link: '/css/decoration-utilities',
+					},
+					{text: 'Layout Utilities', link: '/css/layout-utilities'},
+					{text: 'SCSS and Theming', link: '/css/scss'},
+					{text: 'Spacing Utilities', link: '/css/spacing-utilities'},
+					{text: 'Text Utilities', link: '/css/text-utilities'},
+				],
 			},
 			{
 				text: 'Writing',

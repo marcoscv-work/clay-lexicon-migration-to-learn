@@ -1351,5 +1351,72 @@
     ],
     "storybook": null,
     "notes": "Condensed Writing guide: the five principles, the framework (clarity, active voice, reading level, scannability, positive form, persons, tenses, localization), and the style essentials (capitalization, punctuation, numbers, dates ISO-8601, time). Links to Common Actions and Common Content Patterns per the original guide structure."
+  },
+  {
+    "new_path": "docs/css/layout-utilities.md",
+    "site_url": "/css/layout-utilities",
+    "sources": [
+      "https://www.clayui.com/docs/css/autofit",
+      "https://www.clayui.com/docs/css/display",
+      "https://www.clayui.com/docs/css/flex",
+      "https://www.clayui.com/docs/css/float",
+      "https://www.clayui.com/docs/css/position",
+      "https://www.clayui.com/docs/css/overflow",
+      "https://www.clayui.com/docs/css/vertical-align",
+      "https://www.clayui.com/docs/css/visibility",
+      "https://www.clayui.com/docs/css/width-and-height",
+      "https://www.clayui.com/docs/css/inline-item"
+    ],
+    "storybook": null,
+    "notes": "Curated merge of ten clayui.com CSS utility pages into one layout reference (autofit, display, flex, float, position, overflow, vertical align, visibility, sizing, inline items)."
+  },
+  {
+    "new_path": "docs/css/spacing-utilities.md",
+    "site_url": "/css/spacing-utilities",
+    "sources": [
+      "https://www.clayui.com/docs/css/c-spacing"
+    ],
+    "storybook": null,
+    "notes": "The c-spacing class anatomy (prefix, type, direction, breakpoint, value), the full scale, negative margins, and gap classes, renamed from C Spacing to a human name."
+  },
+  {
+    "new_path": "docs/css/text-utilities.md",
+    "site_url": "/css/text-utilities",
+    "sources": [
+      "https://www.clayui.com/docs/css/text"
+    ],
+    "storybook": null,
+    "notes": "Text utility classes (sizes text-1..11, weights, styles, alignment, wrap/truncate, transforms), linked to the typography foundation and writing rules."
+  },
+  {
+    "new_path": "docs/css/decoration-utilities.md",
+    "site_url": "/css/decoration-utilities",
+    "sources": [
+      "https://www.clayui.com/docs/css/borders",
+      "https://www.clayui.com/docs/css/shadow",
+      "https://www.clayui.com/docs/css/color-utilities",
+      "https://www.clayui.com/docs/css/c-focus-inset",
+      "https://www.clayui.com/docs/css/c-inner"
+    ],
+    "storybook": null,
+    "notes": "Curated merge of borders, rounded, shadows, palette color utilities, and the c-focus-inset and c-inner focus helpers."
+  },
+  {
+    "new_path": "docs/css/accessibility-utilities.md",
+    "site_url": "/css/accessibility-utilities",
+    "sources": [
+      "https://www.clayui.com/docs/css/accessibility"
+    ],
+    "storybook": null,
+    "notes": "sr-only and sr-only-focusable techniques plus the c-prefers-* user preference override classes."
+  },
+  {
+    "new_path": "docs/css/scss.md",
+    "site_url": "/css/scss",
+    "sources": [
+      "https://www.clayui.com/docs/css/scss"
+    ],
+    "storybook": null,
+    "notes": "Full theming guide: !default variables, Sass maps and null removal, variant mixins with the modifier-class rule, and helper functions."
   }
 ]

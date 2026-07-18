@@ -49,35 +49,33 @@ If you only need the CSS, load it from a CDN instead:
 ## Utilities
 
 Beyond component styles, the framework includes utility classes for common
-layout and formatting needs, so you can style markup without writing custom CSS.
-The utilities cover:
+layout and formatting needs, so you can style markup without writing custom
+CSS. Each family has its own reference page:
 
-- **Layout**: flex, float, display, position, overflow, and vertical alignment.
-- **Spacing**: margin and padding helpers built on the 8px grid.
-- **Sizing**: width and height helpers, and autofit for responsive rows.
-- **Typography**: text alignment, wrapping, transformation, and truncation.
-- **Decoration**: borders, shadows, and color utilities.
-- **Visibility**: showing and hiding content responsively.
+- **[Layout Utilities](/css/layout-utilities)**: autofit rows, display, flex,
+  float, position, overflow, vertical alignment, visibility, sizing, and
+  inline items.
+- **[Spacing Utilities](/css/spacing-utilities)**: the `c-` margin, padding,
+  and gap classes on the 8px scale.
+- **[Text Utilities](/css/text-utilities)**: sizes, weights, styles,
+  alignment, wrapping, and truncation.
+- **[Decoration Utilities](/css/decoration-utilities)**: borders, rounded
+  corners, shadows, palette colors, and focus helpers.
+- **[Accessibility Utilities](/css/accessibility-utilities)**: screen reader
+  text, skip links, and user preference overrides.
+
+The palette classes build on the [Color foundation](/foundations/color), which
+also documents the chart palette; keyboard key styling (`c-kbd`) is covered by
+the [Keys](/components/keys) component.
 
 ## Customizing with SCSS
 
-The framework is built with Sass and is designed to be themed without editing its
-source:
-
-- **Variables**: every Clay variable uses the `!default` flag, so you can
-  override it by defining your own value before importing `base.scss` or
-  `atlas.scss`.
-- **Sass maps**: Clay uses maps heavily, which lets you reset a property to
-  `null` (so it is not output) and reuse rulesets instead of overwriting them.
-- **Mixins**: mixins such as `clay-button-variant` generate component variants
-  from a map of values, so you can create your own variants.
-- **Functions**: helpers such as `clay-icon` and `clay-svg-url` return icons as
-  data URIs for use as background images.
-
-Extend components by adding your own modifier classes rather than changing the
-base classes. Liferay uses the base classes (for example `btn` and `btn-primary`)
-throughout its administration controls, so editing them directly changes those
-controls too. Creating modifiers keeps your styles isolated and compatible with
+The framework is designed to be themed without editing its source, through
+`!default` variables, Sass maps, variant mixins, and helper functions. The
+[SCSS and Theming](/css/scss) page covers each mechanism with examples; the
+short version: override variables before importing the theme, and extend
+components with your own modifier classes instead of changing base classes such
+as `btn`, which Liferay's administration controls depend on. Creating modifiers keeps your styles isolated and compatible with
 the React components.
 
 ## Relationship to the components
