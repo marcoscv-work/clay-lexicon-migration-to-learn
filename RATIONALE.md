@@ -71,11 +71,17 @@ publishing guidance the design team no longer stands behind. The content is
 valid; its public home is not where it lives anymore.
 
 **Why is Liferay Learn the destination, instead of keeping a standalone site?**
-Audience. The last time traffic could be traced, design.liferay.com/lexicon
-received less than one visit per day, and clayui.com's traffic was also low
-(product owner's measurement; re-measure if analytics access is available
-when the final decision is made). learn.liferay.com is the most visited web
-property Liferay has. Documentation that nobody visits does not fail for lack
+Audience. Traffic analytics existed for the site during 2025, while it lived
+at its original domain (liferay.design), and they showed **less than one
+visit per day** to the Lexicon documentation; clayui.com's traffic is also
+low. That measurement cannot be repeated: Liferay lost control of the
+liferay.design domain in early 2026, the site moved to design.liferay.com
+(the "Redirections and Website Rename" commit of February 2026 in the source
+repository), and the analytics history went with the domain. As of 2026-07-18
+the old domain still serves a copy of the site outside Liferay's control,
+which is itself evidence of how fragile a standalone property without an
+owning team is. learn.liferay.com is the most visited web property Liferay
+has. Documentation that nobody visits does not fail for lack
 of quality; it fails for lack of placement. Publishing the merged content
 where the readers already are multiplies its visibility at no extra
 maintenance cost, and it is the reason the deliverable is plain CommonMark
