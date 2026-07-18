@@ -88,6 +88,7 @@ related pages.
 migration-map.json     provenance and redirect-map seed
 STORYBOOK-GAPS.md      backlog of components/variants missing a Storybook story
 DECISIONS.md           how the criteria evolved from the original brief
+DISCREPANCIES.md       inventory of Lexicon vs Clay discrepancies and rulings
 README.md
 CONTRIBUTING.md
 ```

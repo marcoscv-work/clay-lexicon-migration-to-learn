@@ -3,6 +3,8 @@ title: Picker
 description: A picker looks like a select but opens a fully styled, accessible option panel.
 sources:
   - https://www.clayui.com/docs/components/picker
+  - https://liferay.atlassian.net/wiki/spaces/ENGLEXICON/pages/3080618005/Item+Selection+Guideline
+  - https://liferay.atlassian.net/wiki/spaces/ENGLEXICON/pages/2444755160/Accessibility+in+Dropdown+Select+Picker+and+Autocomplete
 storybook: https://storybook.clayui.com/?path=/story/design-system-components-picker--default
 status: poc-draft
 api_version: 3.165.0
@@ -10,20 +12,25 @@ api_version: 3.165.0
 
 # Picker
 
-Use the picker when you need the behavior of a [select](/components/select)
-with a fully styled panel: the user opens it, chooses an option, and the button
-shows the selection. Unlike a native select, the picker's options can be styled
-and composed; unlike a [drop down](/components/drop-down), it holds a value
-rather than actions.
+Use the picker for a single selection from a list of options. It reads like a
+[select](/components/select) but opens a fully styled, accessible panel: the
+user opens it, chooses an option, and the trigger shows the selection. Lexicon
+recommends the picker as the direct substitute for the native select in
+Liferay's product.
 
-<!-- REVIEW: the Picker ships in @clayui/core as Beta and has no standalone Lexicon spec; the selector design rules apply. Confirm status with the Clay team. -->
+Two traits identify a picker: the trigger and the panel are connected, so the
+trigger always reflects the selection, and choosing an item results in a
+selection. If choosing an item triggers an action or navigation instead, use a
+[drop down](/components/drop-down); what looks like a selection must behave as
+one.
 
 ## Variants and anatomy
 
 The picker pairs a trigger button with an options panel built from `Option`
 items. It supports a search field inside the panel for long lists, custom
 triggers, grouped options, and a shrink variant that sizes the trigger to its
-content.
+content. It is intentionally limited in customization and extension points,
+so the selection semantics stay clear to every user.
 
 Try the [Picker story](https://storybook.clayui.com/?path=/story/design-system-components-picker--default),
 the [search story](https://storybook.clayui.com/?path=/story/design-system-components-picker--search),
@@ -31,11 +38,17 @@ and the [custom options story](https://storybook.clayui.com/?path=/story/design-
 
 ## Usage guidelines
 
-- Prefer the native [select](/components/select) when its styling is enough;
-  reach for the picker when options need rich content or the panel needs
-  search.
+- Always use the picker for a single selection inside a form. It replaces the
+  native [select](/components/select), which is no longer recommended.
+- Use the picker for multiple selection only where horizontal space is tight,
+  such as inside a toolbar. With room available, prefer
+  [Multi Select](/components/multi-select) with autocomplete.
+- Turn on the built-in search (`searchable`) when the list holds many options,
+  so users can filter instead of scanning.
 - Label the picker like any form control.
 - Keep options as values, not actions; actions belong in a drop down.
+- When an option combines a title, a description, and an image, the title is
+  the main selection element, and it is what the trigger shows once selected.
 
 ## Implementation
 
@@ -107,8 +120,9 @@ export default function Example() {
 ## Accessibility
 
 - The picker implements the ARIA listbox pattern over a combobox-style trigger:
-  arrow keys move through options, typing jumps to matches, and `Enter`
-  selects.
+  arrow keys move through options and `Enter` selects.
+- While the panel is open, pressing a letter must move the selection to the
+  options that begin with that letter, as in a native select.
 - Associate the label through `aria-labelledby`, as with a native select.
 - The selected option is exposed on the trigger, so the current value is always
   announced.

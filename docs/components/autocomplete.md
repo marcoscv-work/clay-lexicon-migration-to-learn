@@ -3,6 +3,8 @@ title: Autocomplete
 description: An autocomplete suggests matching options while the user types in a text field.
 sources:
   - https://www.clayui.com/docs/components/autocomplete
+  - https://liferay.atlassian.net/wiki/spaces/ENGLEXICON/pages/3080618005/Item+Selection+Guideline
+  - https://liferay.atlassian.net/wiki/spaces/ENGLEXICON/pages/2444755160/Accessibility+in+Dropdown+Select+Picker+and+Autocomplete
 storybook: https://storybook.clayui.com/?path=/story/design-system-components-autocomplete--default
 status: poc-draft
 api_version: 3.165.0
@@ -11,10 +13,14 @@ api_version: 3.165.0
 # Autocomplete
 
 Use an autocomplete when the user types into a field and should get matching
-suggestions from a known set: long lists where a plain
-[select](/components/select) would be unwieldy, or lookups against server data.
+suggestions from a known set: long lists where a [picker](/components/picker)
+would be unwieldy, or lookups against server data.
 
-<!-- REVIEW: Lexicon has no standalone autocomplete spec; the behavior appears inside the Multi Select spec. Design guidance here is derived from the Clay implementation and related Lexicon patterns; confirm with the design team. -->
+An autocomplete is a live search over a list of elements. While the user
+types, it must report how many matches remain and let the user walk the
+results with the arrow keys and the tab key, the same way a drop down does.
+Use it for single selection over large sets; to build a set of values, use
+[Multi Select](/components/multi-select), which wraps this same behavior.
 
 ## Variants and anatomy
 
@@ -101,6 +107,8 @@ export default function Example() {
 
 - The component implements the ARIA combobox pattern: the list is announced,
   arrow keys move through suggestions, and `Enter` accepts one.
+- Announce the number of matches while the user types, so screen reader users
+  know the live search is narrowing.
 - Label the field (`aria-labelledby` or a visible label).
 - The "no results" and loading messages are announced through the messages you
   provide.

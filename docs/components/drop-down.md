@@ -4,6 +4,8 @@ description: A drop down shows a list of options or actions for the element that
 sources:
   - https://design.liferay.com/lexicon/core-components/dropdowns/
   - https://www.clayui.com/docs/components/drop-down
+  - https://liferay.atlassian.net/wiki/spaces/ENGLEXICON/pages/3080618005/Item+Selection+Guideline
+  - https://liferay.atlassian.net/wiki/spaces/ENGLEXICON/pages/2444755160/Accessibility+in+Dropdown+Select+Picker+and+Autocomplete
 storybook: https://storybook.clayui.com/?path=/story/design-system-components-dropdown--default
 status: poc-draft
 api_version: 3.165.0
@@ -14,6 +16,13 @@ api_version: 3.165.0
 Use a drop down to show a list of options or actions for the element that
 triggers it. A drop down keeps the screen clean by condensing options until the
 user needs them.
+
+Two traits identify a drop down: the trigger is not connected to the panel's
+content (an actions icon looks the same whatever the menu holds), and choosing
+an item triggers an action or a navigation. When choosing an item makes a
+selection that the trigger reflects, or the control lives inside a form, use a
+[picker](/components/picker) instead; what looks like a selection must behave
+as one.
 
 ## Variants and anatomy
 
@@ -49,8 +58,13 @@ Common types:
 - Show only the actions that are relevant in context. Disable an action that is
   temporarily unavailable rather than removing it, unless the item can never
   perform that action.
-- Do not add submenus or otherwise increase the menu's complexity. For multi
-  level navigation, use a drilldown menu.
+- Offer the search field variant when the menu grows past fifteen elements, so
+  users can filter instead of scanning.
+- Do not add submenus or otherwise increase the menu's complexity. When several
+  actions share a common parent action, use a drilldown menu.
+- A fully custom panel that mixes groups, actions, and selection is possible,
+  but ask the Platform Experience team for an accessibility review before
+  shipping one.
 
 ## Implementation
 

@@ -106,6 +106,30 @@ provenance trail keeps the editorial call. Rulings so far (2026-07-18):
   announced `@clayui/charts` deprecation. The chart color palette stays in the
   Color foundation.
 
+## 8. Internal Lexicon guidelines are part of the merge
+
+The public sites are not the only sources: two internal Lexicon documents from
+the ENGLEXICON Confluence space were folded into the selection components on
+2026-07-18.
+
+- **[Item Selection Guideline](https://liferay.atlassian.net/wiki/spaces/ENGLEXICON/pages/3080618005/Item+Selection+Guideline)**:
+  which component to use for item selection. Drop down for actions, picker for
+  single selection (it substitutes the native select, which is no longer
+  recommended), Multi Select with autocomplete for multiple selection, the
+  picker's multiple selection where space is tight, and the select box only
+  inside the Dual Listbox.
+- **[Accessibility in Dropdown, Select, Picker and Autocomplete](https://liferay.atlassian.net/wiki/spaces/ENGLEXICON/pages/2444755160/Accessibility+in+Dropdown+Select+Picker+and+Autocomplete)**:
+  the semantic criteria behind that choice (what visually looks like a
+  selection must be semantically a selection) and the accessibility
+  expectations: type-ahead in the picker, match-count announcements in the
+  autocomplete.
+
+Affected pages: Drop Down, Picker, Select, Autocomplete, Multi Select, and
+Dual Listbox. The Confluence pages are listed in those pages' frontmatter
+sources and in `migration-map.json`. This import resolved the Picker and
+Autocomplete REVIEW flags: their design guidance is no longer derived from the
+implementation, it comes from these documents.
+
 ## Unchanged rules
 
 Everything else in the brief still applies as written: Learn tone, rewrite (no

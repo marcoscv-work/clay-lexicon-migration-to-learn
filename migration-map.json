@@ -134,10 +134,12 @@
     "site_url": "/components/drop-down",
     "sources": [
       "https://design.liferay.com/lexicon/core-components/dropdowns/",
-      "https://www.clayui.com/docs/components/drop-down"
+      "https://www.clayui.com/docs/components/drop-down",
+      "https://liferay.atlassian.net/wiki/spaces/ENGLEXICON/pages/3080618005/Item+Selection+Guideline",
+      "https://liferay.atlassian.net/wiki/spaces/ENGLEXICON/pages/2444755160/Accessibility+in+Dropdown+Select+Picker+and+Autocomplete"
     ],
     "storybook": "https://storybook.clayui.com/?path=/story/design-system-components-dropdown--default",
-    "notes": "Merged Lexicon dropdown design spec (types, action ordering, sizing) with clayui.com implementation (low-level composition, high-level ClayDropDownWithItems and ClayDropDownWithDrilldown, search filtering). API generated from @clayui/drop-down for DropDown and DropDown.Item.",
+    "notes": "Merged Lexicon dropdown design spec (types, action ordering, sizing) with clayui.com implementation (low-level composition, high-level ClayDropDownWithItems and ClayDropDownWithDrilldown, search filtering). API generated from @clayui/drop-down for DropDown and DropDown.Item. Internal Lexicon guidance folded in on 2026-07-18 (Item Selection Guideline; Accessibility doc): identification criteria (trigger not connected, item click is an action or navigation), search recommended past fifteen elements, accessibility review for complex panels.",
     "api": {
       "package": "@clayui/drop-down",
       "targets": [
@@ -598,10 +600,11 @@
     "site_url": "/components/select",
     "sources": [
       "https://design.liferay.com/lexicon/core-components/forms/selector/",
-      "https://www.clayui.com/docs/components/select"
+      "https://www.clayui.com/docs/components/select",
+      "https://liferay.atlassian.net/wiki/spaces/ENGLEXICON/pages/3080618005/Item+Selection+Guideline"
     ],
     "storybook": "https://storybook.clayui.com/?path=/story/design-system-components-select--high-level",
-    "notes": "Merged Lexicon selector spec (native control, input states, select vs dropdown distinction) with clayui.com implementation (ClaySelectWithOption, ClaySelect, SelectBox). API from @clayui/form.",
+    "notes": "Merged Lexicon selector spec (native control, input states, select vs dropdown distinction) with clayui.com implementation (ClaySelectWithOption, ClaySelect, SelectBox). API from @clayui/form. Internal Lexicon guidance folded in on 2026-07-18 (Item Selection Guideline): select is not recommended in DXP, picker is the direct substitute; select box multiple selection exists only for Dual Listbox.",
     "api": {
       "package": "@clayui/form",
       "targets": [
@@ -623,10 +626,11 @@
     "site_url": "/components/multi-select",
     "sources": [
       "https://design.liferay.com/lexicon/core-components/forms/multi-select/",
-      "https://www.clayui.com/docs/components/multi-select"
+      "https://www.clayui.com/docs/components/multi-select",
+      "https://liferay.atlassian.net/wiki/spaces/ENGLEXICON/pages/3080618005/Item+Selection+Guideline"
     ],
     "storybook": "https://storybook.clayui.com/?path=/story/design-system-components-multiselect--default",
-    "notes": "Merged Lexicon multi select spec (tags as labels, autocomplete, paste to tags, allowlist) with clayui.com implementation (items/sourceItems, onItemsChange). API from @clayui/multi-select.",
+    "notes": "Merged Lexicon multi select spec (tags as labels, autocomplete, paste to tags, allowlist) with clayui.com implementation (items/sourceItems, onItemsChange). API from @clayui/multi-select. Internal Lexicon guidance folded in on 2026-07-18 (Item Selection Guideline): Multi Select with autocomplete is the default for multiple selection; picker covers the limited-space case; comma-key creation documented.",
     "api": {
       "package": "@clayui/multi-select",
       "targets": [
@@ -643,10 +647,11 @@
     "site_url": "/components/dual-listbox",
     "sources": [
       "https://design.liferay.com/lexicon/core-components/dual-listbox/",
-      "https://www.clayui.com/docs/components/dual-list-box"
+      "https://www.clayui.com/docs/components/dual-list-box",
+      "https://liferay.atlassian.net/wiki/spaces/ENGLEXICON/pages/3080618005/Item+Selection+Guideline"
     ],
     "storybook": "https://storybook.clayui.com/?path=/story/design-system-components-duallistbox--default",
-    "notes": "Merged Lexicon dual listbox spec (parts, transfer button states, ordering rules) with clayui.com implementation (ClayDualListBox). API from @clayui/form.",
+    "notes": "Merged Lexicon dual listbox spec (parts, transfer button states, ordering rules) with clayui.com implementation (ClayDualListBox). API from @clayui/form. Internal Lexicon guidance folded in on 2026-07-18 (Item Selection Guideline): the dual listbox is the only current use case for the select box multiple selection mode.",
     "api": {
       "package": "@clayui/form",
       "targets": [
@@ -918,10 +923,12 @@
     "new_path": "docs/components/autocomplete.md",
     "site_url": "/components/autocomplete",
     "sources": [
-      "https://www.clayui.com/docs/components/autocomplete"
+      "https://www.clayui.com/docs/components/autocomplete",
+      "https://liferay.atlassian.net/wiki/spaces/ENGLEXICON/pages/3080618005/Item+Selection+Guideline",
+      "https://liferay.atlassian.net/wiki/spaces/ENGLEXICON/pages/2444755160/Accessibility+in+Dropdown+Select+Picker+and+Autocomplete"
     ],
     "storybook": "https://storybook.clayui.com/?path=/story/design-system-components-autocomplete--default",
-    "notes": "Clay-only component (no standalone Lexicon spec; behavior referenced from the Multi Select spec). Implementation and API from @clayui/autocomplete; flagged with a REVIEW comment for the design team.",
+    "notes": "Clay-only component (no standalone Lexicon spec; behavior referenced from the Multi Select spec). Implementation and API from @clayui/autocomplete; flagged with a REVIEW comment for the design team. Internal Lexicon guidance folded in on 2026-07-18 (Item Selection Guideline; Accessibility doc): autocomplete is a live search for single selection, must announce match count while typing and support arrow navigation. REVIEW flag resolved: guidance is no longer derived, it comes from these documents.",
     "api": {
       "package": "@clayui/autocomplete",
       "targets": [
@@ -1049,10 +1056,12 @@
     "new_path": "docs/components/picker.md",
     "site_url": "/components/picker",
     "sources": [
-      "https://www.clayui.com/docs/components/picker"
+      "https://www.clayui.com/docs/components/picker",
+      "https://liferay.atlassian.net/wiki/spaces/ENGLEXICON/pages/3080618005/Item+Selection+Guideline",
+      "https://liferay.atlassian.net/wiki/spaces/ENGLEXICON/pages/2444755160/Accessibility+in+Dropdown+Select+Picker+and+Autocomplete"
     ],
     "storybook": "https://storybook.clayui.com/?path=/story/design-system-components-picker--default",
-    "notes": "Clay-only (Beta, @clayui/core): select-like control with a styled options panel. Lexicon selector rules apply; REVIEW note on status.",
+    "notes": "Clay-only (Beta, @clayui/core): select-like control with a styled options panel. Lexicon selector rules apply; REVIEW note on status. Internal Lexicon guidance folded in on 2026-07-18 (Item Selection Guideline; Accessibility in Dropdown, Select, Picker and Autocomplete): picker is the recommended substitute for the native select, single selection always, multiple selection only in limited space, type-ahead required. Beta framing dropped and REVIEW flag resolved by stakeholder ruling.",
     "api": {
       "package": "@clayui/core",
       "targets": [

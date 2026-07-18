@@ -4,6 +4,7 @@ description: Multi Select creates tags from typed text, with autocomplete, shown
 sources:
   - https://design.liferay.com/lexicon/core-components/forms/multi-select/
   - https://www.clayui.com/docs/components/multi-select
+  - https://liferay.atlassian.net/wiki/spaces/ENGLEXICON/pages/3080618005/Item+Selection+Guideline
 storybook: https://storybook.clayui.com/?path=/story/design-system-components-multiselect--default
 status: poc-draft
 api_version: 3.165.0
@@ -21,6 +22,8 @@ free text.
 Multi Select combines a text field with:
 
 - **Autocomplete** of existing values while typing.
+- **Tag creation with the comma key**: pressing comma after writing turns the
+  text into a new item, when creation is enabled.
 - **Fast tag creation on paste**: pasted text separated by commas becomes one
   tag per element.
 - **A character allowlist**, so tags only accept the characters you configure.
@@ -31,8 +34,10 @@ and the [primary action story](https://storybook.clayui.com/?path=/story/design-
 
 ## Usage guidelines
 
-- Use Multi Select for open sets the user extends by typing. For choosing among
-  a fixed short list, use a [select](/components/select) or checkboxes.
+- Multi Select with autocomplete is the default choice for multiple selection.
+  Where horizontal space is tight, such as inside a toolbar, use the
+  [picker](/components/picker)'s multiple selection instead; for choosing among
+  a fixed short list, checkboxes work best.
 - Keep tags short; they render as labels and follow label rules (one line, no
   ellipsis).
 - Offer autocomplete whenever existing values are likely to be reused, to avoid

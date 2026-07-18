@@ -4,6 +4,7 @@ description: A dual listbox moves options between an in-use list and an availabl
 sources:
   - https://design.liferay.com/lexicon/core-components/dual-listbox/
   - https://www.clayui.com/docs/components/dual-list-box
+  - https://liferay.atlassian.net/wiki/spaces/ENGLEXICON/pages/3080618005/Item+Selection+Guideline
 storybook: https://storybook.clayui.com/?path=/story/design-system-components-duallistbox--default
 status: poc-draft
 api_version: 3.165.0
@@ -40,6 +41,9 @@ Try the [Dual Listbox story](https://storybook.clayui.com/?path=/story/design-sy
 - Add a short task description above the component, so the goal of the transfer
   is clear.
 - Keep scrolling available in long lists.
+- This pattern is the only current use of the select box's multiple selection
+  mode. Contact the Platform Experience team before reaching for the select box
+  anywhere else.
 
 ## Implementation
 

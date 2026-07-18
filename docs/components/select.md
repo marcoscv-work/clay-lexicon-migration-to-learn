@@ -4,6 +4,7 @@ description: A select lets the user pick one option from a native list of provid
 sources:
   - https://design.liferay.com/lexicon/core-components/forms/selector/
   - https://www.clayui.com/docs/components/select
+  - https://liferay.atlassian.net/wiki/spaces/ENGLEXICON/pages/3080618005/Item+Selection+Guideline
 storybook: https://storybook.clayui.com/?path=/story/design-system-components-select--high-level
 status: poc-draft
 api_version: 3.165.0
@@ -11,10 +12,17 @@ api_version: 3.165.0
 
 # Select
 
-Use a select to pick one option from a fixed list provided by the system. A
-select is a native form control with a data provider; it is not a
+A select picks one option from a fixed list provided by the system. It is a
+native form control with a data provider; it is not a
 [drop down](/components/drop-down), which opens a panel that can contain
 arbitrary content and actions.
+
+Lexicon's item selection guideline recommends the
+[picker](/components/picker) as a direct substitute for this component in
+Liferay's product: the native select has technical limits on style and
+structure, while the picker offers the same selection semantics with a fully
+styled, accessible panel. Reach for the select only when those limits do not
+matter, for example in plain HTML without Clay's React components.
 
 ## Variants and anatomy
 
@@ -28,13 +36,17 @@ autocomplete, use [Multi Select](/components/multi-select).
 
 Try the [Select story](https://storybook.clayui.com/?path=/story/design-system-components-select--high-level)
 and the [select box story](https://storybook.clayui.com/?path=/story/design-system-components-selectbox--default),
-a listbox variant that shows several options at once.
+a listbox variant that shows several options at once. The select box's
+multiple selection mode exists only to build the
+[Dual Listbox](/components/dual-listbox); do not use it on its own.
 
 ## Usage guidelines
 
-- Use a select when the user must choose one of a known, reasonably short list
-  of options. For very long lists, prefer a searchable control such as an
-  autocomplete.
+- Prefer the [picker](/components/picker) for single selection. Keep this
+  select only where the native control's limits are acceptable.
+- Use a selection control when the user must choose one of a known, reasonably
+  short list of options. For very long lists, prefer a searchable control such
+  as an autocomplete.
 - Label every select, and give options short, distinct names.
 - Do not use a select where a drop down of actions belongs: selects hold data
   values, not commands.
@@ -116,6 +128,7 @@ See the [Select stories on Storybook](https://storybook.clayui.com/?path=/story/
 
 ## Related components
 
+- [Picker](/components/picker), the recommended substitute
 - [Drop Down](/components/drop-down)
 - [Multi Select](/components/multi-select)
 - [Dual Listbox](/components/dual-listbox)
