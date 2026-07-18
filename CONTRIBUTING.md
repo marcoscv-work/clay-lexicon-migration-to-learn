@@ -63,11 +63,17 @@ changes and wins where the two disagree.
 - **Conflicts between sources.** Prefer clayui.com for implementation facts and
   Lexicon for design intent. Flag anything unresolved with an HTML comment
   `<!-- REVIEW: conflict between sources, describe -->` so it can be found with
-  grep.
+  grep. Every flag is inventoried in
+  [DISCREPANCIES.md](./DISCREPANCIES.md) and resolved by stakeholder ruling
+  (see [DECISIONS.md](./DECISIONS.md), item 7); when a ruling lands, the
+  comment is removed and the decision is recorded in `migration-map.json`.
 
 ## What not to migrate (for this PoC)
 
-Satellites, Templates, Examples, Writing, and the blog are out of scope.
+Satellites, Templates, Examples, and the blog are out of scope. Charts was
+removed by stakeholder ruling while the charting implementation is unresolved
+(see [DISCREPANCIES.md](./DISCREPANCIES.md)). The Writing guide, originally out
+of scope, was brought in by stakeholder decision as a single condensed page.
 
 ## Pull request checklist
 

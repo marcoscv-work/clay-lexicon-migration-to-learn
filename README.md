@@ -72,6 +72,9 @@ related pages.
 > (live examples instead of images on component pages, per-story embed heights,
 > color swatch chips, a fixed banner). [DECISIONS.md](./DECISIONS.md) records
 > each change and wins over the brief where they disagree.
+> [RATIONALE.md](./RATIONALE.md) collects the argument behind every decision,
+> with pointers to the evidence, and [DISCREPANCIES.md](./DISCREPANCIES.md)
+> inventories where the two sources disagree and how each case was ruled.
 
 ## Repository layout
 
@@ -89,6 +92,7 @@ migration-map.json     provenance and redirect-map seed
 STORYBOOK-GAPS.md      backlog of components/variants missing a Storybook story
 DECISIONS.md           how the criteria evolved from the original brief
 DISCREPANCIES.md       inventory of Lexicon vs Clay discrepancies and rulings
+RATIONALE.md           the argument behind every decision, with evidence links
 README.md
 CONTRIBUTING.md
 ```
@@ -176,6 +180,28 @@ This keeps all three constraints intact at once:
   normal links.
 - **Contributors do nothing special.** Writing a regular Markdown link to a
   story is all it takes; the viewer does the rest.
+
+## Quality gates
+
+Every structural claim in this repo is enforced by a check, not by discipline:
+
+| Check | Command | What it guards |
+| ----- | ------- | -------------- |
+| Internal links and assets | `npm run lint:links` | Every internal link and image path under `/docs` resolves. Runs on every PR. |
+| Storybook story ids | part of `lint:links` | Every story link matches a real story id from the authoritative index snapshot (`scripts/storybook-index.json`, extracted from Storybook's own store), so an embed can never point at a story that does not exist. |
+| Site build | `npm run docs:build` | VitePress fails the build on dead links (`ignoreDeadLinks: false`). Runs on every PR and on deploy. |
+| Generated API blocks | `npm run api:check` | Regenerating every API table from the Clay TypeScript source produces no diff, proving no table was hand-edited or has drifted. |
+| Weekly API refresh | `.github/workflows/api-update.yml` | Clones `liferay/clay` on a weekly schedule, regenerates, and opens a pull request when anything changed: a Clay release becomes a reviewed diff, never a silent drift or an archaeology session. |
+
+One deliberate omission: `api:check` does not run on pull requests. The script
+resolves the latest published `@clayui/*` versions, so the moment Clay ships a
+release, every open PR would fail for reasons unrelated to its content. API
+freshness is instead owned by the scheduled workflow, which turns each release
+into its own reviewed PR, and PR CI stays deterministic.
+
+Editorial rules that need human judgment (Learn tone, one H1 per page, no em
+dashes, plain CommonMark, provenance updates) are listed in
+[CONTRIBUTING.md](./CONTRIBUTING.md) and checked in review.
 
 ## How the Edit-button flow works
 
