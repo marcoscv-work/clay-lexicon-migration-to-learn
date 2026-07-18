@@ -217,9 +217,29 @@ export function embedStorybookLinks() {
 
 		// Idempotence against DOM state too (not only the link flag): if the
 		// framework re-rendered the content but a previously injected embed for
-		// this block survived, do not add a second one.
+		// this exact story survived after this block, do not add a second one.
+		// A paragraph can hold several story links, so walk the consecutive
+		// embeds after the block instead of only checking the first sibling,
+		// and insert new embeds after the last one.
 		const host = link.closest('p, li') || link;
-		if (host.nextElementSibling?.classList.contains('storybook-embed')) {
+		let insertAfter = host;
+		let alreadyEmbedded = false;
+		while (
+			insertAfter.nextElementSibling?.classList.contains('storybook-embed')
+		) {
+			insertAfter = insertAfter.nextElementSibling;
+			try {
+				const existing = new URL(
+					insertAfter.querySelector('iframe')?.src
+				).searchParams.get('id');
+				if (existing === id) {
+					alreadyEmbedded = true;
+				}
+			} catch {
+				// ignore malformed embeds
+			}
+		}
+		if (alreadyEmbedded) {
 			continue;
 		}
 
@@ -249,8 +269,9 @@ export function embedStorybookLinks() {
 		container.appendChild(iframe);
 		container.appendChild(caption);
 
-		// Insert the embed after the block that holds the link, keeping the
-		// original paragraph (and its link) intact as the accessible fallback.
-		host.insertAdjacentElement('afterend', container);
+		// Insert the embed after the block that holds the link (or after the
+		// embeds already attached to it), keeping the original paragraph and
+		// its link intact as the accessible fallback.
+		insertAfter.insertAdjacentElement('afterend', container);
 	}
 }
