@@ -116,6 +116,21 @@ migration cost. The one exception, GFM tables inside generated API blocks, is
 supported by Learn. Evidence: DECISIONS.md governing principle;
 CONTRIBUTING.md content rules.
 
+**Does moving to Learn make the documentation plainer than the current sites?**
+Yes, and this needs to be said out loud and accepted: the move asks for
+flexibility from everyone used to the current sites. Learn's pipeline is
+plain Markdown, so the merged content gives up the custom React widgets the
+old sites built (interactive color swatches, embedded playgrounds, rich
+tables). That is a deliberate trade, not a careless limitation: plain files
+are what any team can maintain, what survives platform changes, and what buys
+entry into Liferay's most visited property. The loss is mitigated twice.
+Live examples are not lost at all: they live in Storybook, their single home,
+and the content links to them. And the PoC viewer demonstrates progressive
+enhancement (story links render as embedded live examples, hex codes render
+as color chips) that Learn could adopt later without touching a single
+content file. The baseline everyone must accept is plain CommonMark; the
+richness is layered on top where the platform allows it.
+
 **Why rewrite the content instead of copying it?**
 The sources are written in two different voices for two different audiences;
 copying would carry both inconsistencies and the old positioning into the new
