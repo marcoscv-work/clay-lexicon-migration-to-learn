@@ -234,10 +234,10 @@ home, not three. What outlives it, and where each piece goes:
   migration epic.
 
 Everything else (the VitePress viewer, the theme enhancements, the GitHub
-Pages deployment) is discarded. Recommendation: archive the repository
-read-only instead of deleting it, so the decision trail (DECISIONS,
-DISCREPANCIES, RATIONALE, the dated rulings in the map) stays auditable
-after the site is gone.
+Pages deployment) is discarded. Decided 2026-07-19: when that day comes, the
+repository is archived read-only rather than deleted, so the Markdown and
+the decision trail (DECISIONS, DISCREPANCIES, RATIONALE, the dated rulings
+in the map) stay auditable after the site is gone.
 
 ## Trust and traceability
 
