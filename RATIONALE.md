@@ -146,6 +146,31 @@ workflow that opens a reviewed PR. Nothing between the API markers is
 human-owned. Evidence: scripts/README.md; README "API reference pipeline" and
 "Quality gates".
 
+**How does the generated-API pipeline survive the move to Learn?**
+By construction. The pipeline's intelligence lives in two host-agnostic
+pieces: plain HTML-comment markers inside the content (`API:START` /
+`API:END`, inert in any Markdown pipeline, with GFM tables, which Learn
+supports) and a standalone Node script plus a target map, with zero coupling
+to the PoC's viewer. Its only platform requirements are Markdown files in a
+git repository and a CI that can open pull requests, and Learn meets both:
+learn.liferay.com is published from the public `liferay/liferay-learn`
+GitHub repository, which already runs GitHub Actions (verified 2026-07-19).
+Two wiring options for the real migration, in order of preference:
+
+1. The automation lives outside Learn (in `liferay/clay`'s CI or a small
+   automation repository) and opens cross-repository pull requests against
+   `liferay-learn` with a bot account. Learn only ever receives normal
+   content PRs, which is already its contribution model, and the job can
+   trigger on Clay release tags instead of a weekly cron, which is strictly
+   better.
+2. The workflow and script move into `liferay-learn` itself, next to the
+   content, if the Learn team prefers owning it.
+
+Fallback if no automation is accepted anywhere: the idempotence check
+(`api:check`) runs anywhere as a scheduled drift detector and opens an issue
+when a table is stale; a human regenerates and submits the PR. Slower, but
+still no silent rot.
+
 **Why no images on component pages?**
 A screenshot of a button rots the day the button changes; a live story does
 not. Component variants link to Storybook stories (the viewer embeds them
