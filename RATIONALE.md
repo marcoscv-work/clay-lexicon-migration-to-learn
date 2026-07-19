@@ -217,6 +217,28 @@ No. Everything under `.vitepress/` is declared throwaway; the acceptance test
 is that `/docs` moves to Learn unchanged. Evidence: README "Repository
 layout".
 
+**What happens to this PoC when the real migration lands?**
+It gets decommissioned; it exists only to propose and validate the migration,
+and it was built for that end from day one (the site ships `noindex` so it
+never accretes links or SEO weight). The site comes down and no parallel
+documentation stays behind, which is the point of the whole exercise: one
+home, not three. What outlives it, and where each piece goes:
+
+- `/docs` is the deliverable: it moves into Learn's pipeline.
+- The API generator, its target map, and the update workflow move to the
+  automation that will serve Learn (see the pipeline question above).
+- `migration-map.json` seeds the redirects from the old clayui.com and
+  Lexicon URLs to the new Learn pages.
+- `STORYBOOK-GAPS.md` hands over to the Clay team as a stories backlog.
+- Any still-unresolved items in `DISCREPANCIES.md` become tasks in the real
+  migration epic.
+
+Everything else (the VitePress viewer, the theme enhancements, the GitHub
+Pages deployment) is discarded. Recommendation: archive the repository
+read-only instead of deleting it, so the decision trail (DECISIONS,
+DISCREPANCIES, RATIONALE, the dated rulings in the map) stays auditable
+after the site is gone.
+
 ## Trust and traceability
 
 **Where did any given sentence come from?**
