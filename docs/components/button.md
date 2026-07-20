@@ -124,7 +124,7 @@ export default function Example() {
 | `block` | `boolean` |  | No | Renders the button as a block element. |
 | `borderless` | `boolean` |  | No | Flag to indicate if the button should be borderless. |
 | `dark` | `boolean` |  | No | Flag to indicate if the button should use the clay-dark variant. |
-| `displayType` | `null \| 'primary' \| 'secondary' \| 'link' \| 'success' \| 'warning' \| 'danger' \| 'info' \| 'beta' \| 'beta-dark' \| 'unstyled'` | `'primary'` | No | Determines the button variant to use. The values `beta` and `beta-dark` are deprecated since v3.100.0 - use `translucent` and `dark` instead. The values `null` and `unstyled` are for internal use only. |
+| `displayType` | `null \| 'ai' \| 'primary' \| 'secondary' \| 'link' \| 'success' \| 'warning' \| 'danger' \| 'info' \| 'beta' \| 'beta-dark' \| 'unstyled'` | `'primary'` | No | Determines the button variant to use. The value `ai` renders the AI variant, meant for actions that trigger or involve AI-assisted workflows. The values `beta` and `beta-dark` are deprecated since v3.100.0 - use `translucent` and `dark` instead. The values `null` and `unstyled` are for internal use only. |
 | `loading` | `boolean` |  | No | Flag to display a loading indicator. |
 | `monospaced` | `boolean` |  | No | Flag to indicate if button should be monospaced. |
 | `outline` | `boolean` |  | No | Flag to indicate if the button should use the outline variant. |
