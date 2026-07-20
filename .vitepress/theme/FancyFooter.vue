@@ -230,6 +230,10 @@
 .fancy-footer svg {
 	width: 100%;
 	height: 100%;
+	/* Washed-out treatment so the mural reads as a soft background texture
+	 * instead of a solid dark band. */
+	filter: brightness(6);
+	opacity: 0.6;
 }
 
 .fancy-footer .stroke {
