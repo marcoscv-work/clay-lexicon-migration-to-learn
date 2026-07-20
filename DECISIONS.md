@@ -86,6 +86,13 @@ at any scroll position. Layout offsets are handled through
 including in screenshots taken mid-page. A banner that scrolls away only
 protects the first viewport.
 
+This deliberately diverges from the theme on mobile: VitePress un-fixes its
+own navigation on small viewports to reclaim vertical space, and the banner
+does not follow it. The nav is a convenience; the notice is the guarantee, so
+it is the one element that stays pinned on every viewport (verified on the
+live site at 375px: the nav scrolls away, the banner holds at the top with
+the content correctly offset).
+
 ## 5. Navigation avoids duplicated labels
 
 Single-page sections render as plain top-level sidebar links instead of a group
