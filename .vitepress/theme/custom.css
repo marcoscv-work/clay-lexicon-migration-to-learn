@@ -6,24 +6,25 @@
  */
 
 /*
- * Reserve space for the PoC banner rendered in the `layout-top` slot. Without
- * this, the fixed navbar overlaps the banner. The value must be at least the
- * banner's rendered height at each breakpoint, so it grows as the text wraps on
- * narrower viewports.
+ * Reserve space for the PoC banner rendered in the `layout-top` slot. The
+ * banner is only fixed at >=960px (where the theme also fixes .VPNav); below
+ * that it sits in the page flow, so no offset is needed and the value stays
+ * 0. In the fixed range the value must be at least the banner's rendered
+ * height, so it grows where the text wraps near the breakpoint.
  */
 :root {
-	--vp-layout-top-height: 40px;
+	--vp-layout-top-height: 0px;
 }
 
-@media (max-width: 960px) {
+@media (min-width: 960px) {
 	:root {
 		--vp-layout-top-height: 64px;
 	}
 }
 
-@media (max-width: 640px) {
+@media (min-width: 1152px) {
 	:root {
-		--vp-layout-top-height: 92px;
+		--vp-layout-top-height: 40px;
 	}
 }
 

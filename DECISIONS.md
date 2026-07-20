@@ -75,23 +75,28 @@ in prose. In other pipelines the values read as plain code.
 page uselessly thin. This keeps the data complete and visual without breaking
 portability.
 
-## 4. The PoC banner is fixed, not scrolled away
+## 4. The PoC banner is fixed on desktop, in the flow on small viewports
 
-The "not official documentation" banner stays pinned (`position: fixed`, above
-the navbar, mirroring how the theme fixes `.VPNav`), so the notice is visible
-at any scroll position. Layout offsets are handled through
-`--vp-layout-top-height`, which the theme's own components consume.
+The "not official documentation" banner stays pinned (`position: fixed`,
+above the navbar) at 960px and up, the same breakpoint where the theme fixes
+`.VPNav`, so on desktop the notice is visible at any scroll position. Layout
+offsets are handled through `--vp-layout-top-height`, which the theme's own
+components consume; below 960px the value is 0 because the banner sits in
+the page flow there.
 
 **Why:** this PoC must never be mistaken for official Liferay documentation,
 including in screenshots taken mid-page. A banner that scrolls away only
 protects the first viewport.
 
-This deliberately diverges from the theme on mobile: VitePress un-fixes its
-own navigation on small viewports to reclaim vertical space, and the banner
-does not follow it. The nav is a convenience; the notice is the guarantee, so
-it is the one element that stays pinned on every viewport (verified on the
-live site at 375px: the nav scrolls away, the banner holds at the top with
-the content correctly offset).
+Updated 2026-07-19 by stakeholder ruling: on viewports under 960px the
+banner joins the page flow. It still opens every page above the navigation,
+but it scrolls away with the rest of the mobile chrome (the theme un-fixes
+its own nav there too). The pinned version cost up to 92px of a roughly
+800px phone viewport, and on small screens usability beats redundancy: the
+notice is still the first thing every page shows. Desktop keeps the pinned
+notice, and desktop is where screenshots for Slack and stakeholder reviews
+are taken. Verified at 375, 768, 960, and 1280px: in-flow and scrolling away
+below 960; pinned with the nav offset exactly below it at 960 and up.
 
 ## 5. Navigation avoids duplicated labels
 

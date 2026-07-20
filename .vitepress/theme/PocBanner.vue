@@ -17,14 +17,13 @@
 
 <style scoped>
 .poc-banner {
-	/* Fixed so the "not official documentation" notice stays visible while
-	 * scrolling, mirroring how the default theme fixes .VPNav at >=960px. The
-	 * layout offset is handled by --vp-layout-top-height (set in custom.css),
+	/* In the page flow by default, so small viewports keep their vertical
+	 * space: the notice still opens the page above the nav, it just scrolls
+	 * away like the rest of the mobile chrome. Pinned only at >=960px, the
+	 * same breakpoint where the default theme fixes .VPNav; the layout offset
+	 * for that pinned range is --vp-layout-top-height (set in custom.css),
 	 * which VitePress's own components (nav, local nav, sidebar) consume. */
-	position: fixed;
-	top: 0;
-	right: 0;
-	left: 0;
+	position: relative;
 	z-index: var(--vp-z-index-layout-top, 10);
 	box-sizing: border-box;
 	display: flex;
@@ -32,7 +31,7 @@
 	align-items: center;
 	justify-content: center;
 	gap: 0.25rem 0.5rem;
-	min-height: var(--vp-layout-top-height, 40px);
+	min-height: 40px;
 	padding: 0.375rem 1.5rem;
 	font-size: 0.8125rem;
 	line-height: 1.4;
@@ -41,6 +40,16 @@
 	background-color: #7a4f01;
 	color: #ffffff;
 	border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+@media (min-width: 960px) {
+	.poc-banner {
+		position: fixed;
+		top: 0;
+		right: 0;
+		left: 0;
+		min-height: var(--vp-layout-top-height, 40px);
+	}
 }
 
 .poc-banner__tag {
