@@ -12,7 +12,7 @@
 		<svg
 			viewBox="0 0 1440 720"
 			fill="none"
-			preserveAspectRatio="xMidYMid slice"
+			preserveAspectRatio="xMidYMin slice"
 			xmlns="http://www.w3.org/2000/svg"
 		>
 			<defs>
