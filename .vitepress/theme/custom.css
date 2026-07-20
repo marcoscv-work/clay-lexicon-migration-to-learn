@@ -126,6 +126,97 @@ summary:focus-visible,
 	color: var(--vp-c-brand-1);
 }
 
+/* Home page liveliness (viewer-only polish, home layout only). The fancy
+ * footer mural closes the page flush with the viewport, so the home drops the
+ * theme's default bottom margin. All motion respects prefers-reduced-motion:
+ * with it set, everything renders in its final resting state. */
+.VPHome {
+	margin-bottom: 0 !important;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+	.VPHome .VPHero .name,
+	.VPHome .VPHero .text,
+	.VPHome .VPHero .tagline,
+	.VPHome .VPHero .actions,
+	.VPHome .VPFeatures .item {
+		animation: poc-rise 0.6s cubic-bezier(0.22, 1, 0.36, 1) both;
+	}
+
+	.VPHome .VPHero .text {
+		animation-delay: 0.08s;
+	}
+
+	.VPHome .VPHero .tagline {
+		animation-delay: 0.16s;
+	}
+
+	.VPHome .VPHero .actions {
+		animation-delay: 0.24s;
+	}
+
+	.VPHome .VPFeatures .item:nth-child(1) {
+		animation-delay: 0.32s;
+	}
+
+	.VPHome .VPFeatures .item:nth-child(2) {
+		animation-delay: 0.4s;
+	}
+
+	.VPHome .VPFeatures .item:nth-child(3) {
+		animation-delay: 0.48s;
+	}
+
+	/* The brand name shimmers through Clay blues. */
+	.VPHome .VPHero .name.clip {
+		background: linear-gradient(
+			115deg,
+			#0b5fff 15%,
+			#0084ff 40%,
+			#5fc8ff 55%,
+			#0084ff 70%,
+			#0b5fff 95%
+		);
+		background-size: 300% 100%;
+		-webkit-background-clip: text;
+		background-clip: text;
+		-webkit-text-fill-color: transparent;
+		animation:
+			poc-rise 0.6s cubic-bezier(0.22, 1, 0.36, 1) both,
+			poc-hero-shimmer 9s linear 0.6s infinite;
+	}
+
+	.VPHome .VPFeature {
+		transition:
+			transform 0.25s ease,
+			box-shadow 0.25s ease,
+			border-color 0.25s ease;
+	}
+
+	.VPHome .VPFeature:hover {
+		transform: translateY(-4px);
+		border-color: var(--vp-c-brand-1);
+		box-shadow: 0 12px 32px rgba(11, 95, 255, 0.14);
+	}
+
+	@keyframes poc-rise {
+		from {
+			opacity: 0;
+			transform: translateY(16px);
+		}
+		to {
+			opacity: 1;
+			transform: none;
+		}
+	}
+
+	@keyframes poc-hero-shimmer {
+		to {
+			background-position: 300% 0;
+		}
+	}
+}
+
 /* Home hero: give the product name clear dominance over the supporting
  * heading. The default theme renders .name and .text at the same size, which
  * makes them read as one confusing title. */

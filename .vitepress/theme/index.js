@@ -1,6 +1,7 @@
 import DefaultTheme from 'vitepress/theme';
 import {useRoute} from 'vitepress';
 import {h, nextTick, onMounted, watch} from 'vue';
+import FancyFooter from './FancyFooter.vue';
 import PocBanner from './PocBanner.vue';
 import {addColorChips} from './color-chips';
 import {embedStorybookLinks} from './storybook-embeds';
@@ -38,6 +39,9 @@ export default {
 			return () =>
 				h(DefaultTheme.Layout, null, {
 					'layout-top': () => h(PocBanner),
+					// Home only: decorative animated mural closing the page,
+					// adapted from design.liferay.com's fancy footer.
+					'home-features-after': () => h(FancyFooter),
 				});
 		},
 	},

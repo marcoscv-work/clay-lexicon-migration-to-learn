@@ -176,6 +176,24 @@ substitute. A merge that read only public sources would have fossilized
 outdated guidance; importing the internal documents is what makes the merged
 site the actual single source of truth, which is the point of the PoC.
 
+## 9. The home page gets viewer-only liveliness
+
+The home closes with the animated mural adapted from design.liferay.com's
+fancy footer (`liferay-design/liferay.design`,
+`src/components/molecules/FancyFooter`), rendered through the theme's
+`home-features-after` slot, and the hero and feature cards get staggered
+entrance animations, a shimmering brand gradient on the name, and a hover
+lift. All of it lives in `.vitepress/theme/` (FancyFooter.vue, custom.css);
+`docs/index.md` is untouched.
+
+**Why:** adoption. The home is the PoC's shop window in Slack threads and
+stakeholder demos, and a livelier cover invites people in; it also nods to
+the design.liferay.com heritage the merge absorbs. It costs nothing where it
+matters: the mural is decorative (`aria-hidden`), every animation is gated
+behind `prefers-reduced-motion` (reduced means everything renders in its
+final resting state), it applies to the home layout only, and the whole
+layer is discarded with the viewer when the PoC is decommissioned.
+
 ## Unchanged rules
 
 Everything else in the brief still applies as written: Learn tone, rewrite (no
