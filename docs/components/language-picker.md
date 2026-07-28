@@ -15,8 +15,6 @@ Each locale shows its flag and name, following the icons foundation's rationale
 for flags: they stay recognizable even when the current language's name is
 unreadable to the user.
 
-<!-- REVIEW: Clay-only component (no standalone Lexicon spec); it implements the language selector used by localized inputs. -->
-
 ## Variants and anatomy
 
 The trigger shows the current locale; the panel lists the available locales. A

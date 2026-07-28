@@ -15,8 +15,6 @@ is active, the behavior that overlays such as [modals](/components/modal) need.
 Clay's modal and drop down already trap focus; reach for this utility when you
 build a custom overlay.
 
-<!-- REVIEW: Clay-only utility component (no Lexicon spec). -->
-
 ## Variants and anatomy
 
 The trap wraps its children: `Tab` from the last focusable element wraps to the

@@ -14,8 +14,6 @@ Use the icon selector to let users pick an icon from the Lexicon icon library,
 for example when configuring a navigation entry or a custom action. It combines
 a trigger with a searchable panel of icons.
 
-<!-- REVIEW: Clay-only component (no standalone Lexicon spec); the icons foundation rules apply. -->
-
 ## Variants and anatomy
 
 The panel lists the spritemap icons in a grid with a search field to filter

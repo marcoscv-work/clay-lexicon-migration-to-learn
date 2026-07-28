@@ -14,8 +14,6 @@ Use a panel to group related content in a container with a header, a body, and
 an optional footer. Collapsible panels help organize long settings or
 configuration screens into sections the user can expand as needed.
 
-<!-- REVIEW: Lexicon documents form sections rather than a standalone panel spec; the collapsible-section rules here come from the forms guidance (first level sections may collapse, second level never). Confirm with the design team. -->
-
 ## Variants and anatomy
 
 A panel combines `Panel.Header`, `Panel.Body`, and `Panel.Footer`, and can be

@@ -144,6 +144,13 @@ Rulings so far (2026-07-18):
   per-type specs, pending a decision on the charting implementation after the
   announced `@clayui/charts` deprecation. The chart color palette stays in the
   Color foundation.
+- **Batch ruling 2026-07-19, Clay wins on all nine remaining flags.** The
+  implementation-derived documentation is canonical for the seven Clay-only
+  components (Nav, Focus Trap, Overlay Mask, Resize Handle, Icon Selector,
+  Language Picker, Data Provider), the Panel's collapse rules derived from
+  the forms guidance are canon, and Application Bar stays in the merged docs
+  despite its satellite status in Lexicon. No REVIEW flags remain in the
+  content.
 
 ## 8. Internal Lexicon guidelines are part of the merge
 

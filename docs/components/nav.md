@@ -15,8 +15,6 @@ navigation patterns such as pills, underline tabs, and stacked side
 navigations. Higher level components build on it; reach for Nav directly when
 none of them fits.
 
-<!-- REVIEW: Clay-only building block; the Lexicon navigation specs are covered by Navigation Bar and Vertical Nav. -->
-
 ## Variants and anatomy
 
 Compose `Nav` with `Nav.Item` and `Nav.Link`; the active link carries the

@@ -259,7 +259,10 @@ keep the original link as accessible fallback. Evidence:
 `.vitepress/theme/custom.css`; DECISIONS.md item 1.
 
 **What is still open?**
-Nine REVIEW flags await rulings (seven Clay-only components without a Lexicon
-spec, the Panel's derived collapse rules, and Application Bar's satellite
-status), listed with options in DISCREPANCIES.md. Storybook gaps are the Clay
-team's backlog in STORYBOOK-GAPS.md.
+No content-level conflicts remain: the last nine REVIEW flags were resolved
+by the 2026-07-19 batch ruling (Clay wins; see DISCREPANCIES.md). What stays
+open are the agreements with the Learn team: how Platform Experience triggers
+documentation changes in Learn, how Learn pages reference Storybook, the
+placement of the Clay docs inside Learn's information architecture, and the
+redirects from the old sites, which the Learn team owns and executes.
+Storybook gaps remain the Clay team's backlog in STORYBOOK-GAPS.md.

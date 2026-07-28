@@ -14,8 +14,6 @@ dark bar at the top with the product menu trigger, the application title, and
 the contextual actions. Clay provides it as a markup pattern built on the CSS
 framework (there is no dedicated React component).
 
-<!-- REVIEW: in Lexicon this belongs to the satellites section (out of the core spec); it is included here because Clay documents it as a component pattern. -->
-
 ## Variants and anatomy
 
 The bar combines, left to right: the menu trigger (a monospaced icon button),

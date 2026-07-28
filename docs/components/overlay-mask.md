@@ -15,8 +15,6 @@ the user's attention on it. Its typical use is onboarding and guided tours,
 often paired with a [popover](/components/popover) explaining the highlighted
 element.
 
-<!-- REVIEW: Clay-only component (no Lexicon spec). -->
-
 ## Variants and anatomy
 
 The mask wraps the target area and dims everything else with configurable

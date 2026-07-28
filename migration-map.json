@@ -948,7 +948,7 @@
       "https://design.liferay.com/lexicon/core-components/forms/"
     ],
     "storybook": "https://storybook.clayui.com/?path=/story/design-system-components-panel--default",
-    "notes": "Clay-only component page; collapsible-section design rules borrowed from the Lexicon forms guidance and flagged with a REVIEW comment. API from @clayui/panel.",
+    "notes": "Clay-only component page; collapsible-section design rules borrowed from the Lexicon forms guidance and flagged with a REVIEW comment. API from @clayui/panel. Ruled 2026-07-19 (Clay wins): the collapse rules derived from the Lexicon forms guidance are canonical for the Panel; REVIEW flag removed.",
     "api": {
       "package": "@clayui/panel",
       "targets": [
@@ -1080,7 +1080,7 @@
       "https://www.clayui.com/docs/components/icon-selector"
     ],
     "storybook": "https://storybook.clayui.com/?path=/story/design-system-components-iconselector--default",
-    "notes": "Clay-only: searchable spritemap icon chooser. API from @clayui/core.",
+    "notes": "Clay-only: searchable spritemap icon chooser. API from @clayui/core. Ruled 2026-07-19 (Clay wins): accepted as canonical implementation-derived documentation; REVIEW flag removed.",
     "api": {
       "package": "@clayui/core",
       "targets": [
@@ -1099,7 +1099,7 @@
       "https://www.clayui.com/docs/components/language-picker"
     ],
     "storybook": "https://storybook.clayui.com/?path=/story/design-system-components-languagepicker--default",
-    "notes": "Clay-only: locale selector with flags and translation status. API from @clayui/core.",
+    "notes": "Clay-only: locale selector with flags and translation status. API from @clayui/core. Ruled 2026-07-19 (Clay wins): accepted as canonical implementation-derived documentation; REVIEW flag removed.",
     "api": {
       "package": "@clayui/core",
       "targets": [
@@ -1138,7 +1138,7 @@
       "https://www.clayui.com/docs/components/overlay-mask"
     ],
     "storybook": "https://storybook.clayui.com/?path=/story/design-system-components-overlaymask--default",
-    "notes": "Clay-only: dims the page except a highlighted area for onboarding tours. API from @clayui/core.",
+    "notes": "Clay-only: dims the page except a highlighted area for onboarding tours. API from @clayui/core. Ruled 2026-07-19 (Clay wins): accepted as canonical implementation-derived documentation; REVIEW flag removed.",
     "api": {
       "package": "@clayui/core",
       "targets": [
@@ -1157,7 +1157,7 @@
       "https://www.clayui.com/docs/components/focus-trap"
     ],
     "storybook": "https://storybook.clayui.com/?path=/story/design-system-components-focustrap--default",
-    "notes": "Clay-only utility: keeps keyboard focus inside a container for custom overlays. API from @clayui/core.",
+    "notes": "Clay-only utility: keeps keyboard focus inside a container for custom overlays. API from @clayui/core. Ruled 2026-07-19 (Clay wins): accepted as canonical implementation-derived documentation; REVIEW flag removed.",
     "api": {
       "package": "@clayui/core",
       "targets": [
@@ -1176,7 +1176,7 @@
       "https://www.clayui.com/docs/components/resize-handle"
     ],
     "storybook": "https://storybook.clayui.com/?path=/story/design-system-components-resizehandle--resizing-left",
-    "notes": "Clay-only utility: drag and keyboard resizing for panels; integrated by VerticalBar resize. API from @clayui/core.",
+    "notes": "Clay-only utility: drag and keyboard resizing for panels; integrated by VerticalBar resize. API from @clayui/core. Ruled 2026-07-19 (Clay wins): accepted as canonical implementation-derived documentation; REVIEW flag removed.",
     "api": {
       "package": "@clayui/core",
       "targets": [
@@ -1233,7 +1233,7 @@
       "https://www.clayui.com/docs/components/nav"
     ],
     "storybook": "https://storybook.clayui.com/?path=/story/design-system-components-nav--default",
-    "notes": "Clay-only building block for navigation lists (pills, underline, stacked); specialized navs cover the Lexicon specs. API from @clayui/core.",
+    "notes": "Clay-only building block for navigation lists (pills, underline, stacked); specialized navs cover the Lexicon specs. API from @clayui/core. Ruled 2026-07-19 (Clay wins): accepted as canonical implementation-derived documentation; REVIEW flag removed.",
     "api": {
       "package": "@clayui/core",
       "targets": [
@@ -1301,7 +1301,7 @@
       "https://www.clayui.com/docs/components/data-provider"
     ],
     "storybook": "https://storybook.clayui.com/?path=/story/design-system-components-dataprovider--polling-example",
-    "notes": "Clay-only utility: remote data fetching with caching and polling (useResource). API from @clayui/data-provider.",
+    "notes": "Clay-only utility: remote data fetching with caching and polling (useResource). API from @clayui/data-provider. Ruled 2026-07-19 (Clay wins): accepted as canonical implementation-derived documentation; REVIEW flag removed.",
     "api": {
       "package": "@clayui/data-provider",
       "targets": [
@@ -1320,7 +1320,7 @@
       "https://www.clayui.com/docs/components/application-bar"
     ],
     "storybook": null,
-    "notes": "CSS markup pattern (DXP main navigation; satellite in Lexicon, included because Clay documents it). No React component, no story (in STORYBOOK-GAPS.md)."
+    "notes": "CSS markup pattern (DXP main navigation; satellite in Lexicon, included because Clay documents it). No React component, no story (in STORYBOOK-GAPS.md). Ruled 2026-07-19 (Clay wins): stays in the merged docs despite its satellite status in Lexicon; REVIEW flag removed."
   },
   {
     "new_path": "docs/components/menubar.md",

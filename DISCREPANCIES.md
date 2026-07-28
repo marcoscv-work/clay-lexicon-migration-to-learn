@@ -25,20 +25,22 @@ component.
 ## 2. Implementation without a design spec (Clay-only)
 
 Components that clayui.com documents but that have no Lexicon spec. The pages
-document them from the implementation; the REVIEW flags stand as an explicit
-backlog of specs to request from the design team.
+document them from the implementation. All of these were resolved by the
+2026-07-19 batch ruling: the implementation-derived documentation is accepted
+as canonical, and requesting Lexicon specs for them remains open to the
+design team's own backlog, outside this migration.
 
 | Component | Notes | Status |
 | --------- | ----- | ------ |
 | Picker | No public Lexicon spec, ships in `@clayui/core`. | **Resolved 2026-07-18.** Covered by the internal Item Selection Guideline and accessibility doc; guidance is official, not derived. |
 | Autocomplete | No standalone public spec; behavior appears inside the Multi Select spec. | **Resolved 2026-07-18.** Same internal documents cover it (live search, match announcements, single selection). |
-| Nav | Building block behind Navigation Bar and Vertical Nav. | Pending ruling. |
-| Focus Trap | Utility component. | Pending ruling. |
-| Overlay Mask | Highlight component. | Pending ruling. |
-| Resize Handle | Utility component. | Pending ruling. |
-| Icon Selector | The icons foundation rules apply, but no component spec exists. | Pending ruling. |
-| Language Picker | Implements the language selector used by localized inputs. | Pending ruling. |
-| Data Provider | Data-fetching utility, no visual identity. | Pending ruling. |
+| Nav | Building block behind Navigation Bar and Vertical Nav. | **Resolved 2026-07-19, Clay wins.** Accepted as canonical; REVIEW flag removed. |
+| Focus Trap | Utility component. | **Resolved 2026-07-19, Clay wins.** Accepted as canonical; REVIEW flag removed. |
+| Overlay Mask | Highlight component. | **Resolved 2026-07-19, Clay wins.** Accepted as canonical; REVIEW flag removed. |
+| Resize Handle | Utility component. | **Resolved 2026-07-19, Clay wins.** Accepted as canonical; REVIEW flag removed. |
+| Icon Selector | The icons foundation rules apply, but no component spec exists. | **Resolved 2026-07-19, Clay wins.** Accepted as canonical; REVIEW flag removed. |
+| Language Picker | Implements the language selector used by localized inputs. | **Resolved 2026-07-19, Clay wins.** Accepted as canonical; REVIEW flag removed. |
+| Data Provider | Data-fetching utility, no visual identity. | **Resolved 2026-07-19, Clay wins.** Accepted as canonical; REVIEW flag removed. |
 
 ## 3. Design without an implementation (Lexicon-only)
 
@@ -60,7 +62,7 @@ because no direct one exists.
 
 | Page | Derivation | Status |
 | ---- | ---------- | ------ |
-| Panel | Collapse rules taken from the Lexicon forms guidance (first level sections may collapse, second level never). | Pending ruling. |
+| Panel | Collapse rules taken from the Lexicon forms guidance (first level sections may collapse, second level never). | **Resolved 2026-07-19, Clay wins.** Accepted as canonical; REVIEW flag removed. |
 
 ## 5. Taxonomy and naming mismatches
 
@@ -84,7 +86,8 @@ anything; they are recorded so redirects and cross-references stay correct.
   three in `@clayui/form`, so the merged site documents them in
   [one page](docs/components/checkbox-radio-toggle.md).
 - Application Bar is a satellite in Lexicon (outside the core spec) but a
-  documented component pattern in Clay. **Pending ruling** on whether it stays.
+  documented component pattern in Clay. **Resolved 2026-07-19, Clay wins:**
+  it stays in the merged docs.
 
 ## 6. Resolved by stakeholder ruling, no source change
 

@@ -16,8 +16,6 @@ components such as [Autocomplete](/components/autocomplete) and
 [Multi Select](/components/multi-select), and is available directly as a
 component and as the `useResource` hook.
 
-<!-- REVIEW: Clay-only utility (no Lexicon spec). -->
-
 ## Variants and anatomy
 
 The provider takes a `link` (URL or fetch function) and renders through a

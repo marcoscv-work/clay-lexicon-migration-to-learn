@@ -14,8 +14,6 @@ Use the resize handle on the edge of a resizable panel, such as the
 [vertical bar](/components/vertical-bar)'s panel, so users can adjust its width
 by dragging or with the keyboard.
 
-<!-- REVIEW: Clay-only utility component (no Lexicon spec). -->
-
 ## Variants and anatomy
 
 The handle attaches to the left or right edge of the panel it resizes, within
